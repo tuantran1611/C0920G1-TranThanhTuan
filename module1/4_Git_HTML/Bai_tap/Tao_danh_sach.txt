@@ -1,1 +1,35 @@
-file:///D:/GitProject/Tao_danh_sach.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BigCityBoy</title>
+</head>
+<body>
+    <ul>
+        <li><b>Việt Nam</b>
+            <ol type="1">
+                <li>Hà Nội</li>
+                <li>Sài Gòn</li>
+                <li>Huế</li>
+                <li>Đà Nẵng</li>
+            </ol>
+        </li>
+        <li><b>Hoa Kỳ</b>
+            <ol type="1">
+                <li>New York</li>
+                <li>Los Angeles</li>
+                <li>Chicago</li>
+                <li>Mexico</li>
+            </ol>
+        </li>
+        <li><b>Trung Quốc</b>
+            <ol>
+                <li>Bejing</li>
+                <li>Chongquin</li>
+                <li>Shanghai</li>
+                <li>Tiajin</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>

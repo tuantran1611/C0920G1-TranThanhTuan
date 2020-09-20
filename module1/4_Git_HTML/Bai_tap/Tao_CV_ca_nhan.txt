@@ -1,1 +1,24 @@
-file:///D:/GitProject/source/Tao%20CV.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo trang CV cá nhân</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <img src="https://1.bp.blogspot.com/-Wh-WLeDcGrE/XqGjhzJgy4I/AAAAAAAAikU/Atn_BAtEfaU0uyoi0BCvOoFsNGpQLLJcwCLcBGAsYHQ/s1600/Hinh-anh-meo-ngau-nhat%2B%25289%2529.jpg" alt="avatar" style="width: 150" height="150">
+    <h6>
+            Địa chỉ: Q.Hải Châu, TP.Đà Nẵng
+            <br>Họ và tên: Aladivmir
+            <br>Số điện thoại: 0900 100 001
+            <br>Email: <u>alardivmir@gmail.com</u>
+            <br>Học vấn: Đại học
+            <br>Bằng cấp: Cử nhân
+            <br>Kỹ năng: Giao tiếp, hoạt động nhóm
+            <br>Kinh nghiệm: 2 năm
+            <br>Định hướng phát triển bản thân: trong vòng 1 năm sau khi hoàn thành CodeGym trở thành Dev1
+    </h6>
+</body>
+</html>

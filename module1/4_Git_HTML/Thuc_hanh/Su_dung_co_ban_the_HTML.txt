@@ -1,1 +1,17 @@
-file:///D:/GitProject/HTML%20links.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML links</title>
+</head>
+<body>
+    <h1>HTML: HyperText Markup Language</h1>
+    <p>Tim Berners_Lee invented the first browser at CERN, to enabled researchers to share there research with eachother.</p>
+    <a target="blank" href="http://home.web.cern.ch/topics/birth-web">Read more about the history of HTML
+        <p>
+        <img src="https://www.kasandbox.org/programming-images/misc/tim-berners-lee-webpage.png" width="300">
+            <br/>Image courtesy CERN
+        </p>
+    </a>
+</body>
+</html>
