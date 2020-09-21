@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simpleform</title>
+    <style>
+        fieldset {
+            background: palegoldenrod;
+            border: 10px solid cadetblue;
+
+        }
+        body h3 {
+            color: white;
+            background: mediumseagreen;
+            margin-left: 5px;
+            margin-right: 5px;
+            font-family: .VnBahamasB;
+        }
+        body div form {
+            background: palegoldenrod;
+            margin-top: 20px;
+        }
+        .input_para {
+             color: blue;
+             margin-left: 5px;
+        }
+        textarea {
+            margin-left: 83px;
+            margin-top: -29px;
+        }
+        .input_name {
+            margin-left: 8px;
+            width: 250px;
+            height: 15px;
+        }
+        .input_birthday {
+            margin-left: 5px;
+            width: 100px;
+            height: 15px;
+        }
+        .input_gender {
+            margin-left: 19px;
+        }
+        .input_email {
+            margin-left: 30px;
+        }
+
+        .select_1 {
+            margin-left: 43px;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+<fieldset>
+    <form action="btformcoban2.html" method="get">
+        <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+        <p class="input_para">Họ và tên&nbsp;
+            <input class="input_name" type="text" name="yourname" placeholder="Trần Thanh Tuấn"/>
+        </p>
+        <p class="input_para">Ngày sinh&nbsp;
+            <input class="input_birthday" type="text" name="birthday" placeholder="dd/mm/yy"/>
+        </p>
+        <p> <span class="input_para">Giới tính&nbsp;</span>
+            <input class="input_gender" type="radio" name="Gender" value="Nam"/>Nam
+            <input type="radio" name="Gender" value="Nữ"/>Nữ
+        </p>
+        <p class="input_para">Địa chỉ&nbsp;</p>
+            <textarea cols="30" rows="3"></textarea> <br>
+        <p class="input_para">Lớp&nbsp;
+            <select class="select_1" name="class">
+                <option value="">--Chọn lớp--</option>
+                <option value="12A1">12A1</option>
+                <option value="12A2">12A2</option>
+                <option value="12A3">12A3</option>
+                <option value="12A4">12A4</option>
+                <option value="12A5">12A5</option>
+                <option value="12A6">12A6</option>
+                <option value="12A7">12A7</option>
+                <option value="12A8">12A8</option>
+                <option value="12A9">12A9</option>
+                <option value="12A10">12A10</option>
+            </select>
+        </p>
+        <p class="input_para">Email&nbsp;
+            <input class="input_email" type="text" name="email" placeholder="abc@gmail.com"/>
+        </p>
+        <p class="input_para">Điện thoại&nbsp;
+            <input type="text" name="phonenumber" placeholder="(+84)"/>
+        </p>
+        <p style="margin-left: 80px">
+            <input type="submit" value="Đăng ký" style="background: limegreen">
+            <input type="reset" value="Nhập lại" style="background: limegreen">
+        </p>
+    </form>
+</fieldset>
+</body>
+</html>

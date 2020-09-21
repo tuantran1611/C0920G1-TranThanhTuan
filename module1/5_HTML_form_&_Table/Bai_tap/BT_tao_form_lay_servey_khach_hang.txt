@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Market Research Survey</title>
+    <style>
+        .dotted {
+            border: 1px dotted black;
+            border-style: none none dotted;
+            color: black;
+        }
+        .select_1 {
+            width: 300px;
+        }
+        .textarea_1 {
+            margin-left: 25px;
+            margin-top: 6px;
+        }
+        .textarea_1:hover {
+            background: wheat;
+        }
+        .input_dollar {
+            width: 70px;
+        }
+        .input_cents {
+            width: 15px;
+        }
+        .p_1 {
+            margin-top: 0px;
+        }
+        .row_1 {
+            text-align: center;
+            background: darkgray;
+        }
+        .row_1_dis {
+            width: 150px;
+        }
+        .row_2_c1 {
+            text-align: left;
+        }
+        .hover_2:hover {
+            background: moccasin;
+        }
+        .p_2 {
+            text-align: center;
+        }
+        .input_submit {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form action="taoformlayserveykhachhang.html" method="get">
+    <h2>Market Research Survey</h2>
+        <p>Please take a few moments to complete this satisfaction survey</p>
+        <hr class="dotted">
+    <div class="hover_2">
+        <p><b>What is your age range?</b></p>
+        <select class="select_1">
+            <option>18-24</option>
+            <option>25-34</option>
+            <option>35-50</option>
+            <option>50+</option>
+        </select>
+    </div>
+    <div class="hover_2">
+        <p><b>What is your yearly income range?</b></p>
+        <select class="select_1">
+            <option value="0-25,000">$0 - $25,000</option>
+            <option value="25,001-50,000">$25,001 - $50,000</option>
+            <option value="50,001-100,000">$50,001 - $100,000</option>
+            <option value="100,000+">$100,000+</option>
+        </select>
+    </div>
+    <div class="hover_2">
+        <p><b>Gender Indentity</b></p>
+        <input type="radio" name="gender" value="Male">  Male <br>
+        <input type="radio" name="gender" value="Female">  Female <br>
+        <input type="radio" name="gender" value="Nonbinary">  Nonbinary <br>
+        <input type="radio" name="gender" value="Other">  Other <br>
+        <textarea class="textarea_1" cols="" rows="1"></textarea>
+    </div>
+    <div class="hover_2">
+        <p><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></p>
+        <input type="checkbox" name="product1" value="product1"> Product 1 <br>
+        <input type="checkbox" name="product2" value="product2"> Product 2 <br>
+        <input type="checkbox" name="product3" value="product3"> Product 3
+    </div>
+    <div class="hover_2">
+        <p><b>How often would you use our new product?</b></p>
+        <input type="radio" name="daily" value="daily"> Daily <br>
+        <input type="radio" name="weekly" value="weekly"> Weekly <br>
+        <input type="radio" name="monthly" value="monthly"> Monthly
+    </div>
+    <div class="hover_2">
+        <p><b>What would you pay for the new product</b></p>
+        $ <input class="input_dollar" type="text"> . <input class="input_cents" type="text">
+        <p class="p_1">&nbsp;&nbsp;&nbsp;Dollars&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cents</p>
+    </div>
+    <div class="hover_2">
+        <p><b>What features would you like to see in the new product.</b></p>
+        <textarea cols="305" rows="5"></textarea>
+    </div>
+        <p><b>Please rate your level of agreement with the following statements.</b></p>
+    <table border="1">
+        <tr class="row_1">
+            <th></th>
+            <th class="row_1_dis">Strongly Disagree</th>
+            <th class="row_1_dis">Disagree</th>
+            <th class="row_1_dis">Agree</th>
+            <th class="row_1_dis">Strongly Agree</th>
+        </tr>
+        <div class="hover_2">
+        <tr>
+            <th class="row_2_c1">Our products are priced fairly.</th>
+            <th>
+                <input type="radio" value="1"> <br>1
+            </th>
+            <th>
+                <input type="radio" value="2"> <br>2
+            </th>
+            <th>
+                <input type="radio" value="3"> <br>3
+            </th>
+            <th>
+                <input type="radio" value="4"> <br>4
+            </th>
+        </tr>
+        </div>
+        <div class="hover_2">
+        <tr>
+            <th class="row_2_c1">Our products are high quality.</th>
+            <th>
+                <input type="radio" value="1"> <br>1
+            </th>
+            <th>
+                <input type="radio" value="2"> <br>2
+            </th>
+            <th>
+                <input type="radio" value="3"> <br>3
+            </th>
+            <th>
+                <input type="radio" value="4"> <br>4
+            </th>
+        </tr>
+        </div>
+        <div class="hover_2">
+        <tr>
+            <th class="row_2_c1">You would recommend our products to a friend or coworker.</th>
+            <th>
+                <input type="radio" value="1"> <br>1
+            </th>
+            <th>
+                <input type="radio" value="2"> <br>2
+            </th>
+            <th>
+                <input type="radio" value="3"> <br>3
+            </th>
+            <th>
+                <input type="radio" value="4"> <br>4
+            </th>
+        </tr>
+        </div>
+    </table> <br>
+    <input class="input_submit" type="submit" value="Submit">
+    </form>
+</body>
+<footer>
+    <div><p class="p_2">Powered by <img src="https://logos-download.com/wp-content/uploads/2020/06/Wufoo_Logo_text-700x285.png" alt="wufoo.com" height="30" width="106"/></p></div>
+</footer>
+</html>

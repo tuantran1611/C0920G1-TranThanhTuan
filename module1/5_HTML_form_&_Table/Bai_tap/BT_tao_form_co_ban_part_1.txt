@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simpleform</title>
+    <style>
+        .container {
+            width: 500px;
+            height: 200px;
+            border: 10px solid cornflowerblue;
+            margin-left: 325px;
+            margin-bottom: 10px;
+        }
+        body h3 {
+            color: white;
+            background: orange;
+            text-align: center;
+            font-family: .VnBahamasB;
+            margin-top: -17px;
+        }
+    </style>
+</head>
+<body>
+        <div class="container">
+        <form action="btformcoban.html" method="get" style="background: white; margin-top: 20px">
+        <h3>SỞ THÍCH CỦA BẠN</h3>
+            <p style="color: blue; margin-left: 30px; margin-top: -10px">Họ và tên&nbsp;
+            <input type="text" name="yourname" placeholder="Trần Thanh Tuấn"/>
+            </p>
+            <p style="color: blue; margin-left: 53px; margin-top: -5px">Email&nbsp
+            <input style="margin-bottom: -15px" type="text" name="email" placeholder="abc@gmail.com"/>
+            </p>
+            <p style="color: blue; margin-left: 37px">Sở thích
+                <p style="color: orange; margin-left: 94px; margin-top: -35px">
+                    <input type="checkbox" name="hobby" value="sports"/>Thể thao
+                    <input style="margin-left: 10px" type="checkbox" name="hobby" value="music"/>Âm nhạc
+                    <input style="margin-left: 16px" type="checkbox" name="hobby" value="reading"/>Đọc sách <br/>
+                    <input type="checkbox" name="hobby" value="sulfweb"/>Lướt web
+                    <input type="checkbox" name="hobby" value="game"/>Chơi game
+                    <input type="checkbox" name="hobby" value="film"/>Điện ảnh <br/>
+                    <input type="checkbox" name="hobby" value="travel"/>Du lịch
+                </p>
+            </p>
+            <p style="margin-left: 97px">
+                <input type="submit" value="Gửi thông tin" style="margin-left: 30px; background: limegreen">
+                <input type="reset" value="Nhập lại" style="background: limegreen">
+            </p>
+        </form>
+        </div>
+</body>
+</html>
