@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký người dùng</title>
+    <style>
+        .p_1 {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .input_1 {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="formdangkynguoidung.html" method="get">
+        <p class="p_1">Họ và tên</p>
+        <input type="text" name="username" placeholder="Trần Thanh Tuấn" >
+        <p class="p_1">Email</p>
+        <input type="text" name="mail" placeholder="abc@gmail.com" >
+        <p class="p_1">Số điện thoại</p>
+        <input type="text" name="phonenumber" placeholder="(+84)" >
+        <p class="input_1">Giới tính <br>
+        <input type="radio" name="gender" value="Nam" > Nam
+        <input type="radio" name="gender" value="Nữ" > Nữ <br> <br>
+        </p>
+        <input class="input_1 " type="submit" value="Đăng ký">
+
+    </form>
+</body>
+</html>
