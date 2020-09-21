@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bàn cờ vua</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        .td_white {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+        .td_black {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+        }
+        th {
+            background-color: orange;
+        }
+        fieldset {
+            background-color: orange;
+            width: 350px;
+            height: 370px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <table>
+        <tr>
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+        </tr>
+        <tr>
+            <th>A</th>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+        </tr
+        <tr>
+            <th>B</th>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+        </tr
+        <tr>
+            <th>C</th>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+        </tr
+        <tr>
+            <th>D</th>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+        </tr
+        <tr>
+            <th>E</th>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+        </tr
+        <tr>
+            <th>F</th>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+        </tr
+        <tr>
+            <th>G</th>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+        </tr
+        <tr>
+            <th>H</th>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+            <td class="td_black"></td>
+            <td class="td_white"></td>
+        </tr
+
+    </table>
+    </fieldset>
+</body>
+</html>

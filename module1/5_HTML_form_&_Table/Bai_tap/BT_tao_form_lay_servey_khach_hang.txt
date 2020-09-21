@@ -47,6 +47,9 @@
         .input_submit {
             width: 100px;
         }
+        .row_2_c2 {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -88,9 +91,9 @@
     </div>
     <div class="hover_2">
         <p><b>How often would you use our new product?</b></p>
-        <input type="radio" name="daily" value="daily"> Daily <br>
-        <input type="radio" name="weekly" value="weekly"> Weekly <br>
-        <input type="radio" name="monthly" value="monthly"> Monthly
+        <input type="radio" name="often" value="Daily"> Daily <br>
+        <input type="radio" name="often" value="Weekly"> Weekly <br>
+        <input type="radio" name="often" value="Monthly"> Monthly
     </div>
     <div class="hover_2">
         <p><b>What would you pay for the new product</b></p>
@@ -113,52 +116,52 @@
         <div class="hover_2">
         <tr>
             <th class="row_2_c1">Our products are priced fairly.</th>
-            <th>
+            <td class="row_2_c2">
                 <input type="radio" value="1"> <br>1
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="2"> <br>2
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="3"> <br>3
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="4"> <br>4
-            </th>
+            </td>
         </tr>
         </div>
         <div class="hover_2">
         <tr>
             <th class="row_2_c1">Our products are high quality.</th>
-            <th>
+            <td class="row_2_c2">
                 <input type="radio" value="1"> <br>1
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="2"> <br>2
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="3"> <br>3
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="4"> <br>4
-            </th>
+            </td>
         </tr>
         </div>
         <div class="hover_2">
         <tr>
             <th class="row_2_c1">You would recommend our products to a friend or coworker.</th>
-            <th>
+            <td class="row_2_c2">
                 <input type="radio" value="1"> <br>1
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="2"> <br>2
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="3"> <br>3
-            </th>
-            <th>
+            </td>
+            <td class="row_2_c2">
                 <input type="radio" value="4"> <br>4
-            </th>
+            </td>
         </tr>
         </div>
     </table> <br>

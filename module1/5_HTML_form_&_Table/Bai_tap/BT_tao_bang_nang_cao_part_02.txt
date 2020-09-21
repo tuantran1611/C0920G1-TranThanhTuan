@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lịch tháng 09/2020</title>
+    <style>
+        h3 {
+            margin-left: 110px;
+            color: cornflowerblue;
+            font-size: 25px;
+        }
+        .p_1 {
+            font-size: 10px;
+            margin-top: 1px;
+            margin-left: 8px;
+            color: black;
+        }
+        .p_2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            font-family: sans-serif, Arial;
+            width: 500px;
+        }
+        th {
+            width: 71px;
+            height: 25px;
+            background-color: yellow;
+            color: white;
+        }
+        td {
+            width: 71px;
+            height: 45px;
+            border: 1px solid gray;
+        }
+        .th_1 {
+            background-color: red;
+            color: white;
+        }
+        .th_3 {
+            background-color: blue;
+            color: white;
+        }
+        .td_1 {
+            color: red;
+            text-align: center;
+        }
+        .td_3 {
+            color: blue;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Tháng 09 - September - 2020</h3>
+    <table>
+        <tr>
+            <th class="th_1">C.Nhật</th>
+            <th>T.Hai</th>
+            <th>T.Ba</th>
+            <th>T.Tư</th>
+            <th>T.Năm</th>
+            <th>T.Sáu</th>
+            <th class="th_3">T.Bảy</th>
+        </tr>
+        <tr>
+            <th class="th_1">Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th class="th_3">Sat</th>
+        </tr>
+        <tr>
+            <th class="th_1">日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th class="th_3">土</th>
+        </tr>
+        <tr>
+            <td class="td_1">30 <br> <p class="p_1">12</p></td>
+            <td class="p_2">31 <br> <p class="p_1">13</p></td>
+            <td class="p_2">1 <br> <p class="p_1">14</p></td>
+            <td class="p_2">2 <br> <p class="p_1">15</p></td>
+            <td class="p_2">3 <br> <p class="p_1">16</p></td>
+            <td class="p_2">4 <br> <p class="p_1">17</p></td>
+            <td class="td_3">5 <br> <p class="p_1">18</p></td>
+        </tr>
+        <tr>
+            <td class="td_1">6 <br> <p class="p_1">19</p></td>
+            <td class="p_2">7 <br> <p class="p_1">20</p></td>
+            <td class="p_2">8 <br> <p class="p_1">21</p></td>
+            <td class="p_2">9 <br> <p class="p_1">22</p></td>
+            <td class="p_2">10 <br> <p class="p_1">23</p></td>
+            <td class="p_2">11 <br> <p class="p_1">24</p></td>
+            <td class="td_3">12 <br> <p class="p_1">25</p></td>
+        </tr>
+        <tr>
+            <td class="td_1">13 <br> <p class="p_1">26</p></td>
+            <td class="p_2">14 <br> <p class="p_1">27</p></td>
+            <td class="p_2">15 <br> <p class="p_1">28</p></td>
+            <td class="p_2">16 <br> <p class="p_1">29</p></td>
+            <td class="p_2">17 <br> <p class="p_1">30</p></td>
+            <td class="p_2">18 <br> <p class="p_1">1</p></td>
+            <td class="td_3">19 <br> <p class="p_1">2</p></td>
+        </tr>
+        <tr>
+            <td class="td_1">20 <br> <p class="p_1">3</p></td>
+            <td class="p_2">21 <br> <p class="p_1">4</p></td>
+            <td class="p_2">22 <br> <p class="p_1">5</p></td>
+            <td class="p_2">23 <br> <p class="p_1">6</p></td>
+            <td class="p_2">24 <br> <p class="p_1">7</p></td>
+            <td class="p_2">25 <br> <p class="p_1">8</p></td>
+            <td class="td_3">26 <br> <p class="p_1">9</p></td>
+        </tr>
+        <tr>
+            <td class="td_1">27 <br> <p class="p_1">10</p></td>
+            <td class="p_2">28 <br> <p class="p_1">11</p></td>
+            <td class="p_2">29 <br> <p class="p_1">12</p></td>
+            <td class="p_2">30 <br> <p class="p_1">13</p></td>
+            <td class="p_2">1 <br> <p class="p_1">14</p></td>
+            <td class="p_2">2 <br> <p class="p_1">15</p></td>
+            <td class="td_3">3 <br> <p class="p_1">16</p></td>
+        </tr>
+    </table>
+</body>
+</html>
