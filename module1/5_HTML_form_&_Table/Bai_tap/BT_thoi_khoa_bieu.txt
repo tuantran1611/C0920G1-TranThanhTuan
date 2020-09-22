@@ -7,7 +7,11 @@
         table {
             font-family: Arial, sans-serif;
             border-collapse: collapse;
-            width: 700px;
+            width: 100%;
+        }
+        span {
+            float: right;
+            margin-right: 20px;
         }
         td, th {
             border: 1px solid black;
@@ -18,10 +22,10 @@
             background-color: yellow;
         }
         h1 {
-            margin-left: 220px;
+            margin-left: 40%;
             color: cornflowerblue;
         }
-        pre {
+        p {
             font-family: Arial, sans-serif;
             color: cornflowerblue;
             margin-left: 20px;
@@ -37,9 +41,9 @@
 <body>
     <div>
     <h1>THỜI KHÓA BIỂU</h1>
-    <pre>Lớp: T0908I                                                                                    Thời gian học: 13h30 - 17h30</pre>
-    <pre>Giáo viên: KhoaNV                                                                                      Ngày học: Thứ 3,5,7</pre>
-    <pre>Phòng học: Class3/Lab3</pre>
+        <p>Lớp: T0908I<span>Thời gian học: 13h30 - 17h30</span></p>
+        <p>Giáo viên: KhoaNV<span>Ngày học: Thứ 3,5,7</span></p>
+        <p>Phòng học: Class3/Lab3</p>
     <table>
         <tr>
             <th colspan="3"></th>

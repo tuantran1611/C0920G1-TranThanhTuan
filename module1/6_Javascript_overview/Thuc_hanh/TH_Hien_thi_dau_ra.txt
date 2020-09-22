@@ -1,0 +1,78 @@
+<!--Part1-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH hiển thị đầu ra</title>
+</head>
+<body>
+    <!--hien thi ket qua ham alert-->
+    <button type="button" onclick="showMessage() ;">Click Me!</button>
+        <script>
+            function showMessage() {
+                alert('Xin chào mọi người')
+            }
+        </script>
+    <div id="mesageDiv"></div>
+    <button type="button" onclick=""
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------
+<!--Part 2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH hiển thị đầu ra</title>
+</head>
+<body>
+    <!--hien thi ket qua sử dụng thẻ Html-->
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showMessage() ;">Click Me!</button>
+        <script>
+            function showMessage() {
+                document.getElementById('messageDiv').innerHTML = 'Xin chào';
+            }
+        </script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------
+<!--Part 3-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH hiển thị đầu ra</title>
+</head>
+<body>
+    <!--hien thi ket qua hàm document.write()-->
+    <div id="messageDiv"></div>
+    <button type="button" onclick="showMessage() ;">Click Me!</button>
+        <script>
+            function showMessage() {
+                document.write('Xin chào')
+            }
+        </script>
+</body>
+</html>
+
+-----------------------------------------------------------------------------------------------------------------
+<!--Part 4-->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TH hiển thị đầu ra</title>
+</head>
+<body>
+    <!--hien thi ket qua hàm console.log()-->
+    <button type="button" onclick="showMessage() ;">Click Me!</button>
+        <script>
+            function showMessage() {
+                console.log('Xin chào')
+            }
+        </script>
+</body>
+</html>
