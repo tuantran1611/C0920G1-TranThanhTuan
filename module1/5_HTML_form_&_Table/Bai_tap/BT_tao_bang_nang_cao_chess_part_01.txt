@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bàn cờ vua</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 350px;
+            height: 360px;
+        }
+        .one td:nth-child(even){
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+        .one td:nth-child(odd){
+            width: 40px;
+            height: 40px;
+            background-color: black;
+        }
+        .two td:nth-child(odd){
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+        .two td:nth-child(even) {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+        }
+        fieldset {
+            background-color: orange;
+            height: 370px;
+            width: 360px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+    <table>
+        <tr>
+            <th></th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+        </tr>
+        <tr class="one">
+            <th>A</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="two">
+            <th>B</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="one">
+            <th>C</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="two">
+            <th>D</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="one">
+            <th>E</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="two">
+            <th>F</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="one">
+            <th>G</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="two">
+            <th>H</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </fieldset>
+</body>
+</html>
