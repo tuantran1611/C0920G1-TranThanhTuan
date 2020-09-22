@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form</title>
+    <style>
+        h3 {
+            color: blue;
+            background-color: moccasin;
+            text-align: center;
+            margin-top: -5px;
+        }
+        p {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        form {
+            width: 400px;
+            background-color: coral;
+        }
+        .input_userName {
+            margin-left: 5px;
+        }
+        .input_birthDay {
+            margin-left: 1px;
+        }
+        .input_genDer {
+            margin-left: 15px;
+        }
+        .input_textArea {
+            margin-left: 25px;
+        }
+        .input_class {
+            margin-left: 45px;
+        }
+        .input_email {
+            margin-left: 32px;
+        }
+        .input_phoneNumber {
+            margin-left: 2px;
+        }
+        .input_subMit {
+            margin-left: 125px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h3>ĐĂNG KÝ HỌC VIÊN</h3>
+        <p>Họ và tên:
+            <input class="input_userName" type="text" name="userName" placeholder="Trần Thanh Tuấn">
+        </p>
+        <p>Ngày sinh:
+            <input class="input_birthDay" type="text" name="birthDay" placeholder="16/11/1995">
+        </p>
+        <p>Giới tính
+            <input class="input_genDer" type="radio" name="gender" value="Male">Nam
+            <input type="radio" name="gender" value="Female">Nữ
+        </p>
+        <p>Địa chỉ
+            <textarea class="input_textArea" rows="3" cols="30"></textarea>
+        </p>
+        <p>Lớp
+            <select class="input_class">
+                <option>Java</option>
+                <option>PHP</option>
+                <option>Python</option>
+                <option>C##</option>
+                <option>Linux</option>
+                <option>Javascript</option>
+                <option>C</option>
+            </select>
+        </p>
+        <p>Email
+            <input class="input_email" type="text" name="email" placeholder="abc@gmail.com">
+        </p>
+        <p>Điện thoại
+            <input class="input_phoneNumber" type="text" name="phoneNumber" placeholder="(+84)">
+        </p>
+        <input class="input_subMit" type="submit" name="subMit" value="Đăng Ký">
+        <input type="reset" name="reSet" value="Nhập lại">
+        <br>
+        <br>
+    </form>
+</body>
+</html>
