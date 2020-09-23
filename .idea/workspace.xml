@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module1/7_Variable_Datatype_operators/Thuc_hanh/th_1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/7_Variable_Datatype_operators/Thuc_hanh/th_2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/7_Variable_Datatype_operators/Thuc_hanh/th_3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/7_Variable_Datatype_operators/Thuc_hanh/th_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/7_Variable_Datatype_operators/Thuc_hanh/th_operator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +15,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,7 +45,7 @@
       <updated>1600763820642</updated>
       <workItem from="1600763822063" duration="2129000" />
       <workItem from="1600766091817" duration="1246000" />
-      <workItem from="1600831814579" duration="1003000" />
+      <workItem from="1600831814579" duration="1514000" />
     </task>
     <servers />
   </component>
