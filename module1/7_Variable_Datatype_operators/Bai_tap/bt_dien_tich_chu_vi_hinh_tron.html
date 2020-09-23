@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích và chu vi hình tròn</title>
+</head>
+<body>
+    <script>
+        let inputRadius;
+        const pi = 3.14159;
+        inputRadius = prompt("Nhập bán kính hình tròn: ");
+        let radius = parseInt(inputRadius);
+        let area = pi * radius * radius;
+        let perimeter = 2 * pi * radius;
+        document.write('Diện tích hình tròn là: ' + area);
+        document.write('<br/>');
+        document.write('Chu vi hình tròn là: ' +perimeter);
+    </script>
+</body>
+</html>

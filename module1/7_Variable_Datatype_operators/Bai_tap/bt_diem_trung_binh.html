@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Datatype and Operator</title>
+</head>
+<body>
+    <script>
+        let inputBiology;
+        let inputPhysic;
+        let inputChemistry;
+        inputBiology = prompt("Nhập điểm Sinh :");
+        inputPhysic = prompt("Nhập điểm Lý :");
+        inputChemistry = prompt("Nhập điểm Hóa :");
+        let biology = parseInt(inputBiology);
+        let physic = parseInt(inputPhysic);
+        let chemistry = parseInt(inputChemistry);
+        let average = (biology + physic + chemistry)/3;
+        let sum = biology + physic + chemistry;
+        document.write('Điểm trung bình là: ' + average);
+        document.write('<br/>');
+        document.write('Tổng điểm là: '+ sum);
+    </script>
+</body>
+</html>
