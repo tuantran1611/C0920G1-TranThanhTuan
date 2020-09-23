@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <style>
+        .input_button {
+            background-color: darkmagenta;
+        }
+        table {
+            text-align: center;
+            margin-top: 50px;
+        }
+        th {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <table align="center">
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td><input type="number" name="amount" id="money" min="0"></td>
+            <td>
+                <select id="selectFromCurrency">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="Yen">Yên</option>
+                    <option value="Bang">Bảng</option>
+                </select>
+            </td>
+            <td>
+                <select id="selectToCurrency">
+                    <option value="USD">USD</option>
+                    <option value="VND">VND</option>
+                    <option value="Yen">Yên</option>
+                    <option value="Bang">Bảng</option>
+                </select>
+            </td>
+            <td><button class="input_button" onclick="changeMoney()">Convert</button></td>
+        </tr>
+    </table>
+</form>
+    <script>
+        function changeMoney(){
+            //chuyển dữ liệu
+            let amountMoney = document.getElementById("money").value;
+            var fromCurrency = document.getElementById("selectFromCurrency").value;
+            var toCurrency = document.getElementById("selectToCurrency").value;
+            var amount = parseInt(amountMoney);
+            var changeMoney;
+            if (fromCurrency === toCurrency){
+                changeMoney = amount;
+            }
+            if (fromCurrency === "VND" && toCurrency === "USD"){
+                changeMoney = amount / 23000;
+            }
+            if (fromCurrency === "VND" && toCurrency === "Yen"){
+                changeMoney = amount / 220.53;
+            }
+            if (fromCurrency === "VND" && toCurrency === "Bang"){
+                changeMoney = amount / 29457;
+            }
+            if (fromCurrency === "USD" && toCurrency === "VND"){
+                changeMoney = amount * 23000;
+            }
+            if (fromCurrency === "USD" && toCurrency === "Yen"){
+                changeMoney = amount * 105.13;
+            }
+            if (fromCurrency === "USD" && toCurrency === "Bang"){
+                changeMoney = amount * 0.79;
+            }
+            if (fromCurrency === "Yen" && toCurrency === "VND"){
+                changeMoney = amount * 220.53;
+            }
+            if (fromCurrency === "Yen" && toCurrency === "USD"){
+                changeMoney = amount * 0.0095;
+            }
+            if (fromCurrency === "Yen" && toCurrency === "Bang"){
+                changeMoney = amount * 0.0075;
+            }
+            if (fromCurrency === "Bang" && toCurrency === "VND"){
+                changeMoney = amount * 29457;
+            }
+            if (fromCurrency === "Bang" && toCurrency === "USD"){
+                changeMoney = amount * 1.27;
+            }
+            if (fromCurrency === "Bang" && toCurrency === "Yen"){
+                changeMoney = amount * 133.46;
+            }
+            alert(changeMoney + toCurrency)
+        }
+    </script>
+</body>
+</html>
