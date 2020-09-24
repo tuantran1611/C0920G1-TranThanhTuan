@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/th_luyen_tap_cau_truc_switch_case.html" afterDir="false" />
+    <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="luyen tap toan tu 3 ngoi">
+      <change afterPath="$PROJECT_DIR$/module1/9_Conditional_statement_2/Bai_tap/bt_tinh_chi_so_can_nang_co_the.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/9_Conditional_statement_2/Thuc_hanh/nobita.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/9_Conditional_statement_2/Thuc_hanh/th_su_kien_ban_phim.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -30,6 +34,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\9_Conditional_statement_2\Thuc_hanh" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,11 +55,71 @@
       <workItem from="1600763822063" duration="2129000" />
       <workItem from="1600766091817" duration="1246000" />
       <workItem from="1600831814579" duration="19155000" />
-      <workItem from="1600917008127" duration="2166000" />
+      <workItem from="1600917008127" duration="3242000" />
+      <workItem from="1600921713912" duration="15014000" />
+      <workItem from="1600959751342" duration="155000" />
+      <workItem from="1600961014327" duration="4530000" />
     </task>
+    <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
+      <created>1600919459652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600919459652</updated>
+    </task>
+    <task id="LOCAL-00002" summary="luyen tap toan tu 3 ngoi">
+      <created>1600920228216</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600920228216</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Case_study_yeu_cau_1">
+      <created>1600939013920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600939013920</updated>
+    </task>
+    <task id="LOCAL-00004" summary="thuc hanh su kien chuot">
+      <created>1600962397682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600962397682</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="luyen tap toan tu 3 ngoi" />
+    <MESSAGE value="Case_study_yeu_cau_1" />
+    <MESSAGE value="thuc hanh su kien chuot" />
+    <option name="LAST_COMMIT_MESSAGE" value="thuc hanh su kien chuot" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="752" y="8" key="CommitChangelistDialog2" timestamp="1600962396920">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="752" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600962396920" />
+    <state x="555" y="56" key="SettingsEditor" timestamp="1600921738471">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="555" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1600921738471" />
+    <state x="573" y="146" key="Vcs.Push.Dialog.v2" timestamp="1600962404276">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="573" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600962404276" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600936142527">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600936142527" />
+    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600929068383">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600929068383" />
   </component>
 </project>
