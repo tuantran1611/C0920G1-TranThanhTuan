@@ -1,0 +1,69 @@
+h3 {
+    text-align: center;
+    background-color: darkkhaki;
+    margin-top: 5px;
+}
+th, td {
+    border: 1px solid black;
+}
+p {
+    margin-left: 10px;
+}
+table {
+    background-color: cornflowerblue;
+}
+.div_1 {
+     width: 500px;
+     margin-left: 450px;
+     background-color: cornflowerblue;
+     padding: 7px;
+ }
+.div_2 {
+    width: 400px;
+    margin-left: 50px;
+    margin-top: -410px;
+}
+.input_name {
+    margin-left: 53px;
+    width: 200px;
+}
+.input_id {
+    margin-left: 47px;
+    width: 200px;
+}
+.input_birthDay {
+    margin-left: 59px;
+}
+.input_email {
+    margin-left: 86px;
+    width: 200px;
+}
+.input_address {
+    margin-left: 82px;
+}
+.input_customerType {
+    margin-left: 27px;
+}
+.input_discount {
+    margin-left: 58px;
+    width: 200px;
+}
+.input_amount {
+    margin-left: 19px;
+    width: 200px;
+}
+.input_rentDays {
+    margin-left: 34px;
+    width: 200px;
+}
+.input_serviceType {
+    margin-left: 44px;
+    width: 130px;
+}
+.input_roomType {
+    margin-left: 20px;
+    width: 130px;
+}
+.input_submit {
+    margin-left: 143px;
+}
