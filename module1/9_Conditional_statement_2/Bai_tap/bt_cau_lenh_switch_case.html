@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu lệnh switch case</title>
+</head>
+<body>
+    <form>
+        <input id="inputDay" type="number" min="1" max="12" style="width: 200px" placeholder="Nhập tháng từ 1-12">
+        <input type="button" value="Tính số ngày" onclick="countDay()" min="1" max="12">
+        <br/>
+        <p id="countDays"></p>
+    </form>
+    <script>
+        let numberDay = document.getElementById("inputDay");
+        function countDay() {
+            let result;
+            switch (numberDay.value) {
+                case '2':
+                    result = 'Tháng này có 28 hoặc 29 ngày';
+                    break;
+                case '4':
+                case '6':
+                case '9':
+                case '11':
+                    result = 'Tháng này có 30 ngày';
+                    break;
+                case '1':
+                case '3':
+                case '5':
+                case '7':
+                case '8':
+                case '10':
+                case '12':
+                    result = 'Tháng này có 31 ngày';
+                default:
+                    alert("Nhập tháng từ 1-12")
+            }
+            document.getElementById('countDays').innerText = result;
+        }
+    </script>
+</body>
+</html>

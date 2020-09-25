@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập ứng dụng vui Doyouloveme</title>
+    <style>
+        input {
+            margin-left: 20px;
+        }
+        div {
+            width: 250px;
+            margin-left: 300px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Do you love me???</h2>
+        <input id="yesButton" type="button" value="Yes" onclick="doYes();"/>
+        <input id="noButton" type="button" value="No" onmouseover="doNo()" style="position: absolute; left: 360px; top: 235px"/>
+    </div>
+    <script>
+        function doYes() {
+            alert("<3 me too <3");
+        }
+        function doNo() {
+            let x = Math.floor(Math.random() * window.innerWidth);
+            let y = Math.floor(Math.random() * window.innerHeight);
+            document.getElementById("noButton").style.left = x + 'px';
+            document.getElementById("noButton").style.top = y + 'px';
+        }
+    </script>
+</body>
+</html>
