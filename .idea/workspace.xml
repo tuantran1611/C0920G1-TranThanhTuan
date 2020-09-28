@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="luyen tap toan tu 3 ngoi">
-      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_do_while.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_long_nhau.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_while.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/employee.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/th_kiem_tra_nam_nhuan.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/th_luyen_tap_cau_truc_3_ngoi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/th_luyen_tap_cau_truc_if_else.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/th_luyen_tap_cau_truc_if_else_if.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/8_Conditional_statements/Thuc_hanh/th_luyen_tap_cau_truc_switch_case.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_1.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
       <workItem from="1600959751342" duration="155000" />
       <workItem from="1600961014327" duration="4530000" />
       <workItem from="1600996972137" duration="20380000" />
-      <workItem from="1601255831750" duration="2328000" />
+      <workItem from="1601255831750" duration="7404000" />
     </task>
     <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
       <created>1600919459652</created>
@@ -123,9 +120,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601022514725" />
-    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601023469394">
+    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601268373671">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601023469394" />
+    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601268373671" />
   </component>
 </project>
