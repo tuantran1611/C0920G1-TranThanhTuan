@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In các số 1 đến 100</title>
+</head>
+<body>
+    <script>
+        let number;
+        let count = 0;
+        let a = 1;
+        do {
+            number = parseInt(prompt("Nhập số lượng số muốn in"))
+        } while (isNaN(number));
+        while (count < number){
+            switch ((a % 3 === 0 && a % 5 === 0) ? 1 : (a % 3 === 0) ? 2 : (a % 5 === 0) ? 3 : 4 ) {
+                case 1:
+                    document.writeln("FizzBuzz" + "<br>");
+                    break;
+                case 2:
+                    document.writeln("Fizz" + "<br>");
+                    break;
+                case 3:
+                    document.writeln("Buzz" + "<br>");
+                    break;
+                case 4:
+                    document.writeln(a + "<br>");
+                    break;
+            }
+            a++;
+            count++;
+        }
+    </script>
+</body>
+</html>

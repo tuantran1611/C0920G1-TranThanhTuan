@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đầu tiên trong dãy fibonacci chia hết cho 5</title>
+</head>
+<body>
+    <script>
+        let check = false;
+        let a = 1;
+        let b = 1;
+        let c;
+        while (!check){
+            c = a + b;
+            a = b;
+            b = c;
+            if (c % 5 === 0){
+                alert("Số đầu tiên chia hết cho 5 là: " + c);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

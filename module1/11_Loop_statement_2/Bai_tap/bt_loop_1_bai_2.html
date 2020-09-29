@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập vòng lặp 1 - bài 2</title>
+</head>
+<body>
+    <script>
+        let nhietdo = parseInt(prompt("Nhập nhiệt độ hiện tại: "));
+        while (isNaN(nhietdo)) {
+            if (nhietdo > 100) {
+                alert("Vui lòng giảm nhiệt độ");
+            } else if (nhietdo < 20) {
+                alert("Vui lòng tăng nhiệt độ");
+            }
+            nhietdo = parseInt(prompt("Nhập nhiệt độ hiện tại: "));
+        }
+    </script>
+</body>
+</html>

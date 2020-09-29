@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng 30 số tự nhiên đầu tiên chia hết cho 7</title>
+</head>
+<body>
+    <script>
+        let number;
+        let count = 0;
+        let a = 0;
+        let total = 0;
+        do {
+            number = parseInt(prompt("Nhập vào số lượng số tự nhiên chia hết cho 7 bạn muốn: "));
+        } while (isNaN(number));
+        while (count < number) {
+            if (a % 7 === 0) {
+                total += a;
+                count++;
+            }
+            a++
+        }
+        alert("Tổng của" + number + "số tự nhiên đầu tiên chia hết cho 7 là: " + total);
+    </script>
+</body>
+</html>

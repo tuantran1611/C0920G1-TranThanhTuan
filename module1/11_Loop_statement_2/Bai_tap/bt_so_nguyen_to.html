@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number;
+    let n =2; //biến chạy
+    let count =0; //đếm số nguyên tố
+    let check = false;
+    do{
+        number =parseInt(prompt("nhap so luong so nguyen to can hien thi: "));
+    }  while (isNaN(number));
+    while (count <number) {
+        for (let i=2; i<=Math.sqrt(n);i++) {
+            if(n%i ===0) {
+                check =true;
+                break;
+            }
+        }
+        if(!check) {
+            document.write(n+" đây là số nguyên tố <br>");
+            count++;
+        }
+        check =false;
+        n++;
+    }
+</script>
+</body>
+</html>

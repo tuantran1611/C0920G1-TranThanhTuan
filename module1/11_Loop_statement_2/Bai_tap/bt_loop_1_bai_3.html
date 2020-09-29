@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị 20 số đầu của dãy fibonacci</title>
+</head>
+<body>
+    <script>
+        let numbers = 20;
+        let count = 2;
+        let a = 1;
+        let b = 1;
+        document.writeln(a);
+        document.writeln(b);
+        let c;
+        while (count < numbers) {
+            c = a + b;
+            a = b;
+            b = c;
+            document.writeln(c);
+            count++;
+        }
+</script>
+</body>
+</html>

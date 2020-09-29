@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+    <input type="button" value="Chơi" onclick="play()">
+    <script>
+        let number1;
+        let number2;
+        let num;
+        let choose;
+        function play() {
+            let count = 0;
+            number1 = parseInt(prompt("Nhập số đầu tiên trong khoảng muốn đoán :"));
+            number2 = parseInt(prompt("Nhập số cuối trong khoảng muốn đoán: "));
+            num = parseInt(prompt("Nhập số bạn muốn đoán: "));
+            choose = Math.floor(Math.random() * (number2 - number1 + 1)) + number1;
+            while (count < 3){
+                if (num === choose) {
+                    alert("Chúc mừng bạn đã đoán đúng!!!!");
+                    break;
+                } else if (num < choose) {
+                    alert("Bạn đã đoán số nhỏ hơn");
+                } else {
+                    alert("Bạn đã đoán số lớn hơn");
+                }
+                count++;
+                num = parseInt(prompt("Nhập số bạn muốn đoán: "));
+            }
+        }
+    </script>
+</body>
+</html>
