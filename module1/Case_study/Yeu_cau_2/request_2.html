@@ -6,77 +6,154 @@
     <link rel="stylesheet" href="request_2.css">
 </head>
 <body>
-    <div class="div_1">
+    <div style="position: relative" class="div_2">
+        <table style="border-collapse: collapse">
+            <tr>
+                <th colspan="3">Bảng giá</th>
+            </tr>
+            <tr>
+                <th>Villa</th>
+                <th>House</th>
+                <th>Room</th>
+            </tr>
+            <tr>
+                <td>500$/1 ngày</td>
+                <td>300$/1 ngày</td>
+                <td>100$/1 ngày</td>
+            </tr>
+        </table>
+    </div>
+    <div class="div_0" id="show">
     <form action="request_2.html" method="get">
+        <div class="div_1">
         <h3>ĐĂNG KÝ THÔNG TIN THÀNH VIÊN</h3>
-        <p>Họ và tên*:
-            <input class="input_name" type="text" id="memberName">
-        </p>
-        <p>Số CMND*:
-            <input class="input_id" type="number" id="memberId">
-        </p>
-        <p>Ngày sinh:
-            <input class="input_birthDay" type="date" id="memberBirthDay">
-        </p>
-        <p>Email:
-            <input class="input_email" type="text" id="memberEmail" placeholder="abc@gmail.com">
-        </p>
-        <p>Địa chỉ
-            <textarea class="input_address" id="memberAddress" rows="3" cols="40"></textarea>
-        </p>
-        <p>Customer Type:
-            <select class="input_customerType" id="selectCustomerType">
+        </div>
+        <div class="div_1">
+            <label class="float-left">Họ và tên*:</label>
+            <input type="text" id="memberName">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số CMND*:</label>
+            <input type="number" id="memberId">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Ngày sinh:</label>
+            <input type="date" id="memberBirthDay">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Email:</label>
+            <input type="text" id="memberEmail" placeholder="abc@gmail.com">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Địa chỉ:</label>̉
+            <select id="memberAddress">
+                <option value="Đà Nẵng">Đà Nẵng</option>
+                <option value="Huế">Huế</option>
+                <option value="Quảng Nam">Quảng Nam</option>
+                <option value="others">Others</option>
+            </select>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Customer Type:</label>
+            <select id="selectCustomerType">
                 <option value="Diamond">Diamond</option>;
-                <option value="Platinum">Platinum</option>;
+                <option value="Platinum" selected>Platinum</option>;
                 <option value="Gold">Gold</option>;
                 <option value="Silver">Silver</option>;
                 <option value="Member">Member</option>;
             </select>
-        </p>
-        <p>Giảm giá*:
-            <input class="input_discount" type="text" id="memberDiscount">
-        </p>
-        <p>Số lượng đi kèm:
-            <input class="input_amount" type="number" id="memberAmount">
-        </p>
-        <p>Số ngày thuê*:
-            <input class="input_rentDays" type="number" id="memberRentDays">
-        </p>
-        <p>Loại dịch vụ:
-            <select class="input_serviceType" id="selectServiceType">
-                <option value="Villa">Villa</option>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Giảm giá*:</label>
+            <input type="text" id="memberDiscount">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số lượng đi kèm:</label>
+            <input type="number" id="memberAmount">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số ngày thuê*:</label>
+            <input type="number" id="memberRentDays" name="memberRentDays">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Loại dịch vụ:</label>
+            <select id="selectServiceType">
+                <option value="Villa" selected>Villa</option>
                 <option value="House">House</option>
                 <option value="Room">Room</option>
             </select>
-        </p>
-        <p>Loại phòng thuê:
-            <select class="input_roomType" id="selectRoomType">
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Loại phòng thuê:</label>
+            <select id="selectRoomType">
                 <option value="Vip">Vip</option>
                 <option value="Business">Business</option>
-                <option value="Normal">Normal</option>
+                <option value="Normal" selected>Normal</option>
             </select>
-        </p>
-        <button class="input_submit" onclick="submitRegist()">Đăng ký</button>
-        <input type="reset" value="Nhập lại">
+        </div><br/>
+        <div style="text-align: center; margin-top: 10px">
+            <input type="button" value="Đăng ký" class="input_submit" onclick="submitRegist()">
+            <input type="reset" value="Nhập lại" class="input_submit">
+        </div>
         <br><br>
     </form>
     </div>
-    <div class="div_2">
-    <table style="border-collapse: collapse">
-        <tr>
-            <th colspan="3">Bảng giá</th>
-        </tr>
-        <tr>
-            <th>Villa</th>
-            <th>House</th>
-            <th>Room</th>
-        </tr>
-        <tr>
-            <td>500$/1 ngày</td>
-            <td>300$/1 ngày</td>
-            <td>100$/1 ngày</td>
-        </tr>
-    </table>
+    <div class="div_0" id="edit">
+        <div class="div_1">
+            <h3>ĐĂNG KÝ THÔNG TIN THÀNH VIÊN</h3>
+        </div>
+        <div class="div_1">
+            <label class="float-left">Họ và tên*:</label>
+            <span id="memberName1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số CMND*:</label>
+            <span id="memberId1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Ngày sinh:</label>
+            <span id="memberBirthDay1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Email:</label>
+            <span id="memberEmail1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Địa chỉ:</label>̉
+            <span id="memberAddress1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Customer Type:</label>
+            <span id="memberCustomerType1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Giảm giá*:</label>
+            <span id="memberDiscount1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số lượng đi kèm:</label>
+            <span id="memberAmount1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số ngày thuê*:</label>
+            <span id="memberDayRents1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Loại dịch vụ:</label>
+            <span id="memberServiceType1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Loại phòng thuê:</label>
+            <span id="memberRoomType1"></span>
+        </div><br/>
+        <div class="div_1">
+            <label class="float-left">Số tiền phải thanh toán:</label>
+            <span id="moneyPay"></span>
+        </div><br/>
+        <div style="text-align: center; margin-top: 10px">
+            <input type="button" value="Sửa thông tin" onclick="submitEdit()">
+        </div>
+        <br><br>
     </div>
     <script src="request_2.js">
     </script>

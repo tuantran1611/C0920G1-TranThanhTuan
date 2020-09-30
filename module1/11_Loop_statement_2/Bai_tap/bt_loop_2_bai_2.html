@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của 1 số nguyên dương</title>
+</head>
+<body>
+    <script>
+        let number;
+        let a;
+        let area = 1;
+        do {
+            number = parseInt(prompt("Nhập số nguyên dương cần tính giai thừa: "));
+        } while (isNaN(number));
+        for (a = 1; a <= number; a++){
+            area = area * a;
+        }
+        alert(number + "!" + "=" + area);
+    </script>
+</body>
+</html>

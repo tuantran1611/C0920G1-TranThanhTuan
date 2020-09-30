@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In dãy Fibonacci</title>
+</head>
+<body>
+<script>
+    let numbers;
+    let count = 2;
+    let a = 1;
+    let b = 1;
+    let c;
+    let total = 2;
+    do {
+        numbers = parseInt(prompt("Nhập số lượng số fibonacci: "))
+    } while (isNaN(numbers));
+    while (count < numbers){
+        c = a + b;
+        a = b;
+        b = c;
+        total = total + c;
+        count++;
+    }
+    document.writeln("Tổng 20 số fibonacci đầu tiên là: " + total);
+</script>
+</body>
+</html>
