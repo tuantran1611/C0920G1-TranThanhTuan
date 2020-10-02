@@ -1,0 +1,42 @@
+body {
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h3 {
+    text-align: center;
+}
+th, td {
+    border: 1px solid black;
+}
+p {
+    margin-left: 10px;
+}
+table {
+}
+input {
+    width: 250px;
+}
+.input_submit {
+    width: 70px;
+}
+.div_1 {
+     margin-bottom: 3px;
+}
+.div_0 {
+    width: 500px;
+    margin-left: 400px;
+    margin-top:-50px;
+}
+.div_2 {
+}
+.float-left{
+    float: left;
+    width: 170px;
+}
+.input_1{
+    margin-bottom: 10px;
+}
+#edit {
+    display: none;
+}

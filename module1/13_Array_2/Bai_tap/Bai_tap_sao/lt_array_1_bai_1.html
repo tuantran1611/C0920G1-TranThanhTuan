@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 1</title>
+</head>
+<body>
+    <h3>Type something slowly</h3>
+        <form>
+        <textarea id="typeText" onkeydown="typeArea()"></textarea>
+    </form>
+    <script>
+        let a = document.getElementById("typeText").value;
+        let b = ["B", "Ạ", "N", "L", "À", "M", "Ộ", "T", "Đ", "Ứ", "A", "N", "G", "Ố", "C"];
+        let c = "";
+        function typeArea() {
+            if (a.length > 0) {
+                for (let i = 0; i < a.length; i++) {
+                    c = c + b[i];
+                    if (i === 14) {
+                        a = "";
+                        c = "";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

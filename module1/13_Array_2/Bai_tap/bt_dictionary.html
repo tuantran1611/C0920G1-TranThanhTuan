@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+    <form action="bt_dictionary.html" method="get">
+        <input type="text" id="translate">
+        <input type="button" value="Tìm kiếm" onclick="translate1()">
+    </form>
+    <script>
+        function translate1() {
+            let arr1 = ["hello","morning","book","pencil","bottle","ballpen"];
+            let arr2 = ["xin chào","buổi sáng","sách","bút chì","cái chai","bút bi"];
+            let a = document.getElementById("translate").value;
+            let b = false;
+            if (!b) {
+                for (let i = 0; i < arr1.length; i++) {
+                    if (a === arr1[i]) {
+                        alert(arr2[i]);
+                        break;
+                    } else if (a === arr2[i]) {
+                        alert(arr1[i]);
+                        break;
+                    }
+                }
+            } else {
+                alert("Không tìm thấy từ");
+            }
+        }
+    </script>
+</body>
+</html>
