@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên tố</title>
+</head>
+<body>
+    <h3>Kiểm tra số nguyên tố~~</h3>
+    <p>Nhập vào một số nhỏ hơn 1000</p>
+    <input type="number" id="checkPrime"/><br/>
+    <input type="button" onclick="checkPrime()" value="Check"/>
+    <p id="outputPrime"></p>
+    <script>
+        function checkPrime(){
+            let a = document.getElementById("checkPrime").value;
+            let check = false;
+            if (a > 1 && a < 1000) {
+                for (let i = 2; i <= Math.sqrt(a); i++) {
+                    if ( a % i === 0){
+                        document.getElementById("outputPrime").innerHTML = "Đây không phải là số nguyên tố";
+                        check = true;
+                    }
+                }
+                if (!check) {
+                    document.getElementById("outputPrime").innerHTML = "Đây là số nguyên tố";
+                }
+            } else {
+                alert("Vui lòng nhập số nhỏ hơn 1000 và lớn hơn 1");
+            }
+        }
+    </script>
+</body>
+</html>
