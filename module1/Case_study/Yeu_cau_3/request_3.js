@@ -24,17 +24,30 @@ let serviceType1 = document.getElementById("memberServiceType1");
 let roomType1 = document.getElementById("memberRoomType1");
 let moneyPay = document.getElementById("moneyPay");
 let check = false;
-let name = "";
-memName = memName.value.trim();
-
 function inputName() {
-    for (let i = 0; i < memName.value.length; i++) {
-        if (memName[i] === " " && memName[i + 1] === " ") {
-               name += memName
+    let name = "";
+    let nameVal = memName.value;
+    for (let i = 0;i < nameVal.length; i++){
+        if (nameVal.charAt(i) === "" && nameVal.charAt(i) === ""){
+            continue;
+        }
+        name += nameVal.charAt(i);
+    }
+    name1.innerText = name;
+}
+function inputEmail() {
+    let count2 = 0;
+    let count3 = 0;
+    let emailVal = memEmail.value;
+    for (let i = 0;i < emailVal.length; i++){
+        if (emailVal.charAt(i) === "@") {
+            count2++;
         }
     }
+    if (count2 != 1){
+        alert("Vui lòng nhập đúng định dạng")
+    }
 }
-
 //Hiển thị thông tin khi ấn Đăng Ký
 function submitRegist() {
     document.getElementById("show").style.display = "none";
@@ -90,8 +103,8 @@ function submitRegist() {
             sCusType = 0;
             break;
     }
+    inputName();
     memDiscount.value = sAdd + sRentDay + sCusType;
-    name1.innerText = memName.value;
     Id1.innerText = memId.value;
     birthDay1.innerText = memBirthDay.value;
     address1.innerText = memAddress.value;

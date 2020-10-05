@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+    <script>
+        let a;
+        let b;
+        let c;
+        do {
+            a = parseInt(prompt("Nhập vào số a:"));
+            b = parseInt(prompt("Nhập vào số b:"));
+            c = parseInt(prompt("Nhập vào số c:"));
+        } while (a < 0 || b < 0 || c < 0);
+        checkMin(a,b,c);
+        function checkMin(x,y,z) {
+            if (x < y){
+                if (x < z){
+                    alert("Giá trị nhỏ nhất là: " + x);
+                } else {
+                    alert("Giá trị nhỏ nhất là: " + z);
+                }
+            } else if (y < z){
+                alert("Giá trị nhỏ nhất là: " + y);
+            } else {
+                alert("Giá trị nhỏ nhất là: " + z);
+            }
+        }
+    </script>
+</body>
+</html>

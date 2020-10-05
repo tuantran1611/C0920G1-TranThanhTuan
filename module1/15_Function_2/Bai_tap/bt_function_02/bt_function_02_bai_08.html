@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+    <input type="button" value="Click" onclick="changePosition()"/>
+    <script>
+        function changePosition() {
+            let arr = [1,4,35,5,6,82,91,10,2];
+            for ( let i = 0; i < arr.length/2; i++){
+                let temp;
+                temp = arr[i];
+                arr[i] = arr[arr.length - i - 1];
+                arr[arr.length - i - 1] = temp;
+            }
+            document.writeln(arr);
+        }
+    </script>
+</body>
+</html>

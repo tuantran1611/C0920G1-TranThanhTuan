@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập hàm 1</title>
+</head>
+<body>
+    <script>
+        let x = prompt("Nhập tên ngôi sao");
+        let starName = ["Polaris","Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let stars = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major","Leo"];
+        callStar(x);
+        function callStar(a) {
+            for (let i = 0; i < starName.length; i++) {
+                if (a === starName[i]) {
+                    alert("Tên chòm sao chứa ngôi sao là: " + stars[i]);
+                    break;
+                } else {
+                    alert("Vui lòng nhập đúng tên ngôi sao");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

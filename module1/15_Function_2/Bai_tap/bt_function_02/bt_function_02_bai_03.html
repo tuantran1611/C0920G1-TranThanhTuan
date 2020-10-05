@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+    <script>
+        let nums = parseInt(prompt("Nhập vào một số"));
+        giaiThua(nums);
+        function giaiThua(x) {
+            if (x === 0){
+                let result = 1;
+                alert(nums + "!" + "=" + result);
+            } else {
+                let result = 1;
+                for (let i = 1; i <= x; i++) {
+                    result = result * i;
+                }
+                alert(nums + "!" + "=" + result);
+            }
+        }
+    </script>
+</body>
+</html>

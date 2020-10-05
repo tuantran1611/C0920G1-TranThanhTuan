@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+    <script>
+        let arr1 = ["s",1,8,5,"d",4,"a",6,"f","v","q","a"];
+        myFunction(arr1);
+        function myFunction(arr) {
+            let a = prompt("Nhập vào 1 ký tự");
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (a === arr[i]) {
+                    count++;
+                }
+            }
+            if (count > 0){
+                alert("Số lần xuất hiện là: " + count);
+            } else {
+                alert(-1);
+            }
+        }
+    </script>
+</body>
+</html>

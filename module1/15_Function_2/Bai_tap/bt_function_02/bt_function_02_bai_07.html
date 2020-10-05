@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+
+    <script>
+        let a = parseInt(prompt("Nhập vào số a"));
+        let b = parseInt(prompt("Nhập vào số b"));
+        changePosition(a,b);
+        function changePosition(x,y) {
+            let temp;
+            temp = x;
+            x = y;
+            y= temp;
+            alert(x +"va" +y);
+        }
+    </script>
+</body>
+</html>

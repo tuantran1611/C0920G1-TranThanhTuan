@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi Foot sang Meter</title>
+</head>
+<body>
+    <h3>Chuyển đổi Foot sang Meter</h3>
+    <div>
+        <p><input type="text" id="inputNumFoot" oninput="changeFootToMeter();"/>Feet</p>
+    </div>
+    <p style="margin-left: 70px">=</p>
+    <div>
+        <p><input type="text" id="inputNumMeter" oninput="changeMeterToFoot();"/>Meter</p>
+    </div>
+    <script>
+        function changeFootToMeter() {
+            let a;
+            a = parseInt(document.getElementById("inputNumFoot").value);
+            let b;
+            b = a * 3.279;
+            document.getElementById("inputNumMeter").value = b;
+        }
+        function changeMeterToFoot  () {
+            let a;
+            a = parseInt(document.getElementById("inputNumFoot").value);
+            let b;
+            b = a * 0.305;
+            document.getElementById("inputNumFoot").value = b;
+        }
+    </script>
+</body>
+</html>

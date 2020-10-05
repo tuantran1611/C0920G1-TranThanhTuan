@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm 2</title>
+</head>
+<body>
+    <script>
+        let nums = parseInt(prompt("Nhập bán kính đường tròn"));
+        const pi = 3.14;
+        chuVi(nums);
+        dienTich(nums);
+        function chuVi(r) {
+            chuvi = 2 * pi * r;
+            document.writeln("Chu vi hình tròn là: " + chuvi + "<br>");
+        }
+        function dienTich(r) {
+            dientich = pi * r * r;
+            document.writeln("Diện tích hình tròn là: " + dientich);
+        }
+    </script>
+</body>
+</html>

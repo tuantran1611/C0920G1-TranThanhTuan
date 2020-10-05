@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập sử dụng hàm</title>
+</head>
+<body>
+    <script>
+        num1 = parseInt(prompt("Nhập số thứ 1"));
+        num2 = parseInt(prompt("Nhập số thứ 2"));
+        myFunction(num1, num2);
+        function myFunction(x,y) {
+            if (x > y){
+                alert("Bạn đã nhập tham số thứ 1 lớn hơn tham số thứ 2");
+            } else {
+                return sum = x + y;
+            }
+        }
+        document.writeln("Tổng 2 số là: " + sum);
+    </script>
+</body>
+</html>
