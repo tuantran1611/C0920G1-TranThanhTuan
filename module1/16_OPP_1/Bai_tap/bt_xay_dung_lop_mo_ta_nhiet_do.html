@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả nhiệt độ</title>
+</head>
+<body>
+<!-- Cách cũ tạo lớp -->
+    <script>
+        let Temperature = function (oC) {
+            this.oC = oC;
+            this.getoC = function () {
+                return this.oC;
+            };
+            this.getCesiusToFah = function () {
+                return this.oC * 1.8 + 32;
+            };
+            this.getCelsiusToKelvin = function () {
+                return this.oC + 237.15;
+            };
+        };
+        let temperature = new Temperature(25);
+        let cesius = temperature.getoC();
+        let fah = temperature.getCesiusToFah();
+        let kel = temperature.getCelsiusToKelvin();
+        alert(cesius + " độ C " + "= " + fah + " độ F");
+        alert(cesius + " độ C " + "= " + kel + " độ F");
+    </script>
+
+
+<!-- Cách mới tạo lớp -->
+    <script>
+        class Temperature{
+            constructor(oC) {
+                this.oC = oC;
+            }
+            getoC(){
+                return this.oC;
+            }
+            getCesiusToFah(){
+                return this.oC * 1.8 + 32;
+            }
+            getCelsiusToKel(){
+                return this.oC + 237.15;
+            }
+        }
+        let temperature = new Temperature(25);
+        let cesius = temperature.getoC();
+        let fah = temperature.getCesiusToFah();
+        let kel = temperature.getCelsiusToKel();
+        alert(cesius + " độ C " + " = " + fah + " độ F");
+        alert(cesius + " độ C " + " = " + kel + " độ K");
+    </script>
+</body>
+</html>
