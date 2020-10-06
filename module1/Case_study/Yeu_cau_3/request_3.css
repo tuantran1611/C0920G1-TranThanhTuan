@@ -40,3 +40,10 @@ input {
 #edit {
     display: none;
 }
+.warning {
+    position: absolute;
+    color: red;
+    margin-left: 170px;
+    margin-top: 0px;
+    size: 8;
+}

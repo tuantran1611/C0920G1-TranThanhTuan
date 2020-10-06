@@ -34,7 +34,7 @@
         </div><br/>
         <div class="div_1">
             <label class="float-left">Số CMND*:</label>
-            <input type="number" id="memberId" oninput="inputEmail()">
+            <input type="number" id="memberId">
         </div><br/>
         <div class="div_1">
             <label class="float-left">Ngày sinh:</label>
@@ -42,7 +42,8 @@
         </div><br/>
         <div class="div_1">
             <label class="float-left">Email:</label>
-            <input type="text" id="memberEmail" placeholder="abc@gmail.com">
+            <input type="text" id="memberEmail" placeholder="abc@gmail.com" oninput="inputEmail()">
+            <p id="warningEmail" class="warning"></p>
         </div><br/>
         <div class="div_1">
             <label class="float-left">Địa chỉ:</label>
@@ -69,11 +70,13 @@
         </div><br/>
         <div class="div_1">
             <label class="float-left">Số lượng đi kèm:</label>
-            <input type="number" id="memberAmount">
+            <input type="number" id="memberAmount" oninput="inputAmount();"/>
+            <p id="warningAmount" class="warning"></p>
         </div><br/>
         <div class="div_1">
             <label class="float-left">Số ngày thuê*:</label>
-            <input type="number" id="memberRentDays" name="memberRentDays">
+            <input type="number" id="memberRentDays" name="memberRentDays" oninput="inputRentDay()">
+            <p id="warningRentDay" class="warning"></p>
         </div><br/>
         <div class="div_1">
             <label class="float-left">Loại dịch vụ:</label>

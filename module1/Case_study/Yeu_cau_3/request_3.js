@@ -23,7 +23,7 @@ let rentDay1 = document.getElementById("memberDayRents1");
 let serviceType1 = document.getElementById("memberServiceType1");
 let roomType1 = document.getElementById("memberRoomType1");
 let moneyPay = document.getElementById("moneyPay");
-let check = false;
+//Định dạng tên khi ấn đăng ký sẽ bỏ phần khoảng trắng thừa
 function inputName() {
     let name = "";
     let nameVal = memName.value;
@@ -35,6 +35,7 @@ function inputName() {
     }
     name1.innerText = name;
 }
+//Email nhập vào đúng định dạng rồi mới Đăng ký
 function inputEmail() {
     let count2 = 0;
     let count3 = 0;
@@ -42,10 +43,35 @@ function inputEmail() {
     for (let i = 0;i < emailVal.length; i++){
         if (emailVal.charAt(i) === "@") {
             count2++;
+            for (let j = i+2; j < emailVal.length; j++){
+                if (emailVal.charAt(j) === "."){
+                    count3++;
+                }
+            }
         }
     }
-    if (count2 != 1){
-        alert("Vui lòng nhập đúng định dạng")
+    if (count2 !== 1 || count3 < 1){
+        document.getElementById("warningEmail").innerHTML = "Vui lòng nhập đúng định dạng";
+    } else {
+        document.getElementById("warningEmail").innerHTML = "";
+    }
+}
+//Số lượng đi kèm và số ngày thuê là số nguyên dương
+function inputAmount() {
+    let amountVal = parseInt(memAmount.value);
+    if (amountVal < 1){
+        document.getElementById("warningAmount").innerHTML = "Vui lòng nhập đúng số người đi kèm";
+    } else {
+        document.getElementById("warningAmount").innerHTML = "";
+    }
+}
+//Số lượng đi kèm và số ngày thuê là số nguyên dương
+function inputRentDay() {
+    let rentDayVal = parseInt(memRentDay.value);
+    if (rentDayVal < 1){
+        document.getElementById("warningRentDay").innerHTML = "Vui lòng nhập đúng số ngày";
+    } else {
+        document.getElementById("warningRentDay").innerHTML = "";
     }
 }
 //Hiển thị thông tin khi ấn Đăng Ký
