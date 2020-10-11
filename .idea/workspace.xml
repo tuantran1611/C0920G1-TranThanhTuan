@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="luyen tap toan tu 3 ngoi">
-      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_do_while.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_long_nhau.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_while.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/11_Loop_statement_2/Bai_tap/bt_loop_2/bt_loop_2_bai_4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/11_Loop_statement_2/Bai_tap/bt_loop_2/bt_loop_2_bai_5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/11_Loop_statement_2/Bai_tap/bt_loop_2/bt_loop_2_bai_6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/13_Array_2/Bai_tap/bt_array_1_sao/bt_array_1_bai_01.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/13_Array_2/Bai_tap/bt_array_1_sao/bt_array_1_bai_02.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/15_Function_2/Bai_tap/bt_quan_ly_san_pham.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/16_OPP_1/Bai_tap/bt_xay_dung_mo_ta_dien_thoai.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Bai_tap/bt_adam_eva.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Bai_tap/bt_game_don_gian.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Bai_tap/bt_turn_on_off_bulb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Bai_tap/pic_bulboff.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Bai_tap/pic_bulbon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Bai_tap/pikachu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/17_OPP_2/Thuc_hanh/th_mo_phong_den_pin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/18_Algorithm_1/Algorithm_1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module1/19_Algorithm_2/31232131231231.JPG" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module1/10_Loop_statement_1/Thuc_hanh/th_loop_1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1/11_Loop_statement_2/Bai_tap/bt_loop_2/bt_loop_2_bai_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/11_Loop_statement_2/Bai_tap/bt_loop_2/bt_loop_2_bai_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1/13_Array_2/Bai_tap/BT_jame/bt_dictionary.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/13_Array_2/Bai_tap/BT_jame/bt_dictionary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -36,12 +50,46 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\Case_study\Yeu_cau_2" />
       <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\9_Conditional_statement_2\Thuc_hanh" />
     </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.bt_function_02_bai_08.html">
+    <configuration name="bt_function_02_bai_07.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0920G1_Tran_Thanh_Tuan/module1/15_Function_2/Bai_tap/bt_function_02/bt_function_02_bai_07.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="bt_function_02_bai_08.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0920G1_Tran_Thanh_Tuan/module1/15_Function_2/Bai_tap/bt_function_02/bt_function_02_bai_08.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="bt_loop_1_BAI_6.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0920G1_Tran_Thanh_Tuan/module1/11_Loop_statement_2/Bai_tap/bt_loop_1_BAI_6.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="bt_loop_1_bai_8.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0920G1_Tran_Thanh_Tuan/module1/11_Loop_statement_2/Bai_tap/bt_loop_1_bai_8.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="lt_array_1_bai_1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/C0920G1_Tran_Thanh_Tuan/module1/13_Array_2/Bai_tap/Bai_tap_sao/lt_array_1_bai_1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="request_2.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/C0920G1_Tran_Thanh_Tuan/module1/Case_study/Yeu_cau_2/request_2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="request_2.js" type="NodeJSConfigurationType" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/module1/Case_study/Yeu_cau_2/request_2.js" working-dir="$PROJECT_DIR$/module1/Case_study/Yeu_cau_2">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.bt_function_02_bai_08.html" />
+        <item itemvalue="JavaScript Debug.bt_function_02_bai_07.html" />
+        <item itemvalue="JavaScript Debug.lt_array_1_bai_1.html" />
+        <item itemvalue="JavaScript Debug.bt_loop_1_bai_8.html" />
+        <item itemvalue="JavaScript Debug.bt_loop_1_BAI_6.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -61,7 +109,30 @@
       <workItem from="1600959751342" duration="155000" />
       <workItem from="1600961014327" duration="4530000" />
       <workItem from="1600996972137" duration="20380000" />
-      <workItem from="1601255831750" duration="7404000" />
+      <workItem from="1601255831750" duration="16532000" />
+      <workItem from="1601282920645" duration="737000" />
+      <workItem from="1601298251720" duration="10586000" />
+      <workItem from="1601342058258" duration="6493000" />
+      <workItem from="1601348584080" duration="791000" />
+      <workItem from="1601349394619" duration="20502000" />
+      <workItem from="1601374165638" duration="88000" />
+      <workItem from="1601393566041" duration="2205000" />
+      <workItem from="1601428514809" duration="13693000" />
+      <workItem from="1601515019111" duration="11766000" />
+      <workItem from="1601535288149" duration="9096000" />
+      <workItem from="1601609916613" duration="10446000" />
+      <workItem from="1601627082484" duration="4248000" />
+      <workItem from="1601861323950" duration="25703000" />
+      <workItem from="1601956179887" duration="2210000" />
+      <workItem from="1601966031239" duration="8069000" />
+      <workItem from="1601994931844" duration="3104000" />
+      <workItem from="1602000835525" duration="576000" />
+      <workItem from="1602039247655" duration="3547000" />
+      <workItem from="1602043289116" duration="1198000" />
+      <workItem from="1602052763125" duration="5637000" />
+      <workItem from="1602211774545" duration="3491000" />
+      <workItem from="1602316478391" duration="3511000" />
+      <workItem from="1602389898472" duration="8672000" />
     </task>
     <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
       <created>1600919459652</created>
@@ -91,7 +162,63 @@
       <option name="project" value="LOCAL" />
       <updated>1600962397682</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="bai tap bo sung">
+      <created>1601374188035</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601374188035</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Array">
+      <created>1601436829198</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601436829198</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bai tap array">
+      <created>1601459422846</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601459422846</updated>
+    </task>
+    <task id="LOCAL-00008" summary="bai 14">
+      <created>1601611433021</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601611433021</updated>
+    </task>
+    <task id="LOCAL-00009" summary="bai tap 15">
+      <created>1601623855702</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601623855702</updated>
+    </task>
+    <task id="LOCAL-00010" summary="bai 15">
+      <created>1601888166111</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1601888166111</updated>
+    </task>
+    <task id="LOCAL-00011" summary="OPP">
+      <created>1601994959583</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1601994959583</updated>
+    </task>
+    <task id="LOCAL-00012" summary="OOP_1">
+      <created>1602000863243</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602000863243</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,28 +228,160 @@
     <MESSAGE value="luyen tap toan tu 3 ngoi" />
     <MESSAGE value="Case_study_yeu_cau_1" />
     <MESSAGE value="thuc hanh su kien chuot" />
-    <option name="LAST_COMMIT_MESSAGE" value="thuc hanh su kien chuot" />
+    <MESSAGE value="bai tap bo sung" />
+    <MESSAGE value="Array" />
+    <MESSAGE value="bai tap array" />
+    <MESSAGE value="bai 14" />
+    <MESSAGE value="bai tap 15" />
+    <MESSAGE value="bai 15" />
+    <MESSAGE value="OPP" />
+    <MESSAGE value="OOP_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="OOP_1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="752" y="8" key="CommitChangelistDialog2" timestamp="1600962396920">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601348625879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="752" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600962396920" />
-    <state x="555" y="56" key="SettingsEditor" timestamp="1601255875068">
+    <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601348625879" />
+    <state x="752" y="8" key="CommitChangelistDialog2" timestamp="1602400024073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="555" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601255875068" />
-    <state x="573" y="146" key="Vcs.Push.Dialog.v2" timestamp="1600962404276">
+    <state x="752" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602400024073" />
+    <state x="294" y="69" key="DiffContextDialog" timestamp="1602399988717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="573" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1600962404276" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1601022514725">
+    <state x="294" y="69" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1602399988717" />
+    <state width="1515" height="196" key="GridCell.Tab.0.bottom" timestamp="1601893097121">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601022514725" />
-    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601268373671">
+    <state width="1515" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601893097121" />
+    <state width="1515" height="196" key="GridCell.Tab.0.center" timestamp="1601893097120">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601268373671" />
+    <state width="1515" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601893097120" />
+    <state width="1515" height="196" key="GridCell.Tab.0.left" timestamp="1601893097119">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601893097119" />
+    <state width="1515" height="196" key="GridCell.Tab.0.right" timestamp="1601893097120">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601893097120" />
+    <state width="1515" height="196" key="GridCell.Tab.1.bottom" timestamp="1601893097122">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601893097122" />
+    <state width="1515" height="196" key="GridCell.Tab.1.center" timestamp="1601893097121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601893097121" />
+    <state width="1515" height="196" key="GridCell.Tab.1.left" timestamp="1601893097121">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601893097121" />
+    <state width="1515" height="196" key="GridCell.Tab.1.right" timestamp="1601893097122">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601893097122" />
+    <state width="1515" height="196" key="GridCell.Tab.2.bottom" timestamp="1601893097123">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601893097123" />
+    <state width="1515" height="196" key="GridCell.Tab.2.center" timestamp="1601893097122">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1601893097122" />
+    <state width="1515" height="196" key="GridCell.Tab.2.left" timestamp="1601893097122">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1601893097122" />
+    <state width="1515" height="196" key="GridCell.Tab.2.right" timestamp="1601893097123">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1601893097123" />
+    <state width="1515" height="196" key="GridCell.Tab.3.bottom" timestamp="1601893097124">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.3.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601893097124" />
+    <state width="1515" height="196" key="GridCell.Tab.3.center" timestamp="1601893097123">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.3.center/0.0.1536.824@0.0.1536.824" timestamp="1601893097123" />
+    <state width="1515" height="196" key="GridCell.Tab.3.left" timestamp="1601893097123">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.3.left/0.0.1536.824@0.0.1536.824" timestamp="1601893097123" />
+    <state width="1515" height="196" key="GridCell.Tab.3.right" timestamp="1601893097124">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1515" height="196" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1601893097124" />
+    <state x="945" y="126" key="RollbackChangesDialog" timestamp="1602400005059">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="945" y="126" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602400005059" />
+    <state x="555" y="56" key="SettingsEditor" timestamp="1601348383263">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="555" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601348383263" />
+    <state x="573" y="146" key="Vcs.Push.Dialog.v2" timestamp="1602399878713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="573" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602399878713" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1601621196062">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1601621196062" />
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2" timestamp="1601621196062">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1601621196062" />
+    <state x="485" y="224" key="jetbrains.nodejs.interpreters-dialog" timestamp="1601348611933">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="224" key="jetbrains.nodejs.interpreters-dialog/0.0.1536.824@0.0.1536.824" timestamp="1601348611933" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601624185353">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601624185353" />
+    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1602040525835">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="789" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602040525835" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/module1/Case_study/Yeu_cau_1/request_1.js</url>
+          <line>22</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/module1/Case_study/Yeu_cau_2/request_2.js</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/module1/Case_study/Yeu_cau_2/request_2.js</url>
+          <line>64</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/module1/13_Array_2/Bai_tap/Bai_tap_sao/lt_array_1_bai_1.html</url>
+          <line>9</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/module1/15_Function_2/Bai_tap/bt_function_02/bt_function_02_bai_07.html</url>
+          <line>11</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/module1/15_Function_2/Bai_tap/bt_function_02/bt_function_02_bai_08.html</url>
+          <line>7</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
