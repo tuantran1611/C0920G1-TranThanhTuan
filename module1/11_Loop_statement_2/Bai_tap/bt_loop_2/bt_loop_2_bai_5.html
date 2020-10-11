@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+<script>
+    let inputMoney;
+    let inputMonth;
+    let inputRate;
+    do {
+        inputMoney = parseInt(prompt("Nhập số tiền vay: "));
+    } while (isNaN(inputMoney));
+    do {
+        inputMonth = parseInt(prompt("Nhập số tháng vay: "));
+    } while (isNaN(inputMonth));
+    do {
+        inputRate = parseInt(prompt("Nhập lãi vay: %/tháng: "));
+    } while (isNaN(inputRate));
+    let rateMoney = inputRate * inputMonth * inputMoney / 100;
+    alert("Lãi suất bạn phải trả sau " + inputMonth + " tháng vay là: " + rateMoney);
+</script>
+</body>
+</html>

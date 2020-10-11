@@ -14,18 +14,19 @@
             let arr1 = ["hello","morning","book","pencil","bottle","ballpen"];
             let arr2 = ["xin chào","buổi sáng","sách","bút chì","cái chai","bút bi"];
             let a = document.getElementById("translate").value;
-            let b = false;
-            if (!b) {
-                for (let i = 0; i < arr1.length; i++) {
-                    if (a === arr1[i]) {
-                        alert(arr2[i]);
-                        break;
-                    } else if (a === arr2[i]) {
-                        alert(arr1[i]);
-                        break;
-                    }
+            let check = true;
+            for (let i = 0; i < arr1.length; i++) {
+                if (a === arr1[i]) {
+                    alert(arr2[i]);
+                    check = false;
+                    break;
+                } else if (a === arr2[i]) {
+                    alert(arr1[i]);
+                    check= false;
+                    break;
                 }
-            } else {
+            }
+            if (check){
                 alert("Không tìm thấy từ");
             }
         }

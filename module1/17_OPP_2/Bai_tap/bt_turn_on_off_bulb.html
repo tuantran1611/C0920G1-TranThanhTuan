@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công tắc và bóng đèn</title>
+</head>
+<body>
+<div style="margin-left: 100px">
+    <h3>Bật tắt bóng đèn</h3>
+    <img src="pic_bulboff.gif" id="lamp"><br/>
+    <input style="margin-left: 19px" type="button" id="switch" onclick="turnOn_turnOff_lamp()" value="Turn on">
+    <h4 id="bulb">Bóng đèn đang tắt</h4>
+</div>
+<script>
+    class SwitchButton{
+        constructor(status) {
+            this.status = status;
+        };
+        turnOn_turnOff(){
+            this.status != this.status;
+        };
+    }
+    class Light{
+        constructor(button) {
+            this.button = button;
+        }
+        switch(){
+            if (this.button.status === true){
+                document.getElementById("lamp").src = "img/pic_bulfbon.gif";
+                document.getElementById("bulb").innerHTML = "Bóng đèn đang bật";
+            } else {
+                document.getElementById("lamp").src = "img/pic_bulboff.gif";
+                document.getElementById("bulb").innerHTML = "Bóng đèn đang tắt";
+            }
+        }
+    }
+    function turnOn_turnOff_lamp() {
+        
+    }
+</script>
+</body>
+</html>

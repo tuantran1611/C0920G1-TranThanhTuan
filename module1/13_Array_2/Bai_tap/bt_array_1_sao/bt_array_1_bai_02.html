@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập mảng 1</title>
+</head>
+<body>
+<script>
+    let num;
+    let arr = [];
+    let i = 1;
+    while (i>0){
+        num = parseInt(prompt("Nhập vào đây số thứ " + i));
+        arr.push(num);
+        if (arr[i] === arr[i-1]){
+            arr.pop();
+        }
+    }
+    document.write(arr);
+</script>
+</body>
+</html>
