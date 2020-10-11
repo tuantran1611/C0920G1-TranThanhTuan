@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a,b,c;
+    do {
+        a = parseInt(prompt("Nhập vào số a "));
+        b = parseInt(prompt("Nhập vào số b "));
+        c = parseInt(prompt("Nhập vào số c "));
+    } while (a < 0 || b < 0 || c < 0);
+    if (a + b > c){
+        alert("Đây là 3 cạnh của một tam giác");
+    } else if (a + c > b){
+        alert("Đây là 3 cạnh của một tam giác");
+    } else if (b + c > a){
+        alert("Đây là 3 cạnh của một tam giác");
+    }
+</script>
+</body>
+</html>

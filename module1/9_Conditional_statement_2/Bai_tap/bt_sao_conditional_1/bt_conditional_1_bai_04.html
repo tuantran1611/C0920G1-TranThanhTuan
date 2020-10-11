@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let a = parseInt(prompt("Nhập vào số nguyên a: "));
+        let b = parseInt(prompt("Nhập vào số nguyên b: "));
+        let c = parseInt(prompt("Nhập vào số nguyên c: "));
+        if (a > b) {
+            if (a > c) {
+                alert("Giá trị lớn nhất là: " + a);
+            } else {
+                alert("Giá trị lớn nhất là: " + c);
+            }
+        } else if (b > c) {
+            alert("Giá trị lớn nhất là: " + b);
+        } else {
+            alert("Giá trị lớn nhất là: " + c);
+        }
+    }
+</script>
+</body>
+</html>

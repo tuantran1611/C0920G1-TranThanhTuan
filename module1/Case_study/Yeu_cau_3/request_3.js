@@ -56,6 +56,16 @@ function inputEmail() {
         document.getElementById("warningEmail").innerHTML = "";
     }
 }
+function inputId() {
+    let idVal = Number.parseFloat(memId.value);
+    if (!Number.isInteger(idVal)){
+        document.getElementById("warningId").innerHTML = "Vui lòng nhập đúng định dạng";
+    } else if (idVal<100000000 || idVal>999999999) {
+        document.getElementById("warningId").innerHTML = "Vui lòng nhập đúng định dạng";
+    } else {
+        document.getElementById("warningId").innerHTML = "";
+    }
+}
 //Số lượng đi kèm và số ngày thuê là số nguyên dương
 function inputAmount() {
     let amountVal = parseInt(memAmount.value);

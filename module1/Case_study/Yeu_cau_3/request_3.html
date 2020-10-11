@@ -24,7 +24,7 @@
         </table>
     </div>
     <div class="div_0" id="show">
-    <form action="request_2.html" method="get">
+    <form action="request_3.html" method="get">
         <div class="div_1">
         <h3>ĐĂNG KÝ THÔNG TIN THÀNH VIÊN</h3>
         </div>
@@ -34,7 +34,8 @@
         </div><br/>
         <div class="div_1">
             <label class="float-left">Số CMND*:</label>
-            <input type="number" id="memberId">
+            <input type="number" id="memberId" oninput="inputId()">
+            <p id="warningId" class="warning"></p>
         </div><br/>
         <div class="div_1">
             <label class="float-left">Ngày sinh:</label>
@@ -70,12 +71,12 @@
         </div><br/>
         <div class="div_1">
             <label class="float-left">Số lượng đi kèm:</label>
-            <input type="number" id="memberAmount" oninput="inputAmount();"/>
+            <input type="number" id="memberAmount" oninput="inputAmount()"/>
             <p id="warningAmount" class="warning"></p>
         </div><br/>
         <div class="div_1">
             <label class="float-left">Số ngày thuê*:</label>
-            <input type="number" id="memberRentDays" name="memberRentDays" oninput="inputRentDay()">
+            <input type="number" id="memberRentDays" name="memberRentDays" oninput="inputRentDay()"/>
             <p id="warningRentDay" class="warning"></p>
         </div><br/>
         <div class="div_1">

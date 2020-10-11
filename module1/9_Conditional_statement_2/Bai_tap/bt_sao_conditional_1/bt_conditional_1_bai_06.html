@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 1</title>
+</head>
+<body>
+    <script>
+        let a = parseInt(prompt("Nhập hóa đơn số tiền bán hàng được: "));
+        let b;
+        if (a <= 200000){
+            b = 3/100 * 200000;
+            alert("Hoa hồng bạn nhận được là " + b);
+        } else if (a <= 500000){
+            b = 5/100*(500000-200000);
+            alert("Hoa hồng bạn nhận được là "+ b);
+        } else {
+            b = 10/100*(a - 500000);
+            alert("Hoa hồng bạn nhận được là "+ b);
+        }
+    </script>
+</body>
+</html>

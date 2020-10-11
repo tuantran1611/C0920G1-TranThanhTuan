@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số điện đã sử dụng: "));
+    let total;
+    if (num <= 50){
+        total = 1000 * num;
+    } else if (num <= 150){
+        total = 1000 * 50 + 1200 * num;
+    }
+    alert("Số tiền phải thanh toán là: " + total);
+</script>
+</body>
+</html>

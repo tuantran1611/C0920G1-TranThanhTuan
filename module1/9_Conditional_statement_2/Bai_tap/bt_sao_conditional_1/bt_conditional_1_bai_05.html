@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện</title>
+</head>
+<body>
+    <script>
+        while (true) {
+            let a;
+            let b;
+            let c;
+            do {
+                a = parseInt(prompt("Nhập điểm kiểm tra"));
+                b = parseInt(prompt("Nhập điểm giữa kỳ"));
+                c = parseInt(prompt("Nhập điểm cuối kỳ"));
+            } while (a > 10 || b > 10 || c>10 || a < 0 || b < 0 || c < 0);
+            let avg = (a + b + 2 * c) / 4;
+            if (avg >= 8) {
+                alert("Điểm trung bình: " + avg + " Xếp loại Giỏi");
+            } else if (avg >= 6.5) {
+                alert("Điểm trung bình: " + avg + " Xếp loại Khá");
+            } else if (avg >= 5) {
+                alert("Điểm trung bình: " + avg + " Xếp loại Trung bình");
+            } else {
+                alert("Điểm trung bình: " + avg + " Xếp loại Yếu");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập cấu trúc điều kiện 2</title>
+</head>
+<body>
+<script>
+    let x1, x2;
+    let a = parseInt(prompt("Nhập vào số a : "));
+    let b = parseInt(prompt("Nhập vào số b : "));
+    let c = parseInt(prompt("Nhập vào số c : "));
+    let delta = b * b - 4 * a * c;
+    if (delta > 0) {
+        x1 = (-b + Math.sqrt(delta)) / 2 * a;
+        x2 = (-b - Math.sqrt(delta)) / 2 * a;
+        alert("Phương trình có 2 nghiệm là: " + x1 + " và " + x2);
+    } else if (delta = 0) {
+        x1 = -b / (2 * a);
+        alert("Phương trình có nghiệm kép là: " + x1);
+    } else {
+        alert("Phương trình vô nghiệm");
+    }
+</script>
+</body>
+</html>
