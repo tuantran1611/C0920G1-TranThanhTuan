@@ -6,17 +6,18 @@
 </head>
 <body>
 <script>
-    let num;
     let arr = [];
-    let i = 1;
-    while (i>0){
-        num = parseInt(prompt("Nhập vào đây số thứ " + i));
+    for (let i = 1; i <= 10; i++){
+        let num = parseInt(prompt("Nhập vào số thứ : " + i));
         arr.push(num);
-        if (arr[i] === arr[i-1]){
-            arr.pop();
+    }
+    let max = arr[0];
+    for ( let j = 0; j < arr.length; j++){
+        if (max < arr[j]) {
+            max = arr[j];
         }
     }
-    document.write(arr);
+    alert("Số lớn nhất là " + max + "\n" + "Nằm ở vị trí thứ " + arr.indexOf(max));
 </script>
 </body>
 </html>

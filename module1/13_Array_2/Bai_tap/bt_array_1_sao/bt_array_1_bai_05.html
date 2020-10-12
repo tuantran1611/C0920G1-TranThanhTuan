@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số lượng số bạn muốn nhập: "));
+    let arr= [];
+    let count = 0;
+    for (let i = 1; i<= a; i++){
+        let num = parseInt(prompt("Nhập số thứ " + i));
+        arr.push(num);
+    }
+    let arrNegative=[];
+    for (let j = 0; j < arr.length; j++){
+        if (arr[j] < 0){
+            count++;
+            arrNegative.push(arr[j]);
+        }
+    }
+    alert("Các số nguyên âm là: " + arrNegative + "\n" + "Số lượng số nguyên âm trong mảng là: " + count);
+</script>
+</body>
+</html>

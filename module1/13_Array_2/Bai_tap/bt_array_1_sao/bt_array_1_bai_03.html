@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số lượng số bạn muốn: "));
+    let arr = [];
+    let avg = 0;
+    for (let i = 1; i <= a; i++){
+        let num = parseInt(prompt("Nhập số thứ " + i));
+        arr.push(num);
+    }
+    let max = arr[0];
+    for (let j = 0; j < arr.length; j++){
+        if (max < arr[j]){
+            max = arr[j];
+        }
+        avg += arr[j]/arr.length;
+    }
+    alert("Giá trị lớn nhất là: " + max + "\n" + "Giá trị trung bình là: " + avg)
+</script>
+</body>
+</html>

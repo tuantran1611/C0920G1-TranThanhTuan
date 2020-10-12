@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Nhập số lượng số bạn muốn nhập: "));
+    let arr= [];
+    for (let i = 1; i<= a; i++){
+        let num = parseInt(prompt("Nhập số thứ " + i));
+        arr.push(num);
+    }
+    alert(arr);
+    let b = parseInt(prompt("Nhập số nguyên V"));
+    for (let j = 0; j < arr.length; j++) {
+        if (b === arr[j]) {
+            arr.splice(j,1);
+        }
+    }
+    alert(arr);
+</script>
+</body>
+</html>
