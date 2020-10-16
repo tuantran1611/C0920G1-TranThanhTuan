@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thi thực hành Module 1 bài 2</title>
+</head>
+<body>
+<script>
+    while (true) {
+        let x;
+        do {
+            x = parseInt(prompt("Nhập điểm của học sinh vào: "));
+        } while (x < 0 || x > 100);
+        checkMark(x);
+        function checkMark(x) {
+            if (x < 48) {
+                alert("Điểm số của học sinh này sau khi làm tròn là: " + x)
+            } else {
+                let temp = parseInt(x / 5) * 5 + 5;
+                if (temp - x < 3) {
+                    alert("Điểm số của học sinh sau khi làm tròn là: " + temp);
+                } else {
+                    alert("Điểm số của học sinh sau khi làm tròn là: " + x);
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

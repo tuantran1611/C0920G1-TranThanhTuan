@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thi thực hành Module 1 bài 3</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n;
+    do {
+        n = parseInt(prompt("Nhập số lượng số muốn kiểm tra: "));
+    } while (n > 50 || n < 0);
+    for (let i = 0; i < n; i++) {
+        let num = parseInt(prompt("Nhập vào số thứ :" + (i + 1)));
+        arr.push(num);
+    }
+    let k = parseInt(prompt("Nhập vào số nguyên dương k để kiểm tra: "));
+    for (let j = 0; j < arr.length; j++) {
+        for (let l = j+1; l < arr.length; l++) {
+            if ((arr[j] + arr[l]) % k === 0) {
+                document.write("(" + arr[j] + "," + arr[l] + ")");
+            }
+        }
+    }
+</script>
+</body>
+</html>

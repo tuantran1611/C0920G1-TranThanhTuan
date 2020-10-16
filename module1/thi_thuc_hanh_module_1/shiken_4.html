@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thi thực hành Module 1 bài 4</title>
+    <script src="costumer_1.js"></script>
+</head>
+<body>
+<script>
+    let listCustomer = [];
+
+    function displayMainMenu() {
+        let choose = parseInt(prompt("1. Add new customer."
+            + "\n2. Display information customer."
+            + "\n3. Search customer."));
+        switch (choose) {
+            case 1: {
+                addNewCustomer();
+                break;
+            }
+            case 2: {
+                displayCustomer();
+                break;
+            }
+            case 3: {
+                searchCustomer();
+                break;
+            }
+            default: {
+                alert("Not have this number");
+                displayMainMenu();
+                break;
+            }
+        }
+    }
+
+    function addNewCustomer() {
+        let cus = new Customer();
+        let id = prompt("Input id customer: ");
+        let name = prompt("Input name: ");
+        let phone = prompt("Input phone number: ");
+        let address = prompt("Input address: ");
+        let email = prompt("Input email: ");
+        cus.name = name;
+        cus.id = id;
+        cus.phone = phone;
+        cus.email = email;
+        cus.address = address;
+        listCustomer.push(cus);
+        alert("Added Customer");
+        displayMainMenu();
+    }
+
+    function displayCustomer() {
+        let temp = "";
+        for (let i = 0; i < listCustomer.length; i++) {
+            temp += (i + 1) + ". Name: " + listCustomer[i].name + "\n";
+        }
+        temp += "Choose only one number";
+        let chooseDisplay = parseInt(prompt(temp));
+        chooseDisplay = chooseDisplay - 1;
+        if (chooseDisplay >= 0 && chooseDisplay < listCustomer.length) {
+            alert("Id: " + listCustomer[chooseDisplay].getId()
+                + "\nName: " + listCustomer[chooseDisplay].getName()
+                + "\nPhone: " + listCustomer[chooseDisplay].getPhone()
+                + "\nEmail: " + listCustomer[chooseDisplay].getEmail()
+                + "\nAddress: " + listCustomer[chooseDisplay].getAddress());
+            displayMainMenu();
+        } else {
+            alert("Not have this number.");
+            displayMainMenu();
+        }
+    }
+    function searchCustomer() {
+        let check = false;
+        let nameCus = prompt("Nhập tên khách hàng bạn muốn tìm: ");
+        for (let j = 0; j < listCustomer.length; j++){
+            if (nameCus === listCustomer[j]['name']){
+                alert("Id: " + listCustomer[j].getId()
+                    + "\nName: " + listCustomer[j].getName()
+                    + "\nPhone: " + listCustomer[j].getPhone()
+                    + "\nEmail: " + listCustomer[j].getEmail()
+                    + "\nAddress: " + listCustomer[j].getAddress());
+                check = true;
+                displayMainMenu();
+            }
+        }
+        if (!check){
+            alert("Tên bạn tìm không có trong danh sách");
+            displayMainMenu();
+        }
+    }
+    displayMainMenu();
+</script>
+</body>
+</html>
