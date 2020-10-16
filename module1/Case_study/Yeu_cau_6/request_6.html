@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<script src="Customer.js"></script>
+<script src="Costumer.js"></script>
 <script>
     let regexEmail =/\S+@\S+\.\S+/;
     let regexBirthday = /^\d{2}[./-]\d{2}[./-]\d{4}$/;
@@ -98,16 +98,71 @@
         let chooseDisplay = parseInt(prompt(temp));
         chooseDisplay = chooseDisplay - 1;
         if (chooseDisplay >= 0 && chooseDisplay < listCustomer.length) {
+            let checkValid = false;
             let name = prompt("Input new name: ", listCustomer[chooseDisplay].getName());
-            let cmnd = prompt("Input new cmnd: ", listCustomer[chooseDisplay].getCmnd());
-            let birthday = prompt("Input new birthday: ", listCustomer[chooseDisplay].getBirthday());
-            let email = prompt("Input new email: ", listCustomer[chooseDisplay].getEmail());
+            let cmnd;
+            do {
+                cmnd = prompt("Input new cmnd: ", listCustomer[chooseDisplay].getCmnd());
+                if (regexCmnd.test(cmnd)){
+                    checkValid = true;
+                }else {
+                    alert("CMND is not Format.");
+                }
+            }while (!checkValid);
+            checkValid = false;
+            let birthday;
+            do {
+                birthday = prompt("Input new birthday: ", listCustomer[chooseDisplay].getBirthday());
+                if (regexBirthday.test(birthday)){
+                    checkValid = true;
+                }else {
+                    alert("Birthday is not Format.");
+                }
+            }while (!checkValid);
+            checkValid = false;
+            let email;
+            do {
+                email = prompt("Input new email: ", listCustomer[chooseDisplay].getEmail());
+                if (regexEmail.test(email)){
+                    checkValid = true;
+                }else {
+                    alert("Email is not Format.");
+                }
+            }while (!checkValid);
+            checkValid = false;
             let address = prompt("Input new address: ", listCustomer[chooseDisplay].getAddress());
             let typeCustomer = prompt("Input new type customer: ", listCustomer[chooseDisplay].getTypeCustomer());
-            let discount = prompt("Input new discount: ", listCustomer[chooseDisplay].getDiscount());
-            let quantityIncluded = prompt("Input new quantity included: ", listCustomer[chooseDisplay].getQuantityIncluded());
+            let discount;
+            do {
+                discount = prompt("Input new discount: ", listCustomer[chooseDisplay].getDiscount());
+                if (regexNum.test(discount)){
+                    checkValid = true;
+                }else {
+                    alert("Discount is not Format.");
+                }
+            }while (!checkValid);
+            checkValid = false;
+            let quantityIncluded;
+            do {
+                quantityIncluded = prompt("Input new quantity included: ", listCustomer[chooseDisplay].getQuantityIncluded());
+                if (regexNum.test(quantityIncluded)){
+                    checkValid = true;
+                }else {
+                    alert("Quantity Included is not Format.");
+                }
+            }while (!checkValid);
+            checkValid = false;
             let typeRoom = prompt("Input new type room: ", listCustomer[chooseDisplay].getTypeRoom());
-            let rentDay = prompt("Input new rent day: ", listCustomer[chooseDisplay].getRentDay());
+            let rentDay;
+            do {
+                rentDay = prompt("Input new rent day: ", listCustomer[chooseDisplay].getRentDay());
+                if (regexNum.test(rentDay)){
+                    checkValid = true;
+                }else {
+                    alert("Rent day is not Format.");
+                }
+            }while (!checkValid);
+            checkValid = false;
             let typeService = prompt("Input new type service: ", listCustomer[chooseDisplay].getTypeService());
             cus.setName(name);
             cus.setCmnd(cmnd);
@@ -181,7 +236,6 @@
             }
         }while (!checkValid);
         checkValid = false;
-
         let address = prompt("Input address: ");
         let typeCustomer = prompt("Input type Customer: ");
         let discount;
@@ -204,7 +258,6 @@
             }
         }while (!checkValid);
         checkValid = false;
-
         let typeRoom = prompt("Input type room: ");
         let rentDay;
         do {
@@ -216,7 +269,6 @@
             }
         }while (!checkValid);
         checkValid = false;
-
         let typeService = prompt("Input type service: ");
         cus.name = name;
         cus.cmnd = cmnd;
@@ -234,7 +286,6 @@
         displayMainMenu();
     }
     displayMainMenu();
-
 </script>
 </body>
 </html>
