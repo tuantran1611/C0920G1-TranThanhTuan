@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="display"></div>
+<div id="edit"></div>
+<script>
+    class Sotietkiem {
+        constructor(number, tietkiem, ten, cmnd, ngay, tien) {
+            this.number = number;
+            this.tietkiem = tietkiem;
+            this.ten = ten;
+            this.cmnd = cmnd;
+            this.ngay = ngay;
+            this.tien = tien;
+        }
+        getNumber() {
+            return this.number;
+        }
+        getTietkiem() {
+            return this.tietkiem;
+        }
+        getTen() {
+            return this.ten;
+        }
+        getCmnd() {
+            return this.cmnd
+        }
+        getNgay() {
+            return this.ngay;
+        }
+        getTien() {
+            return this.tien;
+        }
+        setNumber(number) {
+            this.number = number;
+        }
+        setTietkiem(tietkiem) {
+            this.tietkiem = tietkiem;
+        }
+        setTen(ten) {
+            this.ten = ten;
+        }
+        setCmnd(cmnd) {
+            this.cmnd = cmnd;
+        }
+        setNgay(ngay) {
+            this.ngay = ngay;
+        }
+        setTien(tien) {
+            this.tien = tien;
+        }
+    }
+    let soTK = [];
+    soTK.push(new Sotietkiem(12345, "Loai tiet kiem", "Nguyen Van A", 123456789, 28 / 10 / 1999, 1000));
+    soTK.push(new Sotietkiem(12345, "Loai tiet kiem", "Nguyen Van A", 123456789, 28 / 10 / 1999, 1000));
+    soTK.push(new Sotietkiem(12345, "Loai tiet kiem", "Nguyen Van A", 123456789, 28 / 10 / 1999, 1000));
+    function display() {
+        // let temp = "<button class='btn btn-info' onclick='createProduct()'>CreateProduct</button>";
+        let temp = '';
+        temp += "<table>";
+        temp += "<tr>" +
+            "<th>Ma so</th>" +
+            "<th>Loai tiet kiem</th>" +
+            "<th>Ho va ten</th>" +
+            "<th>Cmnd</th>" +
+            "<th>Ngay mo</th>" +
+            "<th>So tien gui</th>" +
+            "</tr>";
+        for (let i in soTK) {
+            temp += "<tr>" +
+                "<td>" + soTK[i].getNumber() + "</td> " +
+                "<td>" + soTK[i].getTietkiem() + "</td> " +
+                "<td>" + soTK[i].getTen() + "</td> " +
+                "<td>" + soTK[i].getCmnd() + "</td> " +
+                "<td>" + soTK[i].getNgay() + "</td> " +
+                "<td>" + soTK[i].getTien() + "</td> " +
+                "<td><button type='button'  onclick='editProduct(" + i + ")'>Edit</button>" +
+                "</tr>"
+        }
+        temp += "</table>";
+        document.getElementById("display").innerHTML = temp;
+    }
+    function deleteProduct(index) {
+        if (confirm("Bạn muốn xóa " + productList[index].getName() + " này phải không?")) {
+            productList.splice(index, 1);
+            displayProduct();
+        }
+    }
+    function createProduct(index) {
+        let temp = "<h1>Create Product</h1>";
+        temp += "Id: <input type='text' id='idProduct' class='form-control'></br>"
+            + "Name: <input type='text' id='nameEdit' class='form-control'></br>"
+            + "Price: <input type='text' id='priceEdit' class='form-control'></br>"
+            + "Amount: <input type='text' id='amountEdit' class='form-control'></br>"
+            + "<input type='button' class='btn btn-success' value='Create' onclick='create()'></br>";
+        document.getElementById("edit").innerHTML = temp;
+    }
+    function create() {
+        let name = (document.getElementById("nameEdit").value);
+        let price = (document.getElementById("priceEdit").value);
+        let amount = (document.getElementById("amountEdit").value);
+        let idProduct = (document.getElementById("idProduct").value);
+        let product = new Product(idProduct, name, price, amount);
+        productList.push(product);
+        document.getElementById("edit").innerText = "";
+        displayProduct();
+    }
+    displayProduct();
+</script>
+</body>
+</html>

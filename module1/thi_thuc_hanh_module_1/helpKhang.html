@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num;
+    do {
+        num = parseInt(prompt("Nhập số lượng số mảng a: "));
+    } while (num < 0 || isNaN(num));
+    let arr1 = [];
+    let arr2 = [];
+    let check = false;
+    for (let i = 0; i < num; i++){
+        let a = parseInt(prompt("Nhập vào số thứ " + ( i + 1)));
+        arr1.push(a);
+    }
+    alert(arr1);
+    for (let j = 0; j < arr1.length; j++){
+        if (arr1[j] < 2){
+            continue;
+        }
+        for ( let k = 2; k <= Math.sqrt(arr1[j]); k++){
+            if (arr1[j] % k === 0 ){
+                check = true;
+                break;
+            }
+        }
+        if (!check){
+            arr2.push(arr1[j]);
+        }
+        check = false;
+    }
+    alert(arr2);
+</script>
+</body>
+</html>
