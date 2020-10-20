@@ -1,4 +1,4 @@
-package introduction_to_java.exercise.bt_2;
+package _1_introduction_to_java.exercise.bt_2;
 
 import java.util.Scanner;
 
