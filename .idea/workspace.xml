@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dssa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/thi_thuc_hanh_module_1/fixBug.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/thi_thuc_hanh_module_1/help2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module1/thi_thuc_hanh_module_1/helpKhang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/introduction_to_java/pratice/th_1/Hello.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/introduction_to_java/exercise/bt_3/ChangeMoney.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/introduction_to_java/exercise/bt_2/SpellNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/introduction_to_java/exercise/bt_2/SpellNumber.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +140,7 @@
       <workItem from="1603077124666" duration="2000" />
       <workItem from="1603164745771" duration="1553000" />
       <workItem from="1603166435638" duration="2062000" />
+      <workItem from="1603196212270" duration="1202000" />
     </task>
     <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
       <created>1600919459652</created>
