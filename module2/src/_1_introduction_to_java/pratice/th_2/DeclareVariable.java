@@ -1,4 +1,4 @@
-package introduction_to_java.pratice.th_2;
+package _1_introduction_to_java.pratice.th_2;
 
 public class DeclareVariable {
     public static void main(String[] args) {
