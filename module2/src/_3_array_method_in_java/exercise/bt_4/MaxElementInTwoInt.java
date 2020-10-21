@@ -6,13 +6,18 @@ public class MaxElementInTwoInt {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[][] arr;
-        int size;
-        System.out.println("Nhập kích thước các phần tử con");
-        size = sc.nextInt();
-        arr = new int[size][size];
-        for (int row = 0; row < arr.length; row++){
-            for (int column = 0; column < arr[row].length; column++){
-                arr[row][column] = (int) (Math.random()*100);
+        int size1, size2;
+        System.out.print("Nhập số hàng: ");
+        size1 = sc.nextInt();
+        System.out.print("Nhập số cột: ");
+        size2 = sc.nextInt();
+        arr = new int[size1][size2];
+
+        for (int row = 0; row < arr.length; row++) {
+            System.out.println("Nhập row: " + (row + 1));
+            for (int column = 0; column < arr[row].length; column++) {
+                System.out.println("Nhập phần tử thứ: " + (column + 1) + " của row " + (row + 1));
+                arr[row][column] = sc.nextInt();
             }
         }
         System.out.println("Danh sách phần tử trong mảng: ");
@@ -24,9 +29,9 @@ public class MaxElementInTwoInt {
         }
         int max = arr[0][0];
         int x = 0, y = 0;
-        for (int i = 0; i < arr.length;i++) {
+        for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                if (max < arr[i][j]){
+                if (max < arr[i][j]) {
                     max = arr[i][j];
                     x = i;
                     y = j;
