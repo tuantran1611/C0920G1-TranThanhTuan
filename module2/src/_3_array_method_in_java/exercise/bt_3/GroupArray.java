@@ -1,5 +1,6 @@
 package _3_array_method_in_java.exercise.bt_3;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class GroupArray {
@@ -25,15 +26,8 @@ public class GroupArray {
             System.out.println("Nhập vào số thứ" + (i + 1) + " của mảng 2 : ");
             array2[i] = sc.nextInt();
         }
-        System.out.print("Danh sách phần tử mảng 1: ");
-        for (int i : array1) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
-        System.out.print("Danh sách phần tử mảng 2: ");
-        for (int i : array2) {
-            System.out.print(i + " ");
-        }
+        System.out.println(Arrays.toString(array1));
+        System.out.println(Arrays.toString(array2));
         System.out.println();
         System.out.print("Danh sách phần tử mảng 3: ");
         for (int i = 0; i < array1.length; i++) {
@@ -42,8 +36,6 @@ public class GroupArray {
         for (int i = 0; i < array2.length; i++) {
                 array3[array1.length + i] = array2[i];
         }
-        for (int i : array3) {
-            System.out.print(i + " ");
-        }
+        System.out.println(Arrays.toString(array3));
     }
 }

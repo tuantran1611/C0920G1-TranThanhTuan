@@ -28,7 +28,6 @@ public class DeleteElement {
                     array[j] = array[j + 1];
                 }
                 array[array.length - 1] = 0;
-                break;
             }
         }
         System.out.print("Danh sách phần tử của mảng sau khi xóa " + x + " là: ");
