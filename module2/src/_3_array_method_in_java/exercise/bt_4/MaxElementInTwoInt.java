@@ -5,14 +5,11 @@ import java.util.Scanner;
 public class MaxElementInTwoInt {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[][] arr;
-        int size1, size2;
         System.out.print("Nhập số hàng: ");
-        size1 = sc.nextInt();
+        int size1 = sc.nextInt();
         System.out.print("Nhập số cột: ");
-        size2 = sc.nextInt();
-        arr = new int[size1][size2];
-
+        int size2 = sc.nextInt();
+        int[][] arr = new int[size1][size2];
         for (int row = 0; row < arr.length; row++) {
             System.out.println("Nhập row: " + (row + 1));
             for (int column = 0; column < arr[row].length; column++) {

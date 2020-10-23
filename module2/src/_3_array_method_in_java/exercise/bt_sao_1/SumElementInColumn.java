@@ -7,13 +7,11 @@ import java.util.Scanner;
 public class SumElementInColumn {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int size1, size2;
-        int[][] array;
         System.out.println("Nhập vào số hàng: ");
-        size1 = sc.nextInt();
+        int size1 = sc.nextInt();
         System.out.println("Nhập vào số cột: ");
-        size2 = sc.nextInt();
-        array = new int[size1][size2];
+        int size2 = sc.nextInt();
+        int[][] array = new int[size1][size2];
         for (int row = 0; row < array.length; row++) {
             System.out.println("Nhập hàng " + (row + 1));
             for (int column = 0; column < array[row].length; column++) {

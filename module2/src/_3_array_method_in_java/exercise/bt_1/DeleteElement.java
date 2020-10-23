@@ -1,27 +1,21 @@
 package _3_array_method_in_java.exercise.bt_1;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DeleteElement {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] array;
-        int n;
-        int x;
         System.out.println("Nhập số lượng phần tử của mảng: ");
-        n = sc.nextInt();
-        array = new int[n];
+        int[] array = new int[sc.nextInt()];
         for (int i = 0; i < array.length; i++) {
             System.out.println("Nhập phần tử thứ: " + (i + 1));
             array[i] = sc.nextInt();
         }
         System.out.print("Danh sách phần tử của mảng là: ");
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.println(Arrays.toString(array));
         System.out.println("Nhập số X cần xóa");
-        x = sc.nextInt();
+        int x = sc.nextInt();
         for (int i = 0; i < array.length; i++) {
             if (array[i] == x) {
                 for (int j = i; j < array.length - 1; j++) {
@@ -30,8 +24,6 @@ public class DeleteElement {
                 array[array.length - 1] = 0;
             }
         }
-        System.out.print("Danh sách phần tử của mảng sau khi xóa " + x + " là: ");
-        for (int i : array)
-            System.out.print(i + " ");
+        System.out.print("Danh sách phần tử của mảng sau khi xóa " + x + " là: " + Arrays.toString(array));
     }
 }

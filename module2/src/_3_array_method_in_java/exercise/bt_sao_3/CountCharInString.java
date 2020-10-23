@@ -5,12 +5,10 @@ import java.util.Scanner;
 public class CountCharInString {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String a;
         System.out.println("Nhập chuỗi: ");
-        a = sc.nextLine();
+        String a = sc.nextLine();
         System.out.println("Nhập ký tự muốn kiểm tra");
         String b = sc.nextLine();
-
         int count = 0;
         for (int i = 0; i < a.length(); i++) {
             if (b.equals(String.valueOf(a.charAt(i)))) {

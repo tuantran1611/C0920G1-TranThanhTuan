@@ -7,34 +7,29 @@ public class GroupArray {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int size1, size2;
-        int[] array1;
-        int[] array2;
-        int[] array3;
         System.out.print("Nhập vào kích thước mảng 1: ");
-        size1 = sc.nextInt();
+        int[] array1 = new int[sc.nextInt()];
         System.out.print("Nhập vào kích thước mảng 2: ");
-        size2 = sc.nextInt();
-        array1 = new int[size1];
-        array2 = new int[size2];
-        array3 = new int[size1 + size2];
+        int[] array2 = new int[sc.nextInt()];
+        int[] array3 = new int[array1.length + array2.length];
         for (int i = 0; i < array1.length; i++) {
-            System.out.println("Nhập vào số thứ" + (i + 1) + " của mảng 1 : ");
+            System.out.println("Nhập vào số thứ " + (i + 1) + " của mảng 1 : ");
             array1[i] = sc.nextInt();
         }
         for (int i = 0; i < array2.length; i++) {
-            System.out.println("Nhập vào số thứ" + (i + 1) + " của mảng 2 : ");
+            System.out.println("Nhập vào số thứ " + (i + 1) + " của mảng 2 : ");
             array2[i] = sc.nextInt();
         }
         System.out.println(Arrays.toString(array1));
         System.out.println(Arrays.toString(array2));
         System.out.println();
         System.out.print("Danh sách phần tử mảng 3: ");
-        for (int i = 0; i < array1.length; i++) {
+        for (int i = 0; i < array3.length; i++) {
+            if (i < array1.length){
                 array3[i] = array1[i];
-        }
-        for (int i = 0; i < array2.length; i++) {
-                array3[array1.length + i] = array2[i];
+            } else {
+                array3[i] = array2[i - array1.length];
+            }
         }
         System.out.println(Arrays.toString(array3));
     }
