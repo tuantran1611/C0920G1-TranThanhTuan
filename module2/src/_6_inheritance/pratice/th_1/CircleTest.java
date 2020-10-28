@@ -1,14 +1,14 @@
 package _6_inheritance.pratice.th_1;
 
-public class TestCircle {
+public class CircleTest {
     public static void main(String[] args) {
-        Shape.Circle circle = new Shape.Circle();
+        Circle circle = new Circle();
         System.out.println(circle);
 
-        circle = new Shape.Circle(3.5);
+        circle = new Circle(3.5);
         System.out.println(circle);
 
-        circle = new Shape.Circle("indigo",false,3.5);
+        circle = new Circle("indigo",false,3.5);
         System.out.println(circle);
     }
 }
