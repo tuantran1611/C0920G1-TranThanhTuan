@@ -1,8 +1,8 @@
 package _6_inheritance.exercise.bt_1;
 
-public class TestCylinder {
+public class CylinderTest {
     public static void main(String[] args) {
-        Circle.Cylinder cylinder = new Circle.Cylinder(2, "yellow", 3 );
+        Cylinder cylinder = new Cylinder(2, "yellow", 3 );
         System.out.println(cylinder);
     }
 }
