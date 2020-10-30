@@ -1,8 +1,5 @@
 package _7_abstract_class_and_interface.exercise.bt_2;
 
-import _6_inheritance.pratice.th_1.Circle;
-
-import java.util.Arrays;
 
 public class ColorableTest {
     public static void main(String[] args) {
