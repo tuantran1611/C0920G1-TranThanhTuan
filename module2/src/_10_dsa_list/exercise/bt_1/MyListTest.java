@@ -30,5 +30,9 @@ public class MyListTest {
         System.out.println(listInteger.indexOf(11));
         System.out.println("Lấy ra giá trị của vị trí thứ 5 trong mảng: ");
         System.out.println(listInteger.get(5));
+
+        System.out.println("Mảng mới sau khi copy");
+        MyList<Integer> newList = listInteger.clone();
+        newList.displayList();
     }
 }

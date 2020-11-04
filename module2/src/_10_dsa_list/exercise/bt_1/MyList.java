@@ -9,7 +9,6 @@ public class MyList<E> {
     private Object elements[];
 
     public MyList() {
-        elements = new Object[DEFAULT_CAPACITY];
     }
 
     public MyList(int capacity) {
@@ -45,9 +44,14 @@ public class MyList<E> {
         return this.size;
     }
 
-    public E clone() {
-
-        return (E) elements;
+    public MyList<E> clone() {
+        if (size == 0){
+            throw new NullPointerException("List is null");
+        }
+        MyList<E> returnList = new MyList<>(this.size);
+        returnList.elements = Arrays.copyOf(this.elements,this.size);
+        returnList.size = this.size;
+        return returnList;
     }
 
     public boolean contains(E o) {

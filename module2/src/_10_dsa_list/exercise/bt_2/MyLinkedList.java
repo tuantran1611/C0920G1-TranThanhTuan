@@ -111,13 +111,13 @@ public class MyLinkedList<E> {
     }
 
     public boolean remove(Object element) {
-        if (head.data.equals(element)){
+        if (head.data.equals(element)) {
             remove(0);
             return true;
         } else {
             Node temp = head;
-            while (temp.next != null){
-                if (temp.next.data.equals(element)){
+            while (temp.next != null) {
+                if (temp.next.data.equals(element)) {
                     temp.next = temp.next.next;
                     numNodes--;
                     return true;
@@ -188,15 +188,15 @@ public class MyLinkedList<E> {
         }
     }
 
-    public MyLinkedList<E> clone(){
-        if (numNodes == 0){
+    public MyLinkedList<E> clone() {
+        if (numNodes == 0) {
             throw new NullPointerException("LinkedList is null");
         }
         MyLinkedList<E> returnLinkedList = new MyLinkedList<>();
         Node temp = head;
         returnLinkedList.addFirst((E) temp.data);
         temp = temp.next;
-        while (temp != null){
+        while (temp != null) {
             returnLinkedList.addLast((E) temp.data);
             temp = temp.next;
         }
@@ -204,7 +204,8 @@ public class MyLinkedList<E> {
     }
 
     public void clear() {
-
+        head = null;
+        numNodes = 0;
     }
 
     public void displayList() {
