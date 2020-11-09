@@ -27,28 +27,32 @@ public class ProductManager extends Product {
     }
 
     public void editProduct() {
-        displayListId();
-        boolean check = false;
-        System.out.println("Nhập ID sản phẩm muốn sửa");
-        int idEdit = sc.nextInt();
-        sc.nextLine();
-        for (Product id : arrayList) {
-            if (id.getId() == idEdit) {
-                System.out.println("Tên của sản phẩm muốn sửa: " + id.getName());
-                System.out.println("Nhập tên muốn sửa: ");
-                id.setName(sc.nextLine());
-                check = true;
-                break;
-            }
-            check = false;
-        }
-        if (!check) {
-            System.out.println("Id sản phẩm bạn muốn sửa không tồn tại, vui lòng nhập lại !!!");
-            editProduct();
+        if (arrayList.isEmpty()){
+            System.out.println("Danh sách trống, vui lòng nhập lại");
         } else {
-            System.out.println("Bạn đã sửa thành công");
-            displayMenu();
+            displayListId();
+            boolean check = false;
+            System.out.println("Nhập ID sản phẩm muốn sửa");
+            int idEdit = sc.nextInt();
+            sc.nextLine();
+            for (Product id : arrayList) {
+                if (id.getId() == idEdit) {
+                    System.out.println("Tên của sản phẩm muốn sửa: " + id.getName());
+                    System.out.println("Nhập tên muốn sửa: ");
+                    id.setName(sc.nextLine());
+                    check = true;
+                    break;
+                }
+                check = false;
+            }
+            if (!check) {
+                System.out.println("Id sản phẩm bạn muốn sửa không tồn tại, vui lòng nhập lại !!!");
+                editProduct();
+            } else {
+                System.out.println("Bạn đã sửa thành công");
+            }
         }
+        displayMenu();
     }
 
     public void deleteProduct() {
@@ -67,15 +71,14 @@ public class ProductManager extends Product {
                 }
                 check = false;
             }
-
+            if (!check) {
+                System.out.println("Id sản phẩm bạn muốn xóa không tồn tại, vui lòng nhập lại !!!");
+                deleteProduct();
+            } else {
+                System.out.println("Bạn đã xóa thành công");
+            }
         }
-        if (!check) {
-            System.out.println("Id sản phẩm bạn muốn xóa không tồn tại, vui lòng nhập lại !!!");
-            deleteProduct();
-        } else {
-            System.out.println("Bạn đã xóa thành công");
-            displayMenu();
-        }
+        displayMenu();
     }
 
     public void displayProduct() {
