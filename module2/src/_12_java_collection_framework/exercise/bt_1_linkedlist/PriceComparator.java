@@ -1,5 +1,4 @@
-package _12_java_collection_framework.exercise.bt_1;
-
+package _12_java_collection_framework.exercise.bt_1_linkedlist;
 import java.util.Comparator;
 
 public class PriceComparator implements Comparator<Product> {

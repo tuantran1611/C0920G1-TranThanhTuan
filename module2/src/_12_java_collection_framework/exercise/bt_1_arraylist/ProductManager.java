@@ -1,4 +1,4 @@
-package _12_java_collection_framework.exercise.bt_1;
+package _12_java_collection_framework.exercise.bt_1_arraylist;
 
 import java.util.ArrayList;
 import java.util.Collections;
