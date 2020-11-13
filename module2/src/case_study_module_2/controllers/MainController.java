@@ -1,8 +1,7 @@
 package case_study_module_2.controllers;
 
-import case_study_module_2.models.House;
-import case_study_module_2.models.Room;
-import case_study_module_2.models.Villa;
+import case_study_module_2.commons.CompareBirthDayCustomer;
+import case_study_module_2.models.*;
 
 import java.util.*;
 
@@ -10,6 +9,7 @@ public class MainController {
     List<Villa> villas = new ArrayList<>();
     List<House> houses = new ArrayList<>();
     List<Room> rooms = new ArrayList<>();
+    List<Customer> customers = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
 
     TreeSet<Villa> treeVilla = new TreeSet<>();
@@ -34,14 +34,146 @@ public class MainController {
             case 2:
                 showServices();
                 break;
-//            case 3:
-//                addNewCustomer();
+            case 3:
+                addNewCustomer();
+                break;
+            case 4:
+                showInfoCustomer();
+                break;
+//            case 5:
+//                addNewBooking();
 //                break;
-//            case 4:
-//                showInfoCustomer();
+//            case 6:
+//                showInfoEmployee();
 //                break;
         }
     }
+
+    public void showInfoCustomer(){
+        customers.sort(new CompareBirthDayCustomer());
+        if (customers.isEmpty()){
+            System.out.println("Danh sách trống");
+        } else {
+            for (Customer customer : customers) {
+                customer.showInfo();
+            }
+        }
+        displayMainMenu();
+    }
+
+    public void addNewCustomer(){
+        Customer customer = new Customer();
+        System.out.println("Nhập họ và tên: ");
+        customer.setNameCustomer(scanner.nextLine());
+        System.out.println("Nhập ngày sinh: ");
+        customer.setBirthday(scanner.nextLine());
+        System.out.println("Nhập giới tính: ");
+        customer.setGender(scanner.nextLine());
+        System.out.println("Nhập số CMND: ");
+        customer.setCmnd(scanner.nextLine());
+        System.out.println("Nhập số điện thoại: ");
+        customer.setPhoneNumber(scanner.nextLine());
+        System.out.println("Nhập email: ");
+        customer.setEmail(scanner.nextLine());
+        System.out.println("Nhập loại khách: ");
+        customer.setCustomerType(scanner.nextLine());
+        System.out.println("Nhập địa chỉ: ");
+        customer.setAddress(scanner.nextLine());
+//        customer.setUseService(requestUseService());
+        System.out.println("Bạn đã nhập thành công");
+        customers.add(customer);
+        displayMainMenu();
+    }
+
+//    public Customer addNewCustomerInfo(){
+//        Customer customer = new Customer();
+//        System.out.println("Nhập họ và tên: ");
+//        customer.setNameCustomer(scanner.nextLine());
+//        System.out.println("Nhập ngày sinh: ");
+//        customer.setBirthday(scanner.nextLine());
+//        System.out.println("Nhập giới tính: ");
+//        customer.setGender(scanner.nextLine());
+//        System.out.println("Nhập số CMND: ");
+//        customer.setCmnd(scanner.nextLine());
+//        System.out.println("Nhập số điện thoại: ");
+//        customer.setPhoneNumber(scanner.nextLine());
+//        System.out.println("Nhập email: ");
+//        customer.setEmail(scanner.nextLine());
+//        System.out.println("Nhập loại khách: ");
+//        customer.setCustomerType(scanner.nextLine());
+//        System.out.println("Nhập địa chỉ: ");
+//        customer.setAddress(scanner.nextLine());
+////        customer.setUseService(requestUseService());
+//        System.out.println("Bạn đã nhập thành công");
+//        return customer;
+//    }
+
+//    public Services requestUseService() {
+//        System.out.println(" Bạn muốn sử dụng dịch vụ: \n" +
+//                "1. Villa\n" +
+//                "2. House\n" +
+//                "3. Room\n");
+//        Services choice = null;
+//        boolean check = false;
+//        switch (scanner.nextInt()){
+//            case 1:
+//                showAllVilla();
+//                System.out.println("Nhập ID phòng bạn muốn chọn");
+//                for (Villa villa : villas){
+//                    if (villa.getId().equals(scanner.nextLine())){
+//                        choice = villa;
+//                        check = true;
+//                        break;
+//                    }
+//                }
+//                if (check){
+//                    System.out.println("Bạn đã chọn thành công");
+//                } else {
+//                    System.out.println("Vui lòng chọn lại");
+//                    requestUseService();
+//                }
+//                break;
+//            case 2:
+//                showAllHouse();
+//                System.out.println("Nhập ID phòng bạn muốn chọn");
+//                for (House house : houses){
+//                    if (house.getId().equals(scanner.nextLine())){
+//                        choice = house;
+//                        check = true;
+//                        break;
+//                    }
+//                }
+//                if (check){
+//                    System.out.println("Bạn đã chọn thành công");
+//                } else {
+//                    System.out.println("Vui lòng chọn lại");
+//                    requestUseService();
+//                }
+//                break;
+//            case 3:
+//                showAllRoom();
+//                System.out.println("Nhập ID phòng bạn muốn chọn");
+//                for (Room room : rooms){
+//                    if (room.getId().equals(scanner.nextLine())){
+//                        choice = room;
+//                        check = true;
+//                        break;
+//                    }
+//                }
+//                if (check){
+//                    System.out.println("Bạn đã chọn thành công");
+//                } else {
+//                    System.out.println("Vui lòng chọn lại");
+//                    requestUseService();
+//                }
+//                break;
+//            default:
+//                System.out.println("Vui lòng nhập lại");
+//                requestUseService();
+//                break;
+//        }
+//        return choice;
+//    }
 
     public void addNewServices() {
         System.out.println("1. Add New Villa\n" +
@@ -54,17 +186,17 @@ public class MainController {
         scanner.nextLine();
         switch (choose) {
             case 1:
-                villas.add(addInfoVilla());
+                addVilla();
                 System.out.println("Bạn đã nhập thành công");
                 displayMainMenu();
                 break;
             case 2:
-                houses.add(addInfoHouse());
+                addHouse();
                 System.out.println("Bạn đã nhập thành công");
                 displayMainMenu();
                 break;
             case 3:
-                rooms.add(addInfoRoom());
+                addRoom();
                 System.out.println("Bạn đã nhập thành công");
                 displayMainMenu();
                 break;
@@ -122,7 +254,8 @@ public class MainController {
                 break;
         }
     }
-    public Villa addInfoVilla(){
+
+    public void addVilla(){
         Villa villa = new Villa();
         System.out.println("Nhập ID: ");
         villa.setId(scanner.nextLine());
@@ -146,10 +279,10 @@ public class MainController {
         villa.setPoolArea(scanner.nextDouble());
         System.out.println("Nhập số tầng:");
         villa.setNumFloors(scanner.nextInt());
-        return villa;
+        villas.add(villa);
     }
 
-    public House addInfoHouse(){
+    public void addHouse(){
         House house = new House();
         System.out.println("Nhập ID: ");
         house.setId(scanner.nextLine());
@@ -170,10 +303,10 @@ public class MainController {
         house.setOtherFacilities(scanner.nextLine());
         System.out.println("Nhập số tầng:");
         house.setNumFloors(scanner.nextInt());
-        return house;
+        houses.add(house);
     }
 
-    public Room addInfoRoom(){
+    public void addRoom(){
         Room room = new Room();
         System.out.println("Nhập ID: ");
         room.setId(scanner.nextLine());
@@ -190,7 +323,7 @@ public class MainController {
         room.setRentType(scanner.nextLine());
         System.out.println("Nhập dịch vụ miễn phí đi kèm:");
         room.setFreeService(scanner.nextLine());
-        return room;
+        rooms.add(room);
     }
 
     public void showAllVilla(){
