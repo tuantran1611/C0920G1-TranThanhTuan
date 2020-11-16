@@ -5,18 +5,19 @@ import java.util.Scanner;
 public class House extends Services {
     private String roomStandard;
     private String otherFacilities;
-    private int numFloors;
+    private String numFloors;
 
     public House() {
     }
 
-    public House(String roomStandard, String otherFacilities, int numFloors) {
+    public House(String roomStandard, String otherFacilities, String numFloors) {
         this.roomStandard = roomStandard;
         this.otherFacilities = otherFacilities;
         this.numFloors = numFloors;
     }
 
-    public House(String id, String serviceName, double areaRent, int priceRent, int amountMax, String rentType, String roomStandard, String otherFacilities, int numFloors) {
+    public House(String id, String serviceName, String areaRent, String priceRent, String amountMax, String rentType,
+                 String roomStandard, String otherFacilities, String numFloors) {
         super(id, serviceName, areaRent, priceRent, amountMax, rentType);
         this.roomStandard = roomStandard;
         this.otherFacilities = otherFacilities;
@@ -39,11 +40,11 @@ public class House extends Services {
         this.otherFacilities = otherFacilities;
     }
 
-    public int getNumFloors() {
+    public String getNumFloors() {
         return numFloors;
     }
 
-    public void setNumFloors(int numFloors) {
+    public void setNumFloors(String numFloors) {
         this.numFloors = numFloors;
     }
 

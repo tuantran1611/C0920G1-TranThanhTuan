@@ -1,6 +1,7 @@
 package case_study_module_2.models;
 
 public class Customer implements Comparable<Customer>{
+    private String idCus;
     private String nameCustomer;
     private String birthday;
     private String gender;
@@ -14,7 +15,22 @@ public class Customer implements Comparable<Customer>{
     public Customer() {
     }
 
-    public Customer(String nameCustomer, String birthday, String gender, String cmnd, String phoneNumber, String email, String customerType, String address, Services useService) {
+    public Customer(String idCus, String nameCustomer, String birthday, String gender, String cmnd, String phoneNumber,
+                    String email, String customerType, String address) {
+        this.idCus = idCus;
+        this.nameCustomer = nameCustomer;
+        this.birthday = birthday;
+        this.gender = gender;
+        this.cmnd = cmnd;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.customerType = customerType;
+        this.address = address;
+    }
+
+    public Customer(String idCus, String nameCustomer, String birthday, String gender, String cmnd,
+                    String phoneNumber, String email, String customerType, String address, Services useService) {
+        this.idCus = idCus;
         this.nameCustomer = nameCustomer;
         this.birthday = birthday;
         this.gender = gender;
@@ -24,6 +40,14 @@ public class Customer implements Comparable<Customer>{
         this.customerType = customerType;
         this.address = address;
         this.useService = useService;
+    }
+
+    public String getIdCus() {
+        return idCus;
+    }
+
+    public void setIdCus(String idCus) {
+        this.idCus = idCus;
     }
 
     public String getNameCustomer() {
@@ -102,11 +126,10 @@ public class Customer implements Comparable<Customer>{
         System.out.println(this.toString());
     }
 
-
-
     @Override
     public String toString() {
         return "Customer{" +
+                "id customer= " + idCus +
                 "nameCustomer='" + nameCustomer + '\'' +
                 ", birthday='" + birthday + '\'' +
                 ", gender='" + gender + '\'' +

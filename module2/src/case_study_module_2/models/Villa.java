@@ -7,13 +7,14 @@ import java.util.Scanner;
 public class Villa extends Services {
     private String roomStandard;
     private String otherFacilities;
-    private double poolArea;
-    private int numFloors;
+    private String poolArea;
+    private String numFloors;
 
     public Villa() {
     }
 
-    public Villa(String id, String serviceName, double areaRent, int priceRent, int amountMax, String rentType, String roomStandard, String otherFacilities, double poolArea, int numFloors) {
+    public Villa(String id, String serviceName, String areaRent, String priceRent, String amountMax, String rentType,
+                    String roomStandard, String otherFacilities, String poolArea, String numFloors) {
         super(id, serviceName, areaRent, priceRent, amountMax, rentType);
         this.roomStandard = roomStandard;
         this.otherFacilities = otherFacilities;
@@ -37,19 +38,19 @@ public class Villa extends Services {
         this.otherFacilities = otherFacilities;
     }
 
-    public double getPoolArea() {
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumFloors() {
+    public String getNumFloors() {
         return numFloors;
     }
 
-    public void setNumFloors(int numFloors) {
+    public void setNumFloors(String numFloors) {
         this.numFloors = numFloors;
     }
 
@@ -57,7 +58,6 @@ public class Villa extends Services {
     public void showInfor() {
         System.out.println(super.toString() + "," +
         this.toString());
-
     }
 
     @Override

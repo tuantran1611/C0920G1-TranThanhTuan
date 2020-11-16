@@ -3,15 +3,15 @@ package case_study_module_2.models;
 public abstract class Services {
     private String id;
     private String serviceName;
-    private double areaRent;
-    private int priceRent;
-    private int amountMax;
+    private String areaRent;
+    private String priceRent;
+    private String amountMax;
     private String rentType;
 
     public Services() {
     }
 
-    public Services(String id, String serviceName, double areaRent, int priceRent, int amountMax, String rentType) {
+    public Services(String id, String serviceName, String areaRent, String priceRent, String amountMax, String rentType) {
         this.id = id;
         this.serviceName = serviceName;
         this.areaRent = areaRent;
@@ -38,27 +38,27 @@ public abstract class Services {
         this.serviceName = serviceName;
     }
 
-    public double getAreaRent() {
+    public String getAreaRent() {
         return areaRent;
     }
 
-    public void setAreaRent(double areaRent) {
+    public void setAreaRent(String areaRent) {
         this.areaRent = areaRent;
     }
 
-    public int getPriceRent() {
+    public String getPriceRent() {
         return priceRent;
     }
 
-    public void setPriceRent(int priceRent) {
+    public void setPriceRent(String priceRent) {
         this.priceRent = priceRent;
     }
 
-    public int getAmountMax() {
+    public String getAmountMax() {
         return amountMax;
     }
 
-    public void setAmountMax(int amountMax) {
+    public void setAmountMax(String amountMax) {
         this.amountMax = amountMax;
     }
 
@@ -73,12 +73,12 @@ public abstract class Services {
     @Override
     public String toString() {
         return "Services{" +
-                "id='" + id + '\'' +
-                ", serviceName='" + serviceName + '\'' +
+                "id= " + id +
+                ", serviceName=" + serviceName +
                 ", areaRent=" + areaRent +
                 ", priceRent=" + priceRent +
                 ", amountMax=" + amountMax +
-                ", rentType='" + rentType + '\'' +
-                '}';
+                ", rentType='" + rentType +
+                "}";
     }
 }
