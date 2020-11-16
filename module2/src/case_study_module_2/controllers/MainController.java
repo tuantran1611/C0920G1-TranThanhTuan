@@ -7,6 +7,10 @@ import java.util.*;
 
 public class MainController {
     Scanner scanner = new Scanner(System.in);
+    List<Villa> villaList = new ReadWriteVillaInfoToFileCsv().readVilla();
+    List<House> houseList = new ReadWriteHouseInfoToFileCsv().readHouse();
+    List<Room> roomList = new ReadWriteRoomInfoToFileCsv().readRoom();
+    List<Customer> customerList = new ReadWriteCustomer().readCustomer();
     Set<String> treeVilla = new TreeSet<>();
     Set<String> treeHouse = new TreeSet<>();
     Set<String> treeRoom = new TreeSet<>();
@@ -33,7 +37,7 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 4:
-                showInfoCustomer(new ReadWriteCustomer().readCustomer());
+                showInfoCustomer(customerList);
                 displayMainMenu();
                 break;
             case 5:
@@ -46,7 +50,7 @@ public class MainController {
     }
 
     public void addNewBooking(){
-        showInfoCustomer(new ReadWriteCustomer().readCustomer());
+        showInfoCustomer(customerList);
         System.out.println("1. Booking Villa\n" +
                 "2. Booking House\n" +
                 "3. Booking Room\n" +
@@ -60,12 +64,10 @@ public class MainController {
     }
 
     public void bookingVilla(){
-        List<Customer> customerList = new ReadWriteCustomer().readCustomer();
         showInfoCustomer(customerList);
         System.out.println("Nhập ID Customer: ");
         String idCus = scanner.nextLine();
-        showAllVilla(new ReadWriteVillaInfoToFileCsv().readVilla());
-        List<Villa> villaList = new ReadWriteVillaInfoToFileCsv().readVilla();
+        showAllVilla(villaList);
         System.out.println("Chọn ID phòng: ");
         String choice = scanner.nextLine();
         boolean check = false;
@@ -180,27 +182,27 @@ public class MainController {
         scanner.nextLine();
         switch (choose){
             case 1:
-                showAllVilla(new ReadWriteVillaInfoToFileCsv().readVilla());
+                showAllVilla(villaList);
                 showServices();
                 break;
             case 2:
-                showAllHouse(new ReadWriteHouseInfoToFileCsv().readHouse());
+                showAllHouse(houseList);
                 showServices();
                 break;
             case 3:
-                showAllRoom(new ReadWriteRoomInfoToFileCsv().readRoom());
+                showAllRoom(roomList);
                 showServices();
                 break;
             case 4:
-                showNameVillaNotDuplicate(new ReadWriteVillaInfoToFileCsv().readVilla());
+                showNameVillaNotDuplicate(villaList);
                 showServices();
                 break;
             case 5:
-                showNameHouseNotDuplicate(new ReadWriteHouseInfoToFileCsv().readHouse());
+                showNameHouseNotDuplicate(houseList);
                 showServices();
                 break;
             case 6:
-                showNameRoomNotDuplicate(new ReadWriteRoomInfoToFileCsv().readRoom());
+                showNameRoomNotDuplicate(roomList);
                 showServices();
                 break;
             case 7:
