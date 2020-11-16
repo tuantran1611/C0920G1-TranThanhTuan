@@ -12,9 +12,9 @@ public class ReadWriteCustomer {
     public void writeCustomerInfo(Customer customer) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(CUSTOMER_PATH), true));
-            bw.write(customer.getNameCustomer() + "," + customer.getBirthday() + "," + customer.getGender() + "," +
-                    customer.getCmnd() + "," + customer.getPhoneNumber() + "," + customer.getEmail() + "," +
-                    customer.getCustomerType() + "," + customer.getAddress());
+            bw.write(customer.getIdCus()+","+customer.getNameCustomer() + "," + customer.getBirthday() + "," +
+                    customer.getGender() + "," + customer.getCmnd() + "," + customer.getPhoneNumber() + "," +
+                    customer.getEmail() + "," + customer.getCustomerType() + "," + customer.getAddress());
             bw.newLine();
             bw.close();
         } catch (IOException e) {

@@ -1,0 +1,2 @@
+Lớp InputStream là một lớp trừu tượng. Nó là super class của tất cả các lớp đại diện cho một input stream của các byte.
+Các phương thức của lớp InputStream

@@ -6,6 +6,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
 
 public class CompareBirthDayCustomer implements Comparator<Customer> {
     @Override
@@ -19,10 +20,11 @@ public class CompareBirthDayCustomer implements Comparator<Customer> {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        if (date1.compareTo(date2) == 0) {
-            return o1.getNameCustomer().compareTo(o2.getNameCustomer());
-        } else {
+        int compareName = o1.getNameCustomer().compareTo(o2.getNameCustomer());
+        if (compareName == 0) {
             return date1.compareTo(date2);
+        } else {
+            return compareName;
         }
     }
 }

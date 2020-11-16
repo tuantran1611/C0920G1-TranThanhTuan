@@ -130,7 +130,7 @@ public class Customer implements Comparable<Customer>{
     public String toString() {
         return "Customer{" +
                 "id customer= " + idCus +
-                "nameCustomer='" + nameCustomer + '\'' +
+                ",nameCustomer='" + nameCustomer + '\'' +
                 ", birthday='" + birthday + '\'' +
                 ", gender='" + gender + '\'' +
                 ", cmnd='" + cmnd + '\'' +

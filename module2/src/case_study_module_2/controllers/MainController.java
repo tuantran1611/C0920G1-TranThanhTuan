@@ -37,6 +37,7 @@ public class MainController {
                 displayMainMenu();
                 break;
             case 4:
+                customerList = new ReadWriteCustomer().readCustomer();
                 showInfoCustomer(customerList);
                 displayMainMenu();
                 break;
@@ -50,7 +51,6 @@ public class MainController {
     }
 
     public void addNewBooking(){
-        showInfoCustomer(customerList);
         System.out.println("1. Booking Villa\n" +
                 "2. Booking House\n" +
                 "3. Booking Room\n" +
@@ -65,9 +65,10 @@ public class MainController {
 
     public void bookingVilla(){
         showInfoCustomer(customerList);
-        System.out.println("Nhập ID Customer: ");
-        String idCus = scanner.nextLine();
         showAllVilla(villaList);
+        System.out.println("Nhập ID Customer: ");
+        scanner.nextLine();
+        String idCus = scanner.nextLine();
         System.out.println("Chọn ID phòng: ");
         String choice = scanner.nextLine();
         boolean check = false;
@@ -111,9 +112,9 @@ public class MainController {
 
     public void addNewCustomer(){
         Customer customer = new Customer();
-        System.out.println("Nhập ID khách hàng: ");
-        customer.setNameCustomer(scanner.nextLine());
         scanner.nextLine();
+        System.out.println("Nhập ID khách hàng: ");
+        customer.setIdCus(scanner.nextLine());
         System.out.println("Nhập họ và tên: ");
         customer.setNameCustomer(scanner.nextLine());
         System.out.println("Nhập ngày sinh: ");
