@@ -1,6 +1,8 @@
 package _17_io_binary_file.exercise.bt_1;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private String idProduct;
     private String nameProduct;
     private String manufacturer;

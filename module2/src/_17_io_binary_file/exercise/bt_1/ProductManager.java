@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class ProductManager {
     Scanner scanner = new Scanner(System.in);
-    List<Product> productList = new ReadWriteBinaryFile().readBinaryFile();
     public void productManage(){
         System.out.println("1. Add new Product\n" +
                     "2. Display all Product\n" +
@@ -43,17 +42,20 @@ public class ProductManager {
         product.setPrice(scanner.nextLine());
         System.out.println("Nhập mô tả khác: ");
         product.setOtherDescribe(scanner.nextLine());
-        new ReadWriteBinaryFile().writeBinaryFile(product);
+        ReadWriteBinaryFile.writeBinaryFile(product);
         System.out.println("Bạn đã nhập thành công");
     }
 
     public void displayProduct(){
+        List<Product> productList= ReadWriteBinaryFile.readBinaryFile();
+        System.out.println("fsfsfsfs"+ productList.size());
         for (Product product : productList){
             System.out.println(product.toString());
         }
     }
 
     public void searchProduct(){
+        List<Product> productList= ReadWriteBinaryFile.readBinaryFile();
         boolean check = false;
         displayProduct();
         System.out.println("Nhập ID sản phẩm muốn xem thông tin: ");

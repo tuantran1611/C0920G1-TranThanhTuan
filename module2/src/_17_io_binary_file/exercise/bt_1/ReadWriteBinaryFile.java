@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteBinaryFile {
-    public void writeBinaryFile(Product product){
+    public static void writeBinaryFile(Product product){
         try {
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(
-                    new FileOutputStream(new File("src/_17_io_binary_file/exercise/bt_1/InfoProduct.dat")));
+                    new FileOutputStream(new File("src/_17_io_binary_file/exercise/bt_1/InfoProduct.dat"),true));
             List<Product> products = new ArrayList<>();
             products.add(product);
             objectOutputStream.writeObject(products);
@@ -18,15 +18,17 @@ public class ReadWriteBinaryFile {
         }
     }
 
-    public List<Product> readBinaryFile(){
+    public static List<Product> readBinaryFile(){
         List<Product> productsOut = null;
         try {
             ObjectInputStream objectInputStream = new ObjectInputStream(
                     new FileInputStream(new File("src/_17_io_binary_file/exercise/bt_1/InfoProduct.dat")));
             productsOut = (List<Product>) objectInputStream.readObject();
+            objectInputStream.close();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
+
         return productsOut;
     }
 }

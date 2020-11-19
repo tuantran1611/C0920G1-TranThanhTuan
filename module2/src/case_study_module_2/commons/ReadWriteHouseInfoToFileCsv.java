@@ -1,17 +1,15 @@
 package case_study_module_2.commons;
 
 import case_study_module_2.models.House;
-import case_study_module_2.models.Villa;
-import sun.management.HotspotInternal;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteHouseInfoToFileCsv {
-    private final String HOUSE_PATH = "src/case_study_module_2/data/Villa.csv";
+    private static final String HOUSE_PATH = "src/case_study_module_2/data/House.csv";
 
-    public void writeHouseInfoToFileCsv(House h){
+    public static void writeHouseInfoToFileCsv(House h){
         try {
             BufferedWriter br = new BufferedWriter(new FileWriter(
                     new File(HOUSE_PATH),true));
@@ -26,7 +24,7 @@ public class ReadWriteHouseInfoToFileCsv {
         }
     }
 
-    public List<House> readHouse(){
+    public static List<House> readHouse(){
         List<House> houses = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(HOUSE_PATH)));

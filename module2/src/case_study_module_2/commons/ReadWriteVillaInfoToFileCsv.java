@@ -7,17 +7,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteVillaInfoToFileCsv {
-    private final String VILLA_PATH  = "src/case_study_module_2/data/Villa.csv";
+    private static final String VILLA_PATH  = "src/case_study_module_2/data/Villa.csv";
 
-    public void writeVillaInfoToFileCsv(Villa v){
+    public static void writeVillaInfoToFileCsv(Villa v){
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(
                     new File(VILLA_PATH),true));
-            bw.write(v.getId() + " , " + v.getServiceName() + " , " +
-                        v.getAreaRent() + " , " + v.getPriceRent() + " , " +
-                        v.getAmountMax() + " , " + v.getRentType() + " , " +
-                        v.getRoomStandar() + " , " + v.getOtherFacilities() + " , " +
-                        v.getPoolArea() + " , " + v.getNumFloors());
+            bw.write(v.getId() + "," + v.getServiceName() + "," +
+                        v.getAreaRent() + "," + v.getPriceRent() + "," +
+                        v.getAmountMax() + "," + v.getRentType() + "," +
+                        v.getRoomStandar() + "," + v.getOtherFacilities() + "," +
+                        v.getPoolArea() + "," + v.getNumFloors());
             bw.newLine();
             bw.close();
         } catch (IOException e) {
@@ -25,7 +25,7 @@ public class ReadWriteVillaInfoToFileCsv {
         }
     }
 
-    public List<Villa> readVilla(){
+    public static List<Villa> readVilla(){
         List<Villa> villas = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader( new File (VILLA_PATH)));

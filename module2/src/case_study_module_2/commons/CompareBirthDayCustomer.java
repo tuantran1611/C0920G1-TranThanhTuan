@@ -6,7 +6,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
-import java.util.List;
 
 public class CompareBirthDayCustomer implements Comparator<Customer> {
     @Override

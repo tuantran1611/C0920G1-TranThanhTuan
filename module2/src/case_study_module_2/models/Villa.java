@@ -1,14 +1,11 @@
 package case_study_module_2.models;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 public class Villa extends Services {
     private String roomStandard;
     private String otherFacilities;
     private String poolArea;
     private String numFloors;
+//    private ExtraService extraService;
 
     public Villa() {
     }
@@ -62,11 +59,11 @@ public class Villa extends Services {
 
     @Override
     public String toString() {
-        return "Villa{" +
-                "roomStandard='" + roomStandard + '\'' +
-                ", otherFacilities='" + otherFacilities + '\'' +
-                ", poolArea=" + poolArea +
-                ", numFloors=" + numFloors +
-                '}';
+        return  super.toString() +
+                ", roomStandard = " + roomStandard +
+                ", otherFacilities = " + otherFacilities +
+                ", poolArea = " + poolArea +
+                ", numFloors = " + numFloors +
+                "}";
     }
 }

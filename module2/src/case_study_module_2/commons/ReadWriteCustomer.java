@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteCustomer {
-    private String CUSTOMER_PATH = "src/case_study_module_2/data/Customer.csv";
+    private static String CUSTOMER_PATH = "src/case_study_module_2/data/Customer.csv";
 
-    public void writeCustomerInfo(Customer customer) {
+    public static void writeCustomerInfo(Customer customer) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(CUSTOMER_PATH), true));
             bw.write(customer.getIdCus()+","+customer.getNameCustomer() + "," + customer.getBirthday() + "," +
@@ -22,7 +22,7 @@ public class ReadWriteCustomer {
         }
     }
 
-    public List<Customer> readCustomer() {
+    public static List<Customer> readCustomer() {
         List<Customer> customers = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(CUSTOMER_PATH)));

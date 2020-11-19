@@ -72,13 +72,11 @@ public abstract class Services {
 
     @Override
     public String toString() {
-        return "Services{" +
-                "id= " + id +
-                ", serviceName=" + serviceName +
-                ", areaRent=" + areaRent +
-                ", priceRent=" + priceRent +
-                ", amountMax=" + amountMax +
-                ", rentType='" + rentType +
-                "}";
+        return "id = " + id +
+                ", serviceName = " + serviceName +
+                ", areaRent= " + areaRent +
+                ", priceRent= " + priceRent +
+                ", amountMax= " + amountMax +
+                ", rentType= " + rentType;
     }
 }
