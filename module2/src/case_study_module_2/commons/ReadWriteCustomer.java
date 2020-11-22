@@ -9,6 +9,14 @@ import java.util.List;
 public class ReadWriteCustomer {
     private static String CUSTOMER_PATH = "src/case_study_module_2/data/Customer.csv";
 
+    public static void creatFileCsv(){
+        try {
+            new BufferedWriter(new FileWriter(new File(CUSTOMER_PATH), false));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void writeCustomerInfo(Customer customer) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(CUSTOMER_PATH), true));

@@ -17,7 +17,7 @@ public class ReadWriteEmployee {
             Employee employee;
             while ((line = br.readLine()) != null ){
                 strArr = line.split(",");
-                employee = new Employee(strArr[1],strArr[2],strArr[3]);
+                employee = new Employee(strArr[0],strArr[1],strArr[2],strArr[3]);
                 map.put(strArr[0],employee);
             }
         } catch (FileNotFoundException e) {

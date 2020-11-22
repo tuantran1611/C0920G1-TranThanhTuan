@@ -9,6 +9,15 @@ import java.util.List;
 public class ReadWriteVillaInfoToFileCsv {
     private static final String VILLA_PATH  = "src/case_study_module_2/data/Villa.csv";
 
+    public static void creatFileCsv(){
+        try {
+            BufferedWriter bw = new BufferedWriter(new FileWriter(
+                    new File(VILLA_PATH),false));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void writeVillaInfoToFileCsv(Villa v){
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(

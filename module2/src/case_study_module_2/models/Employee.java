@@ -1,6 +1,7 @@
 package case_study_module_2.models;
 
 public class Employee {
+    private String idEmployee;
     private String nameEmployee;
     private String ageEmployee;
     private String addressEmployee;
@@ -8,10 +9,23 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String nameEmployee, String ageEmployee, String addressEmployee) {
+    public Employee(String idEmployee, String nameEmployee, String ageEmployee, String addressEmployee) {
+        this.idEmployee = idEmployee;
         this.nameEmployee = nameEmployee;
         this.ageEmployee = ageEmployee;
         this.addressEmployee = addressEmployee;
+    }
+
+    public Employee(String idEmployee) {
+        this.idEmployee = idEmployee;
+    }
+
+    public String getIdEmployee() {
+        return idEmployee;
+    }
+
+    public void setIdEmployee(String idEmployee) {
+        this.idEmployee = idEmployee;
     }
 
     public String getNameEmployee() {
@@ -41,7 +55,8 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "nameEmployee='" + nameEmployee + '\'' +
+                "id employee = " + idEmployee +
+                ", nameEmployee='" + nameEmployee + '\'' +
                 ", ageEmployee='" + ageEmployee + '\'' +
                 ", addressEmployee='" + addressEmployee + '\'' +
                 '}';
