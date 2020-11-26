@@ -1,8 +1,8 @@
 package case_study_module_2.services;
 
-import case_study_module_2.commons.ReadWriteHouseInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteRoomInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteVillaInfoToFileCsv;
+import case_study_module_2.commons.ReadWriteHouse;
+import case_study_module_2.commons.ReadWriteRoom;
+import case_study_module_2.commons.ReadWriteVilla;
 import case_study_module_2.controllers.MainController;
 import case_study_module_2.models.House;
 import case_study_module_2.models.Room;
@@ -65,7 +65,7 @@ public class ShowService {
         }
     }
     public static void showAllVilla() {
-        List<Villa> villaList = ReadWriteVillaInfoToFileCsv.readVilla();
+        List<Villa> villaList = ReadWriteVilla.readVilla();
         if (villaList.isEmpty()) {
             System.out.println("Danh sách trống");
         } else {
@@ -76,7 +76,7 @@ public class ShowService {
     }
 
     public static void showAllHouse() {
-        List<House> houseList = ReadWriteHouseInfoToFileCsv.readHouse();
+        List<House> houseList = ReadWriteHouse.readHouse();
         if (houseList.isEmpty()) {
             System.out.println("Danh sách trống");
         } else {
@@ -87,7 +87,7 @@ public class ShowService {
     }
 
     public static void showAllRoom() {
-        List<Room> roomList = ReadWriteRoomInfoToFileCsv.readRoom();
+        List<Room> roomList = ReadWriteRoom.readRoom();
         if (roomList.isEmpty()) {
             System.out.println("Danh sách trống ");
         } else {
@@ -98,7 +98,7 @@ public class ShowService {
     }
 
     public static void showNameVillaNotDuplicate() {
-        List<Villa> villaList = ReadWriteVillaInfoToFileCsv.readVilla();
+        List<Villa> villaList = ReadWriteVilla.readVilla();
         Set<String> treeVilla = new TreeSet<>();
         if (villaList.isEmpty()) {
             System.out.println("Danh sách trống");
@@ -111,7 +111,7 @@ public class ShowService {
     }
 
     public static void showNameHouseNotDuplicate() {
-        List<House> houseList = ReadWriteHouseInfoToFileCsv.readHouse();
+        List<House> houseList = ReadWriteHouse.readHouse();
         Set<String> treeHouse = new TreeSet<>();
         if (houseList.isEmpty()) {
             System.out.println("Danh sách trống");
@@ -124,7 +124,7 @@ public class ShowService {
     }
 
     public static void showNameRoomNotDuplicate() {
-        List<Room> roomList = ReadWriteRoomInfoToFileCsv.readRoom();
+        List<Room> roomList = ReadWriteRoom.readRoom();
         Set<String> treeRoom = new TreeSet<>();
         if (roomList.isEmpty()) {
             System.out.println("Danh sách trống");

@@ -1,6 +1,5 @@
 package case_study_module_2.controllers;
 
-import case_study_module_2.commons.*;
 import case_study_module_2.models.*;
 import case_study_module_2.services.*;
 
@@ -35,6 +34,7 @@ public class MainController {
                 ShowService.showServices();
                 break;
             case 3:
+                scanner.nextLine();
                 AddNewCustomer.addNewCustomer();
                 displayMainMenu();
                 break;

@@ -1,9 +1,6 @@
 package case_study_module_2.services;
 
-import case_study_module_2.commons.ReadWriteHouseInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteRoomInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteVillaInfoToFileCsv;
-import case_study_module_2.commons.ValidateData;
+import case_study_module_2.commons.*;
 import case_study_module_2.controllers.MainController;
 import case_study_module_2.models.House;
 import case_study_module_2.models.Room;
@@ -13,6 +10,7 @@ import java.util.Scanner;
 
 public class AddNewServices {
     static Scanner scanner = new Scanner(System.in);
+    private static final String COMMA  = ",";
     public static void addNewServices() {
         System.out.println("1. Add New Villa\n" +
                 "2. Add New House\n" +
@@ -50,19 +48,20 @@ public class AddNewServices {
     public static void addVilla() {
         Villa villa = new Villa();
         System.out.println("Bạn đã nhập thành công");
-        ReadWriteVillaInfoToFileCsv.writeVillaInfoToFileCsv(addVillaInfo(villa));
+        addVillaInfo(villa);
+        ReadWriteVilla.writeVillaInfoToFileCsv(addVillaInfo(villa));
     }
 
     public static void addHouse() {
         House house = new House();
         System.out.println("Bạn đã nhập thành công");
-        ReadWriteHouseInfoToFileCsv.writeHouseInfoToFileCsv(addHouseInfo(house));
+        ReadWriteHouse.writeHouseInfoToFileCsv(addHouseInfo(house));
     }
 
     public static void addRoom() {
         Room room = new Room();
         System.out.println("Bạn đã nhập thành công");
-        ReadWriteRoomInfoToFileCsv.writeRoomInfoToFileCsv(addRoomInfo(room));
+        ReadWriteRoom.writeRoomInfoToFileCsv(addRoomInfo(room));
     }
     public static Villa addVillaInfo(Villa villa){
         boolean check = false;

@@ -5,8 +5,9 @@ import case_study_module_2.models.Customer;
 
 public class ShowAllBooking {
     public static void showAllBooking(){
-        for (Customer customer : ReadWriteBooking.readBookingVilla()) {
-            System.out.println(customer.toString() + customer.getUseService().toString());
+        for (Customer customer : ReadWriteBooking.readBooking()) {
+            System.out.print(customer.toString());
+            customer.getUseService().showInfor();
         }
     }
 }

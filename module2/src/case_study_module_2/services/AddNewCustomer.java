@@ -8,13 +8,12 @@ import java.util.Scanner;
 public class AddNewCustomer {
     public static void addNewCustomer() {
         Customer customer = new Customer();
-        System.out.println("Bạn đã nhập thành công");
         ReadWriteCustomer.writeCustomerInfo(addCustomerInfo(customer));
+        System.out.println("Bạn đã nhập thành công");
     }
 
     public static Customer addCustomerInfo(Customer customer) {
         Scanner scanner = new Scanner(System.in);
-        scanner.nextLine();
         boolean check = false;
         do {
             try {

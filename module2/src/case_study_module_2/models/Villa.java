@@ -59,8 +59,7 @@ public class Villa extends Services {
 
     @Override
     public String toString() {
-        return  super.toString() +
-                ", roomStandard = " + roomStandard +
+        return ", roomStandard = " + roomStandard +
                 ", otherFacilities = " + otherFacilities +
                 ", poolArea = " + poolArea +
                 ", numFloors = " + numFloors +

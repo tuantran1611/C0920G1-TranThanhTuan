@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadWriteRoomInfoToFileCsv {
+public class ReadWriteRoom {
 
     private static final String ROOM_PATH  = "src/case_study_module_2/data/Room.csv";
 

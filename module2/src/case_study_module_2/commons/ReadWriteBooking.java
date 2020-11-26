@@ -50,32 +50,6 @@ public class ReadWriteBooking {
         }
     }
 
-    public static List<Customer> readBookingVilla(){
-        List<Customer> customers = new ArrayList<>();
-        Villa villa;
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(new File(BOOKING_PATH)));
-            String[] strArr;
-            String line;
-            Customer customer;
-            while ((line = br.readLine()) != null) {
-                strArr = line.split(",");
-                villa = new Villa(strArr[9],strArr[10],strArr[11],strArr[12],strArr[13],strArr[14],strArr[15],
-                        strArr[16],strArr[17],strArr[18]);
-
-                customer = new Customer(strArr[0], strArr[1], strArr[2], strArr[3],
-                        strArr[4], strArr[5], strArr[6], strArr[7], strArr[8],villa);
-                customers.add(customer);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return customers;
-    }
-
-
     public static void writeBookingRoom(Customer customerNew) {
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(BOOKING_PATH), true));
@@ -93,4 +67,66 @@ public class ReadWriteBooking {
             e.printStackTrace();
         }
     }
+
+    public static List<Customer> readBooking(){
+        List<Customer> customers = new ArrayList<>();
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(new File(BOOKING_PATH)));
+            String[] strArr;
+            String line;
+            Customer customer;
+            while ((line = br.readLine()) != null) {
+                strArr = line.split(",");
+                if (strArr[9].substring(2, 4).equals("VL")) {
+                    Villa villa = new Villa(strArr[9], strArr[10], strArr[11], strArr[12], strArr[13], strArr[14], strArr[15],
+                            strArr[16], strArr[17], strArr[18]);
+                    customer = new Customer(strArr[0], strArr[1], strArr[2], strArr[3],
+                            strArr[4], strArr[5], strArr[6], strArr[7], strArr[8], villa);
+                    customers.add(customer);
+                } else if (strArr[9].substring(2, 4).equals("HO")) {
+                    House house = new House(strArr[9], strArr[10], strArr[11], strArr[12], strArr[13], strArr[14], strArr[15],
+                            strArr[16], strArr[17]);
+                    customer = new Customer(strArr[0], strArr[1], strArr[2], strArr[3],
+                            strArr[4], strArr[5], strArr[6], strArr[7], strArr[8], house);
+                    customers.add(customer);
+                } else if (strArr[9].substring(2, 4).equals("RO")){
+                    Room room = new Room(strArr[9], strArr[10], strArr[11], strArr[12], strArr[13], strArr[14], strArr[15]);
+                    customer = new Customer(strArr[0], strArr[1], strArr[2], strArr[3],
+                            strArr[4], strArr[5], strArr[6], strArr[7], strArr[8], room);
+                    customers.add(customer);
+                }
+            }
+            return customers;
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return customers;
+    }
+
+//    public static List<Customer> readBookingHouse){
+//        List<Customer> customers = new ArrayList<>();
+//        House house;
+//        try {
+//            BufferedReader br = new BufferedReader(new FileReader(new File(BOOKING_PATH)));
+//            String[] strArr;
+//            String line;
+//            Customer customer;
+//            while ((line = br.readLine()) != null) {
+//                strArr = line.split(",");
+//                villa = new Villa(strArr[9],strArr[10],strArr[11],strArr[12],strArr[13],strArr[14],strArr[15],
+//                        strArr[16],strArr[17],strArr[18]);
+//
+//                customer = new Customer(strArr[0], strArr[1], strArr[2], strArr[3],
+//                        strArr[4], strArr[5], strArr[6], strArr[7], strArr[8],villa);
+//                customers.add(customer);
+//            }
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        return customers;
+//    }
 }

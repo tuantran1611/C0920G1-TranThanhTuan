@@ -41,7 +41,7 @@ public class AddNewBooking {
     }
 
     public static void bookingVilla() {
-        List<Villa> villaList = ReadWriteVillaInfoToFileCsv.readVilla();
+        List<Villa> villaList = ReadWriteVilla.readVilla();
         List<Customer> customerList = ReadWriteCustomer.readCustomer();
         scanner.nextLine();
         ShowInfoCustomer.showInfoCustomer();
@@ -77,7 +77,7 @@ public class AddNewBooking {
     }
 
     public static void bookingHouse() {
-        List<House> houseList = ReadWriteHouseInfoToFileCsv.readHouse();
+        List<House> houseList = ReadWriteHouse.readHouse();
         List<Customer> customerList = ReadWriteCustomer.readCustomer();
         scanner.nextLine();
         ShowInfoCustomer.showInfoCustomer();
@@ -113,7 +113,7 @@ public class AddNewBooking {
     }
 
     public static void bookingRoom() {
-        List<Room> roomList = ReadWriteRoomInfoToFileCsv.readRoom();
+        List<Room> roomList = ReadWriteRoom.readRoom();
         List<Customer> customerList = ReadWriteCustomer.readCustomer();
         scanner.nextLine();
         ShowInfoCustomer.showInfoCustomer();

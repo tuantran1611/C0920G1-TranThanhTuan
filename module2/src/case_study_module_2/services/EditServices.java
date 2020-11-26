@@ -1,15 +1,13 @@
 package case_study_module_2.services;
 
-import case_study_module_2.commons.ReadWriteHouseInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteRoomInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteVillaInfoToFileCsv;
-import case_study_module_2.commons.ValidateData;
+import case_study_module_2.commons.ReadWriteHouse;
+import case_study_module_2.commons.ReadWriteRoom;
+import case_study_module_2.commons.ReadWriteVilla;
 import case_study_module_2.controllers.MainController;
 import case_study_module_2.models.House;
 import case_study_module_2.models.Room;
 import case_study_module_2.models.Villa;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -51,7 +49,7 @@ public class EditServices {
     }
 
     public static void editVilla() {
-        List<Villa> villaList = ReadWriteVillaInfoToFileCsv.readVilla();
+        List<Villa> villaList = ReadWriteVilla.readVilla();
         if (villaList.isEmpty()) {
             ShowService.showAllVilla();
         } else {
@@ -64,16 +62,16 @@ public class EditServices {
                     break;
                 }
             }
-            ReadWriteVillaInfoToFileCsv.creatFileCsv();
+            ReadWriteVilla.creatFileCsv();
             for (Villa villa : villaList) {
-                ReadWriteVillaInfoToFileCsv.writeVillaInfoToFileCsv(villa);
+                ReadWriteVilla.writeVillaInfoToFileCsv(villa);
             }
             System.out.println("Bạn đã sửa thành công");
         }
     }
 
     public static void editHouse() {
-        List<House> houseList = ReadWriteHouseInfoToFileCsv.readHouse();
+        List<House> houseList = ReadWriteHouse.readHouse();
         if (houseList.isEmpty()){
             ShowService.showAllHouse();
         } else {
@@ -86,16 +84,16 @@ public class EditServices {
                     break;
                 }
             }
-            ReadWriteHouseInfoToFileCsv.creatFileCsv();
+            ReadWriteHouse.creatFileCsv();
             for (House house : houseList) {
-                ReadWriteHouseInfoToFileCsv.writeHouseInfoToFileCsv(house);
+                ReadWriteHouse.writeHouseInfoToFileCsv(house);
             }
             System.out.println("Bạn đã sửa thành công");
         }
     }
 
     public static void editRoom() {
-        List<Room> roomList = ReadWriteRoomInfoToFileCsv.readRoom();
+        List<Room> roomList = ReadWriteRoom.readRoom();
         if (roomList.isEmpty()) {
             ShowService.showAllRoom();
         } else {
@@ -108,9 +106,9 @@ public class EditServices {
                     break;
                 }
             }
-            ReadWriteRoomInfoToFileCsv.creatFileCsv();
+            ReadWriteRoom.creatFileCsv();
             for (Room room : roomList) {
-                ReadWriteRoomInfoToFileCsv.writeRoomInfoToFileCsv(room);
+                ReadWriteRoom.writeRoomInfoToFileCsv(room);
             }
             System.out.println("Bạn đã sửa thành công");
         }

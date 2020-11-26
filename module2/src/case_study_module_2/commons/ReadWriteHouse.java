@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadWriteHouseInfoToFileCsv {
+public class ReadWriteHouse {
     private static final String HOUSE_PATH = "src/case_study_module_2/data/House.csv";
 
     static File file = new File(HOUSE_PATH);
@@ -40,8 +40,8 @@ public class ReadWriteHouseInfoToFileCsv {
         List<House> houses = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File(HOUSE_PATH)));
-            String[] strArr = null;
-            String line = null;
+            String[] strArr;
+            String line;
             while ((line = br.readLine()) != null) {
                 strArr = line.split(",");
                 House house = new House(strArr[0], strArr[1],strArr[2], strArr[3],
@@ -49,8 +49,6 @@ public class ReadWriteHouseInfoToFileCsv {
                 houses.add(house);
             }
             br.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

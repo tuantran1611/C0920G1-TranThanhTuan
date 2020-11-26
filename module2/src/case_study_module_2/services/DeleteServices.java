@@ -1,8 +1,8 @@
 package case_study_module_2.services;
 
-import case_study_module_2.commons.ReadWriteHouseInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteRoomInfoToFileCsv;
-import case_study_module_2.commons.ReadWriteVillaInfoToFileCsv;
+import case_study_module_2.commons.ReadWriteHouse;
+import case_study_module_2.commons.ReadWriteRoom;
+import case_study_module_2.commons.ReadWriteVilla;
 import case_study_module_2.controllers.MainController;
 import case_study_module_2.models.House;
 import case_study_module_2.models.Room;
@@ -50,26 +50,25 @@ public class DeleteServices {
     }
 
     public static void deleteVilla() {
-        List<Villa> villaList = ReadWriteVillaInfoToFileCsv.readVilla();
+        List<Villa> villaList = ReadWriteVilla.readVilla();
         if (villaList.isEmpty()) {
             ShowService.showAllVilla();
         } else {
             ShowService.showAllVilla();
-            List<Villa> villas = new ArrayList<>(villaList);
             System.out.println("Nhập ID bạn muốn xóa");
             String idEdit = scanner.nextLine();
-            for (Villa villa : villas) {
+            for (Villa villa : villaList) {
                 if (idEdit.equals(villa.getId())) {
-                    villas.remove(villa);
+                    villaList.remove(villa);
                     break;
                 }
             }
-            if (villaList.size() == 1){
-                ReadWriteVillaInfoToFileCsv.creatFileCsv();
+            if (villaList.size() == 0){
+                ReadWriteVilla.creatFileCsv();
             } else {
-                ReadWriteVillaInfoToFileCsv.creatFileCsv();
-                for (Villa villa : villas) {
-                    ReadWriteVillaInfoToFileCsv.writeVillaInfoToFileCsv(villa);
+                ReadWriteVilla.creatFileCsv();
+                for (Villa villa : villaList) {
+                    ReadWriteVilla.writeVillaInfoToFileCsv(villa);
                 }
             }
             System.out.println("Bạn đã xóa thành công");
@@ -77,26 +76,25 @@ public class DeleteServices {
     }
 
     public static void deleteHouse() {
-        List<House> houseList = ReadWriteHouseInfoToFileCsv.readHouse();
+        List<House> houseList = ReadWriteHouse.readHouse();
         if (houseList.isEmpty()) {
             ShowService.showAllHouse();
         } else {
             ShowService.showAllHouse();
-            List<House> houses = new ArrayList<>(houseList);
             System.out.println("Nhập ID bạn muốn xóa");
             String idEdit = scanner.nextLine();
-            for (House house : houses) {
+            for (House house : houseList) {
                 if (idEdit.equals(house.getId())) {
-                    houses.remove(house);
+                    houseList.remove(house);
                     break;
                 }
             }
-            if (houseList.size() == 1){
-                ReadWriteHouseInfoToFileCsv.creatFileCsv();
+            if (houseList.size() == 0){
+                ReadWriteHouse.creatFileCsv();
             } else {
-                ReadWriteHouseInfoToFileCsv.creatFileCsv();
-                for (House house : houses) {
-                    ReadWriteHouseInfoToFileCsv.writeHouseInfoToFileCsv(house);
+                ReadWriteHouse.creatFileCsv();
+                for (House house : houseList) {
+                    ReadWriteHouse.writeHouseInfoToFileCsv(house);
                 }
             }
             System.out.println("Bạn đã xóa thành công");
@@ -104,26 +102,25 @@ public class DeleteServices {
     }
 
     public static void deleteRoom() {
-        List<Room> roomList = ReadWriteRoomInfoToFileCsv.readRoom();
+        List<Room> roomList = ReadWriteRoom.readRoom();
         if (roomList.isEmpty()) {
             ShowService.showAllRoom();
         } else {
             ShowService.showAllRoom();
-            List<Room> rooms = new ArrayList<>(roomList);
             System.out.println("Nhập ID bạn muốn xóa");
             String idEdit = scanner.nextLine();
-            for (Room room : rooms) {
+            for (Room room : roomList) {
                 if (idEdit.equals(room.getId())) {
-                    rooms.remove(room);
+                    roomList.remove(room);
                     break;
                 }
             }
-            if (roomList.size() == 1){
-                ReadWriteRoomInfoToFileCsv.creatFileCsv();
+            if (roomList.size() == 0){
+                ReadWriteRoom.creatFileCsv();
             } else {
-                ReadWriteRoomInfoToFileCsv.creatFileCsv();
-                for (Room room : rooms) {
-                    ReadWriteRoomInfoToFileCsv.writeRoomInfoToFileCsv(room);
+                ReadWriteRoom.creatFileCsv();
+                for (Room room : roomList) {
+                    ReadWriteRoom.writeRoomInfoToFileCsv(room);
                 }
             }
             System.out.println("Bạn đã xóa thành công");

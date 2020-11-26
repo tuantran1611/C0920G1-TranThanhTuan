@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadWriteVillaInfoToFileCsv {
+public class ReadWriteVilla {
     private static final String VILLA_PATH  = "src/case_study_module_2/data/Villa.csv";
 
     public static void creatFileCsv(){
