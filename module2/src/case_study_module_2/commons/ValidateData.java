@@ -8,14 +8,14 @@ public class ValidateData {
     private static final String ID_SERVICE_VILLA_REGEX = "^(SVVL)-\\d{4}$";
     private static final String ID_SERVICE_HOUSE_REGEX = "^(SVHO)-\\d{4}$";
     private static final String ID_SERVICE_ROOM_REGEX = "^(SVRO)-\\d{4}$";
-    private static final String NAME_SERVICE_REGEX = "^[A-Z][a-z0-9]*$";
+    private static final String NAME_SERVICE_REGEX = "^[A-Z][a-z0-9_]*$";
     private static final String POOL_AREA_REGEX = "^(([3-9])([0-9])|([1-9]\\d{2,}))(|\\.[0-9]+)$";
     private static final String AMOUNT_MAX_REGEX = "^((0*[1-9])|1([1-9]))$";
     private static final String PRICE_RENT_REGEX = "^(\\d+)(|\\.[0-9]+)$";
     private static final String NAME_CUSTOMER_REGEX= "^(([A-Z][a-z]+)(| ))+$";
     private static final String EMAIL_CUSTOMER_REGEX = "^[a-z0-9_]+[a-z0-9]@([a-z0-9]+\\.)[a-z]+(|\\.[a-z]+)$";
     private static final String CMND_CUSTOMER_REGEX = "^([0-9]{3}\\s){2}[0-9]{3}$";
-    private static final String GENDER_CUSTOMER_REGEX = "^[mM][aA][lL][eE]|[fF][eE][mM][aA][lL][eE]|[uU][nN][kK][nN][oO][wW]$";
+    private static final String GENDER_CUSTOMER_REGEX = "^[nN][aA][mM]|[nN][uU]|[uU][nN][kK][nN][oO][wW]$";
     private static final String PHONE_NUMBER_REGEX = "^0([0-9]{9})$";
     private static final String BIRTHDAY_REGEX = "(^(((0[1-9]|1[0-9]|2[0-8])[/](0[1-9]|1[012]))|((29|30|31)[/]" +
             "(0[13578]|1[02]))|((29|30)[/](0[4,6,9]|11)))[/](19\\d\\d|200[0-1])$)|(^29[/]02[/]((19)" +

@@ -2,9 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module2/src/introduction_to_java/exercise/bt_3/ChangeMoney.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/_17_io_binary_file/pratice/th_1/CopyFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/_17_io_binary_file/pratice/th_1/TestOutPut.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/_17_io_binary_file/pratice/th_1/TestSite.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteBooking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteHouseInfoToFileCsv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteRoomInfoToFileCsv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteVillaInfoToFileCsv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Booking.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Customer.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/House.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Room.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Villa.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/introduction_to_java/exercise/bt_2/SpellNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/introduction_to_java/exercise/bt_2/SpellNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/House.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Room.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Services.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Services.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Villa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/views/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/views/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/House.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Villa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/views/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +166,16 @@
       <workItem from="1603164745771" duration="1553000" />
       <workItem from="1603166435638" duration="2062000" />
       <workItem from="1603196212270" duration="1202000" />
+      <workItem from="1603250433168" duration="232000" />
+      <workItem from="1603254642805" duration="763000" />
+      <workItem from="1603273160144" duration="600000" />
+      <workItem from="1603686579645" duration="81000" />
+      <workItem from="1604654424192" duration="93000" />
+      <workItem from="1604657922558" duration="2000" />
+      <workItem from="1604813957177" duration="92000" />
+      <workItem from="1604816897760" duration="2293000" />
+      <workItem from="1604833585367" duration="1249000" />
+      <workItem from="1605492670633" duration="1199000" />
     </task>
     <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
       <created>1600919459652</created>
