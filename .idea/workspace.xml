@@ -2,34 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/module2/src/_17_io_binary_file/pratice/th_1/CopyFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/_17_io_binary_file/pratice/th_1/TestOutPut.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/_17_io_binary_file/pratice/th_1/TestSite.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteBooking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteCustomer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteHouseInfoToFileCsv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteRoomInfoToFileCsv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/commons/ReadWriteVillaInfoToFileCsv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Booking.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Customer.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/House.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Room.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/data/Villa.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/House.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/House.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Room.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Services.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Services.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Villa.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/models/Villa.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/views/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/case_study_module_2/views/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/House.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/House.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Villa.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/models/Villa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/case_study_module_2/views/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/case_study_module_2/views/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module3/src/case_study_3/task_2_3_4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/module3/src/case_study_3/task_2_3_4.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +13,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -64,6 +38,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0920G1_Tran_Thanh_Tuan\module3\src\_06_CSS\exercise\bt_1" />
       <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\Case_study\Yeu_cau_2" />
       <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\9_Conditional_statement_2\Thuc_hanh" />
     </key>
@@ -176,6 +151,11 @@
       <workItem from="1604816897760" duration="2293000" />
       <workItem from="1604833585367" duration="1249000" />
       <workItem from="1605492670633" duration="1199000" />
+      <workItem from="1607395108771" duration="4568000" />
+      <workItem from="1607440391886" duration="1621000" />
+      <workItem from="1607483064346" duration="3116000" />
+      <workItem from="1607500372375" duration="8539000" />
+      <workItem from="1607564121890" duration="3516000" />
     </task>
     <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
       <created>1600919459652</created>
@@ -310,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602833619571</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="update css">
+      <created>1607566339904</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1607566339905</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,17 +318,18 @@
     <MESSAGE value="bt" />
     <MESSAGE value="bt bo sung" />
     <MESSAGE value="shiken_module_1" />
-    <option name="LAST_COMMIT_MESSAGE" value="shiken_module_1" />
+    <MESSAGE value="update css" />
+    <option name="LAST_COMMIT_MESSAGE" value="update css" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601348625879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601348625879" />
-    <state x="752" y="8" key="CommitChangelistDialog2" timestamp="1602833618889">
+    <state x="752" y="8" key="CommitChangelistDialog2" timestamp="1607566339161">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="752" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1602833618889" />
+    <state x="752" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1607566339161" />
     <state x="294" y="69" key="DiffContextDialog" timestamp="1602399988717">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -418,10 +406,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="56" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601348383263" />
-    <state x="573" y="146" key="Vcs.Push.Dialog.v2" timestamp="1602833624412">
+    <state x="573" y="146" key="Vcs.Push.Dialog.v2" timestamp="1607566345370">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="573" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1602833624412" />
+    <state x="573" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1607566345370" />
     <state x="93" y="93" width="1350" height="638" key="dock-window-1" timestamp="1601621196062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -95,14 +95,33 @@ join BoPhan on NhanVien.IdBoPhan = BoPhan.IdBoPhan
 where year(HopDong.ngayLamHopDong) between 2018 and 2019
 group by HopDong.IdNhanVien
 having  TongSoLan < 4; 
--- Task 16
+-- Task 16 ----------------------------------------------------------------------------
 delete from NhanVien
-where IdNhanVien = 
+where IdNhanVien not in 
 (select HopDong.IdNhanVien from HopDong
-join NhanVien on HopDong.IdNhanVien = NhanVien.IdNhanVien
-where year(HopDong.ngayLamHopDong) = 2019
-group by HopDong.IdNhanVien
-having (select mycount from( select HopDong.IdNhanVien, count(HopDong.IdNhanVien) as mycount from HopDOng group by HopDong.IdNhanVien) as MyAlias) < 1 );
+where year(HopDong.ngayLamHopDong) between 2017 and 2019);
+-- Task 17 -----------------------------------------------------------------------------
+update KhachHang set IdLoaiKhach = 1
+where KhachHang.IdKhachHang = (
+select HopDong.IdKhachHang from HopDong 
+where HopDong.TongTien > 10000000 and year(HopDong.ngayLamHopDong) = 2019
+) and KhachHang.IdLoaiKhach = 2;
+-- Task 18
+delete from KhachHang
+where IdKhachHang = 
+(select HopDong.IdKhachHang from HopDong
+where HopDong.ngayLamHopDong < 2016 and HopDong.ngayKetThucHopDong < 2016);
+-- Task 19	
+set SQL_SAFE_UPDATES = 0;
+update DichVuDiKem set gia = gia / 2
+where IdDichVuDiKem in (select IdDichVuDiKem from (select HopDongChiTiet.IdDichVuDiKem, count(HopDongChiTiet.IdDichVuDiKem) as mycount from HopDongChiTiet 
+    group by HopDongChiTiet.IdDichVuDiKem 
+	having mycount > 4) as MyAlias);
+-- Task 20
+select IdNhanVien as ID, hoTen, email, SDT, ngaySinh, diaChi from NhanVien
+union
+select IdKhachHang, hoTen, email, SDT, ngaySinh, diaChi from KhachHang;
+-- Task 21
 
 
 
