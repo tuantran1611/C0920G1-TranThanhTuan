@@ -67,7 +67,7 @@ tenDichVu varchar(45),
 dienTich int,
 soTang int,
 soNguoiToiDa int,
-chiPhiThue varchar(45),
+chiPhiThue int,
 IdKieuThue int,
 IdLoaiDichVu int,
 trangThai varchar(45),
@@ -75,6 +75,8 @@ foreign key (IdKieuThue) references KieuThue(IdKieuThue),
 foreign key (IdLoaiDichVu) references LoaiDichVu(IdLoaiDichVu)
 );
 
+alter table DichVu
+	modify chiPhiThue int; 
 create table HopDong(
 IdHopDong int primary key,
 IdNhanVien int,
