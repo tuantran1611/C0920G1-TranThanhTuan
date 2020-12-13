@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0af59e43-d819-4c06-b7a5-01e2cd0b429d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/module3/src/_06_CSS/exercise/bt_3/bt_3.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/src/_06_CSS/exercise/bt_3/comic.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/src/_08_Bootstrap/exercise/bt_1/simple_gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/src/_08_Bootstrap/exercise/bt_2/bt_2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/src/_08_Bootstrap/practice/bt_1_layout_bootstrap/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module3/src/_08_Bootstrap/practice/bt_1_layout_bootstrap/layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module3/src/case_study_3/task_2_3_4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/module3/src/case_study_3/task_2_3_4.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module3/src/_06_CSS/exercise/bt_3/bt_3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module3/src/_06_CSS/exercise/bt_3/bt_3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module3/src/case_study_3/task_2_3_4.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -32,12 +39,17 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/module3/src/_06_CSS/exercise/bt_3" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0920G1_Tran_Thanh_Tuan\module3\src\_06_CSS\exercise\bt_3" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\C0920G1_Tran_Thanh_Tuan\module3\src\_08_Bootstrap\exercise\bt_1" />
       <recent name="D:\C0920G1_Tran_Thanh_Tuan\module3\src\_06_CSS\exercise\bt_1" />
       <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\Case_study\Yeu_cau_2" />
       <recent name="D:\C0920G1_Tran_Thanh_Tuan\module1\9_Conditional_statement_2\Thuc_hanh" />
@@ -156,6 +168,9 @@
       <workItem from="1607483064346" duration="3116000" />
       <workItem from="1607500372375" duration="8539000" />
       <workItem from="1607564121890" duration="3516000" />
+      <workItem from="1607589442204" duration="660000" />
+      <workItem from="1607655773719" duration="5155000" />
+      <workItem from="1607865737913" duration="7536000" />
     </task>
     <task id="LOCAL-00001" summary="luyen tap toan tu 3 ngoi">
       <created>1600919459652</created>
