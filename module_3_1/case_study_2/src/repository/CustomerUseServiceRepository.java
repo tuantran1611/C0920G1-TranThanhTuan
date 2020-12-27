@@ -24,8 +24,7 @@ public class CustomerUseServiceRepository {
             "left join service on contract.service_id = service.service_id\n" +
             "left join contract_detail on contract.contract_id = contract_detail.contract_detail_id " +
             "left join attach_service on contract_detail.attach_service_id = attach_service.attach_service_id " +
-            "where contract.contract_end_date < now();";
-
+            "where contract.contract_end_date > now();";
     ContractService contractService = new ContractServiceImpl();
     ServiceService serviceService = new ServiceServiceImpl();
     ContractDetailService contractDetailService = new ContractDetailServiceImpl();

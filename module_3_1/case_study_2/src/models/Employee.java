@@ -7,7 +7,7 @@ public class Employee {
     private String employeeName;
     private String employeeBirthDay;
     private String employeeIdCard;
-    private double employeeSalary;
+    private String employeeSalary;
     private String employeePhone;
     private String employeeEmail;
     private String employeeAddress;
@@ -16,7 +16,7 @@ public class Employee {
     private Division divisionId;
     private User userName;
 
-    public Employee(String employeeName, String employeeBirthDay, String employeeIdCard, double employeeSalary,
+    public Employee(String employeeName, String employeeBirthDay, String employeeIdCard, String employeeSalary,
                     String employeePhone, String employeeEmail, String employeeAddress, Position positionId,
                     EducationDegree educationDegreeId, Division divisionId, User userName) {
         this.employeeName = employeeName;
@@ -33,7 +33,7 @@ public class Employee {
     }
 
     public Employee(String employeeId, String employeeName, String employeeBirthDay, String employeeIdCard,
-                    double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress,
+                    String employeeSalary, String employeePhone, String employeeEmail, String employeeAddress,
                     Position positionId, EducationDegree educationDegreeId, Division divisionId, User userName) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
@@ -81,11 +81,11 @@ public class Employee {
         this.employeeIdCard = employeeIdCard;
     }
 
-    public double getEmployeeSalary() {
+    public String getEmployeeSalary() {
         return employeeSalary;
     }
 
-    public void setEmployeeSalary(double employeeSalary) {
+    public void setEmployeeSalary(String employeeSalary) {
         this.employeeSalary = employeeSalary;
     }
 

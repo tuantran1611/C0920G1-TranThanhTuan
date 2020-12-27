@@ -49,7 +49,7 @@
                 <li class="nav-item dropdown">
                     <a style="color: white" class="nav-link dropdown-toggle" href="/admin/customers" id="navbarDropdown2"
                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Customer Use Service
+                        Customer Service
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="/admin/customers?action=useService">Customer Use Attach Service</a>
@@ -87,14 +87,34 @@
     <h3>Form edit employee</h3>
 </center>
 <div align="center">
-    <form action="/admin/employees?action=edit&id=${employee.getEmployeeId()}" method="post">
+    <form action="/admin/employees?action=edit&oldId=${employee.getEmployeeId()}" method="post">
         <table border="1" cellpadding="5">
+
+            <tr>
+                <th>Employee Id:</th>
+                <td>
+                    <input type="text" name="id" size="45"
+                           value="${employee.getEmployeeId()}"
+                    />
+                    <p>
+                        <c:if test='${message1!= null}'>
+                            <span style="color: red" class="message">${message1}</span>
+                        </c:if>
+                    </p>
+                </td>
+            </tr>
+
             <tr>
                 <th>Employee Name:</th>
                 <td>
                     <input type="text" name="name" size="45"
                            value="${employee.getEmployeeName()}"
                     />
+                    <p>
+                        <c:if test='${message2!= null}'>
+                            <span style="color: red" class="message">${message2}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
@@ -113,6 +133,11 @@
                     <input type="text" name="idcard" size="45"
                            value="${employee.getEmployeeIdCard()}"
                     />
+                    <p>
+                        <c:if test='${message3!= null}'>
+                            <span style="color: red" class="message">${message3}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
@@ -122,6 +147,11 @@
                     <input type="text" name="salary" size="45"
                            value="${employee.getEmployeeSalary()}"
                     />
+                    <p>
+                        <c:if test='${message4!= null}'>
+                            <span style="color: red" class="message">${message4}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
@@ -131,6 +161,11 @@
                     <input type="text" name="phone" size="45"
                            value="${employee.getEmployeePhone()}"
                     />
+                    <p>
+                        <c:if test='${message5!= null}'>
+                            <span style="color: red" class="message">${message5}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
@@ -140,6 +175,11 @@
                     <input type="text" name="email" size="45"
                            value="${employee.getEmployeeEmail()}"
                     />
+                    <p>
+                        <c:if test='${message6!= null}'>
+                            <span style="color: red" class="message">${message6}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
@@ -152,36 +192,65 @@
                 </td>
             </tr>
             <tr>
-                <th>Position Id:</th>
+                <th>Position:</th>
                 <td>
-                    <input type="text" name="position" size="45"
-                           value="${employee.getPositionId().getPositionId()}"
-                    />
+                    <select name="position" class="form-control" id="position">
+                        <option selected hidden value="${employee.getPositionId().getPositionId()}">${employee.getPositionId().getPositionName()}</option>
+                        <option value="1">Le tan</option>
+                        <option value="2">Phuc vu</option>
+                        <option value="3">Chuyen vien</option>
+                        <option value="4">Giam sat</option>
+                        <option value="5">Quan ly</option>
+                        <option value="6">Giam doc</option>
+                    </select>
+                    <p>
+                        <c:if test='${message7!= null}'>
+                            <span style="color: red" class="message">${message7}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
             <tr>
-                <th>Education Id:</th>
+                <th>Education:</th>
                 <td>
-                    <input type="text" name="degree" size="45"
-                           value="${employee.getEducationDegreeId().getEducationDegreeId()}"
-                    />
+                    <select name="degree" class="form-control" id="degree">
+                        <option selected hidden value="${employee.getEducationDegreeId().getEducationDegreeId()}">${employee.getEducationDegreeId().getEducationDegreeName()}</option>
+                        <option value="1">Trung cap</option>
+                        <option value="2">Cao dang</option>
+                        <option value="3">Dai hoc</option>
+                        <option value="4">Sau dai hoc</option>
+                    </select>
+                    <p>
+                        <c:if test='${message8!= null}'>
+                            <span style="color: red" class="message">${message8}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
             <tr>
-                <th>Division Id:</th>
+                <th>Division:</th>
                 <td>
-                    <input type="text" name="division" size="45"
-                           value="${employee.getDivisionId().getDivisionId()}"
-                    />
+                    <select name="division" class="form-control" id="division">
+                        <option selected hidden value="${employee.getDivisionId().getDivisionId()}">${employee.getDivisionId().getDivisionName()}</option>
+                        <option value="1">Sale - Marketing</option>
+                        <option value="2">Hanh chinh</option>
+                        <option value="3">Phuc vu</option>
+                        <option value="4">Quan ly</option>
+                    </select>
+                    <p>
+                        <c:if test='${message9!= null}'>
+                            <span style="color: red" class="message">${message9}</span>
+                        </c:if>
+                    </p>
                 </td>
             </tr>
 
             <tr>
                 <th>User Name:</th>
                 <td>
-                    <input disabled type="text" name="userName" size="45"
+                    <input readonly="readonly" type="text" name="userName" size="45"
                            value="${employee.getUserName().getUserName()}"
                     />
                 </td>

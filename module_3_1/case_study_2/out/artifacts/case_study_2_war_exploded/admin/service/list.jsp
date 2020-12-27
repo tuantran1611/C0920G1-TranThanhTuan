@@ -19,7 +19,7 @@
     </style>
     <style>
         body {
-            background-image: url("/admin/details-2-background.jpg");
+            background-image: url("/admin/details-1-background.jpg");
             background-size: cover;
         }
 
@@ -32,7 +32,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="myFunction('${message}')">
 <div class="container-fluid">
     <header class="container">
         <div style="float: left;margin-top: 10px">
@@ -62,7 +62,7 @@
                 <li class="nav-item dropdown">
                     <a style="color: white" class="nav-link dropdown-toggle" href="/admin/customers" id="navbarDropdown2"
                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Customer Use Service
+                        Customer Service
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="/admin/customers?action=useService">Customer Use Attach Service</a>
@@ -123,59 +123,123 @@
                             <table>
                                 <tr>
                                     <th>Service Id:</th>
-                                    <td><input type="text" name="id" id="id" size="45"/></td>
+                                    <td><input type="text" name="id" id="id" size="45" value="${service.getServiceId()}"/>
+                                        <p>
+                                            <c:if test='${message1!= null}'>
+                                                <span style="color: red" class="message">${message1}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Service Name:</th>
-                                    <td><input type="text" name="name" id="name" size="45"/></td>
+                                    <td><input type="text" name="name" id="name" size="45" value="${service.getServiceName()}"/>
+                                        <c:if test='${message9!= null}'>
+                                            <span style="color: red" class="message">${message9}</span>
+                                        </c:if>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Service Area:</th>
-                                    <td><input type="text" name="area" id="area" size="45"/></td>
+                                    <td><input type="text" name="area" style="width: 100%" id="area" size="45" value="${service.getServiceArea()}"/>
+                                        <p>
+                                            <c:if test='${message2!= null}'>
+                                                <span style="color: red" class="message">${message2}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Service Type Cost:</th>
-                                    <td><input type="text" name="cost" id="cost" size="45"/></td>
+                                    <td><input type="text" name="cost" style="width: 100%" id="cost" size="45" value="${service.getServiceTypeCost()}"/>
+                                        <p>
+                                            <c:if test='${message3!= null}'>
+                                                <span style="color: red" class="message">${message3}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Service Max People:</th>
-                                    <td><input type="text" name="maxPeople" id="maxPeople" size="45"/></td>
+                                    <td><input type="text" name="maxPeople" id="maxPeople" style="width: 100%" size="45" value="${service.getServiceMaxPeople()}"/>
+                                        <p>
+                                            <c:if test='${message4!= null}'>
+                                                <span style="color: red" class="message">${message4}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Rent Type Id:</th>
-                                    <td><input type="text" name="rentType" id="rentType" size="45"/></td>
+                                    <td>
+                                        <select name="rentType" id="rentType" class="form-control">
+                                            <option selected hidden value="${service.getRentType().getRentTypeId()}">${service.getRentType().getRentTypeName()}</option>
+                                            <option value="1">Nam</option>
+                                            <option value="2">Thang</option>
+                                            <option value="3">Ngay</option>
+                                            <option value="4">Gio</option>
+                                        </select>
+                                        <p>
+                                            <c:if test='${message5!= null}'>
+                                                <span style="color: red" class="message">${message5}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Service Type ID:</th>
-                                    <td><input type="text" name="serviceType" id="serviceType" size="45"/></td>
+                                    <td>
+                                        <select name="serviceType" id="serviceType" class="form-control">
+                                            <option selected hidden value="${service.getServiceType().getServiceTypeId()}">${service.getServiceType().getServiceTypeName()}</option>
+                                            <option value="1">Villa</option>
+                                            <option value="2">House</option>
+                                            <option value="3">Room</option>
+                                        </select>
+                                        <p>
+                                            <c:if test='${message6!= null}'>
+                                                <span style="color: red" class="message">${message6}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Standard Room:</th>
-                                    <td><input type="text" name="standardRoom" id="standardRoom" size="45"/></td>
+                                    <td><input type="text" name="standardRoom" id="standardRoom" size="45" value="${service.getStandardRoom()}"/></td>
                                 </tr>
 
                                 <tr>
                                     <th>Description:</th>
-                                    <td><input type="text" name="description" id="description" size="45"/></td>
+                                    <td><input type="text" name="description" id="description" size="45" value="${service.getDescriptionConvenience()}"/></td>
                                 </tr>
 
                                 <tr>
                                     <th>Pool Area:</th>
-                                    <td><input type="text" name="pool" id="pool" size="45"/></td>
+                                    <td><input type="text" name="pool" id="pool" style="width: 100%" size="45" value="${service.getPoolArea()}"/>
+                                        <p>
+                                            <c:if test='${message7!= null}'>
+                                                <span style="color: red" class="message">${message7}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Number of Floor:</th>
-                                    <td><input type="text" name="floor" id="floor" size="45"/></td>
+                                    <td><input type="text" name="floor" id="floor" style="width: 100%" size="45" value="${service.getNumberFloor()}"/>
+                                        <p>
+                                            <c:if test='${message8!= null}'>
+                                                <span style="color: red" class="message">${message8}</span>
+                                            </c:if>
+                                        </p></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <input class="btn btn-primary" type="submit" value="Add"/>
+                            <button type="submit" class="btn btn-primary" id="submit_id">ADD</button>
                         </div>
                     </div>
                 </div>

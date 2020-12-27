@@ -9,6 +9,7 @@ import java.util.List;
 public class CustomerTypeServiceImpl implements CustomerTypeService {
 
     private CustomerTypeRepository customerTypeRepository = new CustomerTypeRepository();
+
     @Override
     public List<CustomerType> getAll() {
         return customerTypeRepository.selectAllCustomerType();

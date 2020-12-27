@@ -1,9 +1,7 @@
 package controller;
 
-import models.Employee;
-import models.RentType;
-import models.Service;
-import models.ServiceType;
+import common.Validate;
+import models.*;
 import services.RentTypeServiceImpl;
 import services.ServiceServiceImpl;
 import services.ServiceTypeServiceImpl;
@@ -18,6 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "ServiceServlet", urlPatterns = "/admin/services")
@@ -70,7 +69,7 @@ public class ServiceServlet extends HttpServlet {
 
     private void displayService(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
-        Service service = serviceService.getServiceById(id);
+        Service service = serviceService.getServiceById(id.substring(3));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("service/view.jsp");
         request.setAttribute("service", service);
         try {
@@ -82,22 +81,53 @@ public class ServiceServlet extends HttpServlet {
 
     private void createService(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
+        String message1 = Validate.validateServiceId(id);
         String serviceName = request.getParameter("name");
-        int serviceArea = Integer.parseInt(request.getParameter("area"));
-        double serviceTypeCost = Double.parseDouble(request.getParameter("cost"));
-        int serviceMaxPeople = Integer.parseInt(request.getParameter("maxPeople"));
+        String message9 = Validate.validateServiceName(serviceName);
+        String serviceArea = request.getParameter("area");
+        String message2 = Validate.validateServiceArea(serviceArea);
+        String serviceTypeCost = request.getParameter("cost");
+        String message3 = Validate.validateServiceTypeCost(serviceTypeCost);
+        String serviceMaxPeople = request.getParameter("maxPeople");
+        String message4 = Validate.validateServiceArea(serviceMaxPeople);
         RentType rentType = rentTypeService.selectRentTypeById(request.getParameter("rentType"));
+        String message5 = Validate.validateRentType(rentType);
         ServiceType serviceType = serviceTypeService.selectServiceTypeById(request.getParameter("serviceType"));
+        String message6 = Validate.validateServiceType(serviceType);
         String standardRoom = request.getParameter("standardRoom");
         String description = request.getParameter("description");
-        double poolArea = Double.parseDouble(request.getParameter("pool"));
-        int floor = Integer.parseInt(request.getParameter("floor"));
-        Service service = new Service(id,serviceName,serviceArea,serviceTypeCost,serviceMaxPeople,rentType,serviceType,
-                standardRoom,description,poolArea,floor);
-        try {
+        String poolArea = request.getParameter("pool");
+        String message7 = Validate.validateServiceTypeCost(poolArea);
+        String floor = request.getParameter("floor");
+        String message8 = Validate.validateServiceArea(floor);
+        Service service = new Service(id,serviceName,serviceArea,serviceTypeCost,
+                serviceMaxPeople,rentType,serviceType
+                ,standardRoom,description,poolArea,floor);
+
+        if (message1 == null && message2 == null && message3 == null && message4 == null && message5 == null &&
+                message6 == null && message7 == null && message8 == null && message9 == null) {
             serviceService.addNewService(service);
-            response.sendRedirect("/admin/services");
-        } catch (IOException e) {
+            service = null;
+        } else {
+            String message = "Not OK";
+            request.setAttribute("message", message);
+        }
+        List<Service> services = serviceService.getAllService();
+        request.setAttribute("services",services);
+        request.setAttribute("service",service);
+        request.setAttribute("message1", message1);
+        request.setAttribute("message2", message2);
+        request.setAttribute("message3", message3);
+        request.setAttribute("message4", message4);
+        request.setAttribute("message5", message5);
+        request.setAttribute("message6", message6);
+        request.setAttribute("message7", message7);
+        request.setAttribute("message8", message8);
+        request.setAttribute("message9", message9);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("service/list.jsp");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (IOException | ServletException e) {
             e.printStackTrace();
         }
     }

@@ -11,15 +11,19 @@ import java.util.List;
 
 public class CustomerRepository {
 
-    private static final String INSERT_CUSTOMER_SQL = "INSERT INTO customer" + "  (customer_type_id, customer_name, customer_birthday," +
+    private static final String INSERT_CUSTOMER_SQL = "INSERT INTO customer" + "  (customer_id,customer_type_id, customer_name, customer_birthday," +
             " customer_gender, customer_id_card, customer_phone, customer_email, customer_address) VALUES " +
-            " (?,?, ?, ?,?,?,?,?);";
+            " (?,?, ?, ?,?,?,?,?,?);";
+
+    private static final String INSERT_CUSTOMER_SQL_2 = "INSERT INTO customer" + "  (customer_type_id, customer_name, customer_birthday," +
+            " customer_gender, customer_id_card, customer_phone, customer_email, customer_address) VALUES " +
+            " (?, ?, ?,?,?,?,?,?);";
 
     private static final String SELECT_CUSTOMER_BY_ID = "select customer_type_id, customer_name, customer_birthday, " +
             "customer_gender, customer_id_card, customer_phone, customer_email, customer_address from customer where customer_id =?";
     private static final String SELECT_ALL_CUSTOMER = "select * from customer";
     private static final String DELETE_CUSTOMER_SQL = "delete from customer where customer_id = ?;";
-    private static final String UPDATE_CUSTOMER_SQL = "update customer set customer_type_id = ?, customer_name = ?, customer_birthday = ?, " +
+    private static final String UPDATE_CUSTOMER_SQL = "update customer set customer_id = ?, customer_type_id = ?, customer_name = ?, customer_birthday = ?, " +
             "customer_gender = ?, customer_id_card = ?, customer_phone = ?, customer_email = ?, customer_address = ? where customer_id = ?";
 
     private CustomerTypeRepository customerTypeRepository = new CustomerTypeRepository();
@@ -29,20 +33,41 @@ public class CustomerRepository {
     public void addCustomer(Customer customer) {
         System.out.println(INSERT_CUSTOMER_SQL);
         try (Connection connection = MySQLConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER_SQL)) {
-            preparedStatement.setString(1, customer.getCustomerTypeId().getCustomerTypeId());
-            preparedStatement.setString(2, customer.getCustomerName());
-            preparedStatement.setString(3, customer.getCustomerBirthDay());
-            preparedStatement.setBoolean(4, customer.getCustomerGender());
-            preparedStatement.setString(5, customer.getCustomerIdCard());
-            preparedStatement.setString(6, customer.getCustomerPhone());
-            preparedStatement.setString(7, customer.getCustomerEmail());
-            preparedStatement.setString(8, customer.getCustomerAddress());
-            System.out.println(preparedStatement);
-            preparedStatement.executeUpdate();
+             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_CUSTOMER_SQL);) {
+                preparedStatement.setString(1, customer.getCustomerId());
+                preparedStatement.setString(2, customer.getCustomerTypeId().getCustomerTypeId());
+                preparedStatement.setString(3, customer.getCustomerName());
+                preparedStatement.setString(4, customer.getCustomerBirthDay());
+                preparedStatement.setBoolean(5, customer.getCustomerGender());
+                preparedStatement.setString(6, customer.getCustomerIdCard());
+                preparedStatement.setString(7, customer.getCustomerPhone());
+                preparedStatement.setString(8, customer.getCustomerEmail());
+                preparedStatement.setString(9, customer.getCustomerAddress());
+                System.out.println(preparedStatement);
+                preparedStatement.executeUpdate();
         } catch (SQLException e) {
             printSQLException(e);
         }
+    }
+
+    public boolean updateCustomer(Customer customer) throws SQLException {
+        boolean rowUpdated;
+        try (Connection connection = MySQLConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(UPDATE_CUSTOMER_SQL)) {
+            statement.setString(1, customer.getCustomerId());
+            statement.setString(2, customer.getCustomerTypeId().getCustomerTypeId());
+            statement.setString(3, customer.getCustomerName());
+            statement.setString(4, customer.getCustomerBirthDay());
+            statement.setBoolean(5, customer.getCustomerGender());
+            statement.setString(6, customer.getCustomerIdCard());
+            statement.setString(7, customer.getCustomerPhone());
+            statement.setString(8, customer.getCustomerEmail());
+            statement.setString(9, customer.getCustomerAddress());
+            statement.setString(10, customer.getCustomerId());
+            System.out.println(statement);
+            rowUpdated = statement.executeUpdate() > 0;
+        }
+        return rowUpdated;
     }
 
     public Customer selectCustomer(String id) {
@@ -53,6 +78,14 @@ public class CustomerRepository {
             ResultSet rs = preparedStatement.executeQuery();
 
             while (rs.next()) {
+                String id1 = null;
+                if (id.matches("^000[1-9]$")){
+                    id1 = ("KH-").concat(id);
+                } else if (id.matches("^00[1-9]\\d$")){
+                    id1 = ("KH-").concat(id);
+                } else if (id.matches("^0[1-9]\\d\\d$")){
+                    id1 = ("KH-").concat(id);
+                }
                 CustomerType customerType = customerTypeRepository.selectTypeNote(rs.getString("customer_type_id"));
                 String customerName = rs.getString("customer_name");
                 String customerBirthDay = rs.getString("customer_birthday");
@@ -61,7 +94,7 @@ public class CustomerRepository {
                 String customerPhone = rs.getString("customer_phone");
                 String customerEmail = rs.getString("customer_email");
                 String customerAddress = rs.getString("customer_address");
-                customer = new Customer(id, customerType, customerName, customerBirthDay, customerGender,
+                customer = new Customer(id1, customerType, customerName, customerBirthDay, customerGender,
                         customerCardId, customerPhone, customerEmail, customerAddress);
             }
         } catch (SQLException e) {
@@ -77,6 +110,14 @@ public class CustomerRepository {
             ResultSet rs = preparedStatement.executeQuery();
             while (rs.next()) {
                 String id = rs.getString("customer_id");
+                String id1 = null;
+                if (id.matches("^[1-9]$")){
+                    id1 = ("KH-000").concat(id);
+                } else if (id.matches("^[1-9]\\d$")){
+                    id1 = ("KH-00").concat(id);
+                } else if (id.matches("^[1-9]\\d\\d$")){
+                    id1 = ("KH-0").concat(id);
+                }
                 CustomerType customerType = customerTypeRepository.selectTypeNote(rs.getString("customer_type_id"));
                 String customerName = rs.getString("customer_name");
                 String customerBirthDay = rs.getString("customer_birthday");
@@ -85,7 +126,7 @@ public class CustomerRepository {
                 String customerPhone = rs.getString("customer_phone");
                 String customerEmail = rs.getString("customer_email");
                 String customerAddress = rs.getString("customer_address");
-                customers.add(new Customer(id, customerType, customerName, customerBirthDay, customerGender,
+                customers.add(new Customer(id1, customerType, customerName, customerBirthDay, customerGender,
                         customerCardId, customerPhone, customerEmail, customerAddress));
             }
         } catch (SQLException e) {
@@ -104,6 +145,14 @@ public class CustomerRepository {
                 ResultSet rs = callableStatement.executeQuery();
                 while (rs.next()){
                     String id = rs.getString("customer_id");
+                    String id1 = null;
+                    if (id.matches("^[1-9]$")){
+                        id1 = ("KH-000").concat(id);
+                    } else if (id.matches("^[1-9]\\d$")){
+                        id1 = ("KH-00").concat(id);
+                    } else if (id.matches("^[1-9]\\d\\d$")){
+                        id1 = ("KH-0").concat(id);
+                    }
                     CustomerType customerType = customerTypeRepository.selectTypeNote(rs.getString("customer_type_id"));
                     String customerName = rs.getString("customer_name");
                     String customerBirthDay = rs.getString("customer_birthday");
@@ -112,7 +161,7 @@ public class CustomerRepository {
                     String customerPhone = rs.getString("customer_phone");
                     String customerEmail = rs.getString("customer_email");
                     String customerAddress = rs.getString("customer_address");
-                    customerList.add(new Customer(id, customerType, customerName, customerBirthDay, customerGender,
+                    customerList.add(new Customer(id1, customerType, customerName, customerBirthDay, customerGender,
                             customerCardId, customerPhone, customerEmail, customerAddress));
                 }
 
@@ -127,29 +176,12 @@ public class CustomerRepository {
         try (Connection connection = MySQLConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(DELETE_CUSTOMER_SQL)) {
             statement.setString(1, id);
+            System.out.println(statement);
             rowDeleted = statement.executeUpdate() > 0;
         }
         return rowDeleted;
     }
 
-    public boolean updateCustomer(Customer customer) throws SQLException {
-        boolean rowUpdated;
-        try (Connection connection = MySQLConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(UPDATE_CUSTOMER_SQL)) {
-            statement.setString(1, customer.getCustomerTypeId().getCustomerTypeId());
-            statement.setString(2, customer.getCustomerName());
-            statement.setString(3, customer.getCustomerBirthDay());
-            statement.setBoolean(4, customer.getCustomerGender());
-            statement.setString(5, customer.getCustomerIdCard());
-            statement.setString(6, customer.getCustomerPhone());
-            statement.setString(7, customer.getCustomerEmail());
-            statement.setString(8, customer.getCustomerAddress());
-            statement.setString(9, customer.getCustomerId());
-            System.out.println(statement);
-            rowUpdated = statement.executeUpdate() > 0;
-        }
-        return rowUpdated;
-    }
 
     private void printSQLException(SQLException ex) {
         for (Throwable e : ex) {

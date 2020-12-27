@@ -38,10 +38,8 @@ CREATE TABLE customer_type (
   customer_type_name VARCHAR(45) NULL,
   PRIMARY KEY (customer_type_id));
 
-
-
 CREATE TABLE customer (
-  customer_id INT NOT NULL   AUTO_INCREMENT,
+  customer_id INT NOT NULL  AUTO_INCREMENT,
   customer_type_id INT ,
   customer_name VARCHAR(45) ,
   customer_birthday DATE ,
@@ -51,7 +49,7 @@ CREATE TABLE customer (
   customer_email VARCHAR(45) ,
   customer_address VARCHAR(45) ,
   PRIMARY KEY (customer_id),
-  foreign key (customer_type_id) references customer_type(customer_type_id)
+  constraint cus_1 foreign key (customer_type_id) references customer_type(customer_type_id)
   );
 
 CREATE TABLE employee (
@@ -110,19 +108,19 @@ CREATE TABLE service_type (
   attach_service_status VARCHAR(45) NULL,
   PRIMARY KEY (attach_service_id));
   
-    CREATE TABLE contract (
+  CREATE TABLE contract (
   contract_id INT NOT NULL AUTO_INCREMENT,
-  contract_start_date DATETIME NULL,
-  contract_end_date DATETIME NULL,
+  contract_start_date DATE NULL,
+  contract_end_date DATE NULL,
   contract_deposit DOUBLE NULL,
   contract_total_money DOUBLE NULL,
-  employee_id INT NULL,
-  customer_id INT NULL,
-  service_id INT NULL,
+  employee_id INT,
+  customer_id INT,
+  service_id INT,
   PRIMARY KEY (contract_id),
-  foreign key (employee_id) references employee(employee_id),
-  foreign key (customer_id) references customer(customer_id),
-  foreign key (service_id) references service(service_id)
+  constraint cons_1 foreign key (employee_id) references employee(employee_id),
+  constraint cons_2 foreign key (customer_id) references customer(customer_id),
+  constraint cons_3 foreign key (service_id) references service(service_id)
   );
   
   CREATE TABLE contract_detail (
@@ -131,14 +129,14 @@ CREATE TABLE service_type (
   attach_service_id INT NULL,
   quantity INT NULL,
   PRIMARY KEY (contract_detail_id),
-  foreign key (contract_id) references contract(contract_id),
-  foreign key (attach_service_id) references attach_service(attach_service_id)
+  constraint consde_1 foreign key (contract_id) references contract(contract_id),
+  constraint consde_2 foreign key (attach_service_id) references attach_service(attach_service_id)
   );
   
 insert into customer_type values 
 (1 ,'Diamond'),(2, 'Platinium'), (3,'Gold'), (4,'Silver'), (5,'Member');
 insert into customer values
-(1,2,'Tuan', '1995-11-16',1,'KH-1234','0987575064','tuan@gmail.com','Da Nang');
+(1,2,'Tuan', '1995-11-16',1,'231231321','0987575064','tuan@gmail.com','Da Nang');
 
 DELIMITER //
 CREATE PROCEDURE search_customer(
@@ -180,12 +178,14 @@ DELIMITER ;
 -- END//
 -- DELIMITER ;
 
-ALTER TABLE contract
-MODIFY COLUMN contract_end_date date;
+ALTER TABLE customer
+MODIFY COLUMN customer_id int(4) zerofill;
 
-select customer_type_id, customer_name, customer_id_card, customer_phone, customer_address, contract.contract_id, contract_detail.contract_detail_id, service.service_id, attach_service.attach_service_id from customer
-join contract on customer.customer_id = contract.customer_id
-join service on contract.service_id = service.service_id
-join contract_detail on contract.contract_id = contract_detail.contract_detail_id
-join attach_service on contract_detail.attach_service_id = attach_service.attach_service_id 
+select customer.customer_type_id, customer.customer_name, customer.customer_id_card, customer.customer_phone, customer.customer_address, contract.contract_id, contract.contract_end_date, contract_detail.contract_detail_id, service.service_id, attach_service.attach_service_id from contract
+left join customer on customer.customer_id = contract.customer_id
+left join service on contract.service_id = service.service_id
+left join contract_detail on contract.contract_id = contract_detail.contract_detail_id
+left join attach_service on contract_detail.attach_service_id = attach_service.attach_service_id 
 where contract.contract_end_date < now();
+
+drop database casestudy3_2;

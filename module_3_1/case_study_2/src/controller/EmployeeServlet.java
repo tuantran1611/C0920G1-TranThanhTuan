@@ -1,5 +1,6 @@
 package controller;
 
+import common.Validate;
 import models.*;
 import services.*;
 import services.impl.*;
@@ -44,28 +45,6 @@ public class EmployeeServlet extends HttpServlet {
             case "edit":
                 editEmployee(request,response);
                 break;
-        }
-    }
-
-    private void editEmployee(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("id");
-        String employeeName = request.getParameter("name");
-        String birthDay = request.getParameter("birthday");
-        String idCard = request.getParameter("idcard");
-        double salary = Double.parseDouble(request.getParameter("salary"));
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-        Position position = positionService.selectPositionById(request.getParameter("position"));
-        EducationDegree educationDegree = educationDegreeService.selectEducationDegreeById(request.getParameter("degree"));
-        Division division = divisionService.selectDivisionById(request.getParameter("division"));
-        User user = userService.selectUserByName(request.getParameter("userName"));
-        try {
-            employeeService.updateEmployee(new Employee(id,employeeName,birthDay,idCard,salary,phone,email,address,position,
-                    educationDegree,division,user));
-            response.sendRedirect("/admin/employees");
-        } catch (SQLException | IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -127,23 +106,119 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void createEmployee(HttpServletRequest request, HttpServletResponse response) {
+        String employeeId = request.getParameter("id");
+        String message1 = Validate.validateEmployeeId(employeeId);
         String employeeName = request.getParameter("name");
+        String message2 = Validate.validateCustomerName(employeeName);
         String birthDay = request.getParameter("birthday");
         String idCard = request.getParameter("idcard");
-        double salary = Double.parseDouble(request.getParameter("salary"));
+        String message3 = Validate.validateCustomerIdCard(idCard);
+        String salary = request.getParameter("salary");
+        String message4 = Validate.validateServiceTypeCost(salary);
         String phone = request.getParameter("phone");
+        String message5 = Validate.validateCustomerPhone(phone);
         String email = request.getParameter("email");
+        String message6 = Validate.validateCustomerEmail(email);
         String address = request.getParameter("address");
         Position position = positionService.selectPositionById(request.getParameter("position"));
+        String message7 = Validate.validatePosition(position);
         EducationDegree educationDegree = educationDegreeService.selectEducationDegreeById(request.getParameter("degree"));
+        String message8 = Validate.validateDegree(educationDegree);
         Division division = divisionService.selectDivisionById(request.getParameter("division"));
+        String message9 = Validate.validateDivision(division);
         User user = userService.selectUserByName(request.getParameter("userName"));
+        String message10 = Validate.validateUserName(user);
 
-        Employee  employee = new Employee(employeeName,birthDay,idCard,salary,phone,email,address,position,
+        Employee  employee = new Employee(employeeId,employeeName,birthDay,idCard,salary,phone,email,address,position,
                 educationDegree,division,user);
-         try {
-            employeeService.addEmployee(employee);
-            response.sendRedirect("/admin/employees");
+        try {
+            if (message1 == null && message2 == null && message3 == null && message4 == null&& message5 == null && message6 == null && message7 == null
+            && message8 == null && message9 == null && message10 == null) {
+                employeeService.addEmployee(employee);
+                employee = null;
+            } else {
+                String message = "Not OK";
+                request.setAttribute("message", message);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        List<Employee> employees = employeeService.selectAllEmployee();
+        request.setAttribute("employees",employees);
+        request.setAttribute("employee",employee);
+        request.setAttribute("message1", message1);
+        request.setAttribute("message2", message2);
+        request.setAttribute("message3", message3);
+        request.setAttribute("message4", message4);
+        request.setAttribute("message5", message5);
+        request.setAttribute("message6", message6);
+        request.setAttribute("message7", message7);
+        request.setAttribute("message8", message8);
+        request.setAttribute("message9", message9);
+        request.setAttribute("message10", message10);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("employee/list.jsp");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (IOException | ServletException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void editEmployee(HttpServletRequest request, HttpServletResponse response) {
+        String employeeOldId = request.getParameter("oldId");
+        String employeeId = request.getParameter("id");
+        String message1 = Validate.validateEmployeeId(employeeId);
+        String employeeName = request.getParameter("name");
+        String message2 = Validate.validateCustomerName(employeeName);
+        String birthDay = request.getParameter("birthday");
+        String idCard = request.getParameter("idcard");
+        String message3 = Validate.validateCustomerIdCard(idCard);
+        String salary = request.getParameter("salary");
+        String message4 = Validate.validateServiceTypeCost(salary);
+        String phone = request.getParameter("phone");
+        String message5 = Validate.validateCustomerPhone(phone);
+        String email = request.getParameter("email");
+        String message6 = Validate.validateCustomerEmail(email);
+        String address = request.getParameter("address");
+        Position position = positionService.selectPositionById(request.getParameter("position"));
+        String message7 = Validate.validatePosition(position);
+        EducationDegree educationDegree = educationDegreeService.selectEducationDegreeById(request.getParameter("degree"));
+        String message8 = Validate.validateDegree(educationDegree);
+        Division division = divisionService.selectDivisionById(request.getParameter("division"));
+        String message9 = Validate.validateDivision(division);
+        User user = userService.selectUserByName(request.getParameter("userName"));
+        Employee employee;
+        try {
+            if (message1 == null && message2 == null && message3 == null && message4 == null&& message5 == null && message6 == null && message7 == null
+                    && message8 == null && message9 == null) {
+                if (!employeeOldId.equals(employeeId)) {
+                    employee = new Employee(employeeId,employeeName.trim(),birthDay,idCard,salary,phone,email,address,position,educationDegree,division,user);
+                    employeeService.addEmployee(employee);
+                    employeeService.deleteEmployee(employeeOldId);
+                } else {
+                    employee = new Employee(employeeOldId,employeeName.trim(),birthDay,idCard,salary,phone,email,address,position,educationDegree,division,user);
+                    employeeService.updateEmployee(employee);
+                }
+                response.sendRedirect("/admin/employees");
+            } else {
+                employee = new Employee(employeeId,employeeName.trim(),birthDay,idCard,salary,phone,email,address,position,educationDegree,division,user);
+                request.setAttribute("employee",employee);
+                request.setAttribute("message1", message1);
+                request.setAttribute("message2", message2);
+                request.setAttribute("message3", message3);
+                request.setAttribute("message4", message4);
+                request.setAttribute("message5", message5);
+                request.setAttribute("message6", message6);
+                request.setAttribute("message7", message7);
+                request.setAttribute("message8", message8);
+                request.setAttribute("message9", message9);
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("employee/edit.jsp");
+                try {
+                    requestDispatcher.forward(request,response);
+                } catch (IOException | ServletException e) {
+                    e.printStackTrace();
+                }
+            }
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }

@@ -32,7 +32,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="myFunction('${message}')">
 <div class="container-fluid">
     <header class="container">
         <div style="float: left;margin-top: 10px">
@@ -114,6 +114,8 @@
                  aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
+
+                        <!-- Header-->
                         <div class="modal-header">
                             <h5 class="modal-title" id="addNewCus">Add New Customer</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -124,24 +126,47 @@
                         <div class="modal-body">
                             <table>
                                 <tr>
+                                    <th>Customer Id:</th>
+                                    <td><input type="text" name="id" id="id" size="45" value="${customer.getCustomerId()}"/>
+                                        <p>
+                                            <c:if test='${message2!= null}'>
+                                                <span style="color: red" class="message">${message2}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th>Customer Type Id:</th>
                                     <td>
                                         <select name="type" class="form-control" id="type">
-                                            <option value="1">Diamond</option>
-                                            <option value="2">Platinium</option>
-                                            <option value="3">Gold</option>
-                                            <option value="4">Silver</option>
-                                            <option value="5">Member</option>
+                                                <option selected hidden value="${customer.getCustomerTypeId().getCustomerTypeId()}">${customer.getCustomerTypeId().getCustomerTypeName()}</option>
+                                                <option value="1">Diamond</option>
+                                                <option value="2">Platinium</option>
+                                                <option value="3">Gold</option>
+                                                <option value="4">Silver</option>
+                                                <option value="5">Member</option>
                                         </select>
+                                        <p>
+                                            <c:if test='${message7!= null}'>
+                                                <span style="color: red" class="message">${message7}</span>
+                                            </c:if>
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>Customer Name:</th>
-                                    <td><input type="text" name="name" id="name" size="45"/></td>
+                                    <td>
+                                        <input type="text" name="name" id="name" size="45" value="${customer.getCustomerName()}"/>
+                                        <p>
+                                            <c:if test='${message1!= null}'>
+                                                <span style="color: red" class="message">${message1}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th>Customer BirthDay:</th>
-                                    <td><input type="text" name="birthday" id="birthday" size="45"/></td>
+                                    <td><input type="text" name="birthday" id="birthday" size="45" value="${customer.getCustomerBirthDay()}"/></td>
                                 </tr>
                                 <tr>
                                     <th>Customer Gender:</th>
@@ -155,28 +180,46 @@
 
                                 <tr>
                                     <th>Customer Id Card:</th>
-                                    <td><input type="text" name="idcard" id="idcard" size="45"/></td>
+                                    <td><input type="text" name="idcard" id="idcard" size="45" value="${customer.getCustomerIdCard()}"/>
+                                        <p>
+                                            <c:if test='${message3!= null}'>
+                                                <span style="color: red" class="message">${message3}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Customer Phone:</th>
-                                    <td><input type="text" name="phone" id="phone" size="45"/></td>
+                                    <td><input type="text" name="phone" id="phone" size="45" value="${customer.getCustomerPhone()}"/>
+                                        <p>
+                                            <c:if test='${message4!= null}'>
+                                                <span style="color: red" class="message">${message4}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Customer Email:</th>
-                                    <td><input type="text" name="email" id="email" size="45"/></td>
+                                    <td><input type="text" name="email" id="email" size="45" value="${customer.getCustomerEmail()}"/>
+                                        <p>
+                                            <c:if test='${message6!= null}'>
+                                                <span style="color: red" class="message">${message6}</span>
+                                            </c:if>
+                                        </p>
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <th>Customer Address:</th>
-                                    <td><input type="text" name="address" id="address" size="45"/></td>
+                                    <td><input type="text" name="address" id="address" size="45" value="${customer.getCustomerAddress()}"/></td>
                                 </tr>
                             </table>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <input class="btn btn-primary" type="submit" value="Add"/>
+                            <button type="submit" class="btn btn-primary" id="submit_id">ADD</button>
                         </div>
                     </div>
                 </div>
@@ -272,7 +315,7 @@
 </script>
 <script type="text/javascript">
     function myFunction(message) {
-        if (message) {
+        if(message) {
             $('#addNew').modal('show');
         }
     }

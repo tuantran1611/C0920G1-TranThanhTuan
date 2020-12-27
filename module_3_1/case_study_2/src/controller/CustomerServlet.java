@@ -1,5 +1,6 @@
 package controller;
 
+import common.Validate;
 import models.Customer;
 import models.CustomerType;
 import models.CustomerUseService;
@@ -78,7 +79,6 @@ public class CustomerServlet extends HttpServlet {
     private void searchCustomerByName(HttpServletRequest request, HttpServletResponse response) {
         String searchWord = request.getParameter("searchWord");
         List<Customer> customers = customerService.selectCustomerByName(searchWord);
-        System.out.println(customers);
         request.setAttribute("customers" , customers);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/list.jsp");
         try {
@@ -91,7 +91,7 @@ public class CustomerServlet extends HttpServlet {
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
         try {
-            customerService.deleteCustomer(id);
+            customerService.deleteCustomer(id.substring(3));
             response.sendRedirect("/admin/customers");
         } catch (SQLException | IOException e) {
             e.printStackTrace();
@@ -99,48 +99,123 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void addCustomer(HttpServletRequest request, HttpServletResponse response) {
-
+        String customerId = request.getParameter("id");
+        String message2 = Validate.validateCustomerId(customerId);
+        String customerId1 = request.getParameter("id");
+        if (message2 == null) {
+            customerId1 = customerId.substring(3);
+        }
         CustomerType customerTypeId = customerTypeService.getCusTypeById(request.getParameter("type"));
+        String message7 = Validate.validateCustomerType(customerTypeId);
         String customerName = request.getParameter("name");
+        String message1 = Validate.validateCustomerName(customerName.trim());
         String customerBirthDay = request.getParameter("birthday");
         boolean customerGender = Boolean.parseBoolean(request.getParameter("gender"));
         String customerIdCard = request.getParameter("idcard");
+        String message3 = Validate.validateCustomerIdCard(customerIdCard);
         String customerPhone = request.getParameter("phone");
+        String message4 = Validate.validateCustomerPhone(customerPhone);
         String customerEmail = request.getParameter("email");
+        String message6 = Validate.validateCustomerEmail(customerEmail);
         String customerAddress = request.getParameter("address");
 
-        Customer customer = new Customer(customerTypeId, customerName, customerBirthDay, customerGender, customerIdCard,
+        Customer customer = new Customer(customerId1,customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
                 customerPhone, customerEmail, customerAddress);
 
         try {
-            customerService.addCustomer(customer);
-            response.sendRedirect("/admin/customers");
-        } catch (IOException | SQLException e) {
+            if (message1 == null && message2 == null && message3 == null && message4 == null && message6 == null && message7 == null) {
+                customerService.addCustomer(customer);
+                customer = null;
+            } else {
+                String message5 = "Not OK";
+                request.setAttribute("message", message5);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        List<Customer> customers = customerService.selectAllCustomer();
+        List<CustomerType> customerTypeList = customerTypeService.getAll();
+        request.setAttribute("customerTypeList", customerTypeList);
+        request.setAttribute("customers",customers);
+        request.setAttribute("customer",customer);
+        request.setAttribute("message1", message1);
+        request.setAttribute("message2", message2);
+        request.setAttribute("message3", message3);
+        request.setAttribute("message4", message4);
+        request.setAttribute("message6", message6);
+        request.setAttribute("message7", message7);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/list.jsp");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (IOException | ServletException e) {
             e.printStackTrace();
         }
     }
 
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("id");
+        String customerOldId = request.getParameter("oldId");
+        String customerId = request.getParameter("id");
+        String message2 = Validate.validateCustomerId(customerId);
+        String customerId1 = request.getParameter("id");
+        if (message2 == null) {
+            customerId1 = customerId.substring(3);
+        }
         CustomerType customerTypeId = customerTypeService.getCusTypeById(request.getParameter("type"));
+        String message7 = Validate.validateCustomerType(customerTypeId);
         String customerName = request.getParameter("name");
+        String message1 = Validate.validateCustomerName(customerName.trim());
         String customerBirthDay = request.getParameter("birthday");
         boolean customerGender = Boolean.parseBoolean(request.getParameter("gender"));
         String customerIdCard = request.getParameter("idcard");
+        String message3 = Validate.validateCustomerIdCard(customerIdCard);
         String customerPhone = request.getParameter("phone");
+        String message4 = Validate.validateCustomerPhone(customerPhone);
         String customerEmail = request.getParameter("email");
+        String message6 = Validate.validateCustomerEmail(customerEmail);
         String customerAddress = request.getParameter("address");
+
+        System.out.println(customerId);
+        System.out.println(customerOldId);
+
+        Customer customer;
         try {
-            customerService.updateCustomer(new Customer(id, customerTypeId, customerName, customerBirthDay,
-                    customerGender, customerIdCard, customerPhone, customerEmail, customerAddress));
-            response.sendRedirect("/admin/customers");
+            if (message1 == null && message2 == null && message3 == null && message4 == null && message6 == null && message7 == null) {
+                if (!customerOldId.equals(customerId)) {
+                    customer = new Customer(customerId1, customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
+                            customerPhone, customerEmail, customerAddress);
+
+                    customerService.addCustomer(customer);
+                    customerService.deleteCustomer(customerOldId.substring(3));
+                } else {
+                    customer = new Customer(customerOldId.substring(3), customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
+                            customerPhone, customerEmail, customerAddress);
+                    customerService.updateCustomer(customer);
+                }
+                response.sendRedirect("/admin/customers");
+            } else {
+                customer = new Customer(customerId,customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
+                        customerPhone, customerEmail, customerAddress);
+                request.setAttribute("customer",customer);
+                request.setAttribute("message1", message1);
+                request.setAttribute("message2", message2);
+                request.setAttribute("message3", message3);
+                request.setAttribute("message4", message4);
+                request.setAttribute("message6", message6);
+                request.setAttribute("message7", message7);
+                RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/edit.jsp");
+                try {
+                    requestDispatcher.forward(request,response);
+                } catch (IOException | ServletException e) {
+                    e.printStackTrace();
+                }
+            }
         } catch (SQLException | IOException e) {
             e.printStackTrace();
         }
     }
 
     private void displayCustomer(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("id");
+        String id = (request.getParameter("id")).substring(3);
         Customer customer = customerService.selectCustomer(id);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/view.jsp");
         request.setAttribute("customer", customer);
@@ -152,8 +227,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
-        String id = request.getParameter("id");
+        String id = (request.getParameter("id")).substring(3);
         Customer customer = customerService.selectCustomer(id);
+        System.out.println(id);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/edit.jsp");
         request.setAttribute("customer", customer);
         try {

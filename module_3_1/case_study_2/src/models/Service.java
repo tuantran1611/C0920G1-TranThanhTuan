@@ -3,18 +3,18 @@ package models;
 public class Service {
     private String serviceId;
     private String serviceName;
-    private int serviceArea;
-    private double serviceTypeCost;
-    private int serviceMaxPeople;
+    private String serviceArea;
+    private String serviceTypeCost;
+    private String serviceMaxPeople;
     private RentType rentType;
     private ServiceType serviceType;
     private String standardRoom;
     private String descriptionConvenience;
-    private double poolArea;
-    private int numberFloor;
+    private String poolArea;
+    private String numberFloor;
 
-    public Service(String serviceName, int serviceArea, double serviceTypeCost, int serviceMaxPeople, RentType rentType,
-                   ServiceType serviceType, String standardRoom, String descriptionConvenience, double poolArea, int numberFloor) {
+    public Service(String serviceName, String serviceArea, String serviceTypeCost, String serviceMaxPeople, RentType rentType,
+                   ServiceType serviceType, String standardRoom, String descriptionConvenience, String poolArea, String numberFloor) {
         this.serviceName = serviceName;
         this.serviceArea = serviceArea;
         this.serviceTypeCost = serviceTypeCost;
@@ -27,9 +27,9 @@ public class Service {
         this.numberFloor = numberFloor;
     }
 
-    public Service(String serviceId, String serviceName, int serviceArea, double serviceTypeCost, int serviceMaxPeople,
+    public Service(String serviceId, String serviceName, String serviceArea, String serviceTypeCost, String serviceMaxPeople,
                    RentType rentType, ServiceType serviceType, String standardRoom, String descriptionConvenience,
-                   double poolArea, int numberFloor) {
+                   String poolArea, String numberFloor) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.serviceArea = serviceArea;
@@ -59,27 +59,27 @@ public class Service {
         this.serviceName = serviceName;
     }
 
-    public int getServiceArea() {
+    public String getServiceArea() {
         return serviceArea;
     }
 
-    public void setServiceArea(int serviceArea) {
+    public void setServiceArea(String serviceArea) {
         this.serviceArea = serviceArea;
     }
 
-    public double getServiceTypeCost() {
+    public String getServiceTypeCost() {
         return serviceTypeCost;
     }
 
-    public void setServiceTypeCost(double serviceTypeCost) {
+    public void setServiceTypeCost(String serviceTypeCost) {
         this.serviceTypeCost = serviceTypeCost;
     }
 
-    public int getServiceMaxPeople() {
+    public String getServiceMaxPeople() {
         return serviceMaxPeople;
     }
 
-    public void setServiceMaxPeople(int serviceMaxPeople) {
+    public void setServiceMaxPeople(String serviceMaxPeople) {
         this.serviceMaxPeople = serviceMaxPeople;
     }
 
@@ -115,19 +115,19 @@ public class Service {
         this.descriptionConvenience = descriptionConvenience;
     }
 
-    public double getPoolArea() {
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumberFloor() {
+    public String getNumberFloor() {
         return numberFloor;
     }
 
-    public void setNumberFloor(int numberFloor) {
+    public void setNumberFloor(String numberFloor) {
         this.numberFloor = numberFloor;
     }
 }

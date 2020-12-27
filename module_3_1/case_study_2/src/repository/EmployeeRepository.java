@@ -8,7 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeRepository {
-    private static final String INSERT_EMPLOYEE_SQL = "INSERT INTO employee" + "  (employee_name, employee_birthday, employee_id_card," +
+    private static final String INSERT_EMPLOYEE_SQL = "INSERT INTO employee" + "  (employee_id,employee_name, employee_birthday, employee_id_card," +
+            " employee_salary, employee_phone, employee_email, employee_address, position_id, education_degree_id, division_id, username) VALUES " +
+            " (?,?,?, ?, ?,?,?,?,?,?,?,?)";
+
+    private static final String INSERT_EMPLOYEE_SQL_2 = "INSERT INTO employee" + "  (employee_name, employee_birthday, employee_id_card," +
             " employee_salary, employee_phone, employee_email, employee_address, position_id, education_degree_id, division_id, username) VALUES " +
             " (?,?, ?, ?,?,?,?,?,?,?,?)";
 
@@ -30,21 +34,39 @@ public class EmployeeRepository {
     }
 
     public void addEmployee(Employee employee) {
-        try (Connection connection = MySQLConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE_SQL)) {
-            preparedStatement.setString(1, employee.getEmployeeName());
-            preparedStatement.setString(2, employee.getEmployeeBirthDay());
-            preparedStatement.setString(3, employee.getEmployeeIdCard());
-            preparedStatement.setDouble(4, employee.getEmployeeSalary());
-            preparedStatement.setString(5, employee.getEmployeePhone());
-            preparedStatement.setString(6, employee.getEmployeeEmail());
-            preparedStatement.setString(7, employee.getEmployeeAddress());
-            preparedStatement.setString(8, employee.getPositionId().getPositionId());
-            preparedStatement.setString(9, employee.getEducationDegreeId().getEducationDegreeId());
-            preparedStatement.setString(10, employee.getDivisionId().getDivisionId());
-            preparedStatement.setString(11,employee.getUserName().getUserName());
-            System.out.println(preparedStatement);
-            preparedStatement.executeUpdate();
+        try (Connection connection = MySQLConnection.getConnection();) {
+            if (!employee.getEmployeeId().equals("")) {
+                PreparedStatement preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE_SQL);
+                preparedStatement.setString(1, employee.getEmployeeId());
+                preparedStatement.setString(2, employee.getEmployeeName());
+                preparedStatement.setString(3, employee.getEmployeeBirthDay());
+                preparedStatement.setString(4, employee.getEmployeeIdCard());
+                preparedStatement.setString(5, employee.getEmployeeSalary());
+                preparedStatement.setString(6, employee.getEmployeePhone());
+                preparedStatement.setString(7, employee.getEmployeeEmail());
+                preparedStatement.setString(8, employee.getEmployeeAddress());
+                preparedStatement.setString(9, employee.getPositionId().getPositionId());
+                preparedStatement.setString(10, employee.getEducationDegreeId().getEducationDegreeId());
+                preparedStatement.setString(11, employee.getDivisionId().getDivisionId());
+                preparedStatement.setString(12, employee.getUserName().getUserName());
+                System.out.println(preparedStatement);
+                preparedStatement.executeUpdate();
+            } else {
+                PreparedStatement preparedStatement = connection.prepareStatement(INSERT_EMPLOYEE_SQL_2);
+                preparedStatement.setString(1, employee.getEmployeeName());
+                preparedStatement.setString(2, employee.getEmployeeBirthDay());
+                preparedStatement.setString(3, employee.getEmployeeIdCard());
+                preparedStatement.setString(4, employee.getEmployeeSalary());
+                preparedStatement.setString(5, employee.getEmployeePhone());
+                preparedStatement.setString(6, employee.getEmployeeEmail());
+                preparedStatement.setString(7, employee.getEmployeeAddress());
+                preparedStatement.setString(8, employee.getPositionId().getPositionId());
+                preparedStatement.setString(9, employee.getEducationDegreeId().getEducationDegreeId());
+                preparedStatement.setString(10, employee.getDivisionId().getDivisionId());
+                preparedStatement.setString(11, employee.getUserName().getUserName());
+                System.out.println(preparedStatement);
+                preparedStatement.executeUpdate();
+            }
         } catch (SQLException e) {
             printSQLException(e);
         }
@@ -61,7 +83,7 @@ public class EmployeeRepository {
                 String employeeName = rs.getString("employee_name");
                 String employeeBirthDay = rs.getString("employee_birthday");
                 String employeeIdCard = rs.getString("employee_id_card");
-                double employeeSalary = rs.getDouble("employee_salary");
+                String employeeSalary = rs.getString("employee_salary");
                 String employeePhone = rs.getString("employee_phone");
                 String employeeMail = rs.getString("employee_email");
                 String employeeAddress = rs.getString("employee_address");
@@ -89,7 +111,7 @@ public class EmployeeRepository {
                 String employeeName = rs.getString("employee_name");
                 String employeeBirthDay = rs.getString("employee_birthday");
                 String employeeIdCard = rs.getString("employee_id_card");
-                double employeeSalary = rs.getDouble("employee_salary");
+                String employeeSalary = rs.getString("employee_salary");
                 String employeePhone = rs.getString("employee_phone");
                 String employeeMail = rs.getString("employee_email");
                 String employeeAddress = rs.getString("employee_address");
@@ -119,7 +141,7 @@ public class EmployeeRepository {
                 String employeeName = rs.getString("employee_name");
                 String employeeBirthDay = rs.getString("employee_birthday");
                 String employeeIdCard = rs.getString("employee_id_card");
-                double employeeSalary = rs.getDouble("employee_salary");
+                String employeeSalary = rs.getString("employee_salary");
                 String employeePhone = rs.getString("employee_phone");
                 String employeeMail = rs.getString("employee_email");
                 String employeeAddress = rs.getString("employee_address");
@@ -154,7 +176,7 @@ public class EmployeeRepository {
             statement.setString(1, employee.getEmployeeName());
             statement.setString(2, employee.getEmployeeBirthDay());
             statement.setString(3, employee.getEmployeeIdCard());
-            statement.setDouble(4, employee.getEmployeeSalary());
+            statement.setString(4, employee.getEmployeeSalary());
             statement.setString(5, employee.getEmployeePhone());
             statement.setString(6, employee.getEmployeeEmail());
             statement.setString(7, employee.getEmployeeAddress());

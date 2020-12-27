@@ -15,7 +15,7 @@
     <style><%@ include file="/WEB-INF/libs/bootstrap/datatables/css/dataTables.bootstrap4.min.css"%></style>
     <style>
         body {
-            background-image: url("/admin/details-2-background.jpg");
+            background-image: url("/admin/details-1-background.jpg");
             background-size: cover;
         }
         td {
@@ -52,7 +52,7 @@
                 <li class="nav-item dropdown">
                     <a style="color: white" class="nav-link dropdown-toggle" href="/admin/customers" id="navbarDropdown2"
                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Customer Use Service
+                        Customer Service
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                         <a class="dropdown-item" href="/admin/customers?action=useService">Customer Use Attach Service</a>
