@@ -1,12 +1,15 @@
 package controller;
 
 import common.Validate;
+import models.Contract;
 import models.Customer;
 import models.CustomerType;
 import models.CustomerUseService;
+import services.ContractServiceImpl;
 import services.CustomerServiceImpl;
 import services.CustomerTypeServiceImpl;
 import services.CustomerUseServiceServiceImpl;
+import services.impl.ContractService;
 import services.impl.CustomerService;
 import services.impl.CustomerTypeService;
 import services.impl.CustomerUseServiceService;
@@ -27,11 +30,13 @@ public class CustomerServlet extends HttpServlet {
     private CustomerService customerService;
     private CustomerTypeService customerTypeService;
     private CustomerUseServiceService customerUseServiceService;
+    private ContractService contractService;
 
     public void init() {
         customerService = new CustomerServiceImpl();
         customerTypeService = new CustomerTypeServiceImpl();
         customerUseServiceService = new CustomerUseServiceServiceImpl();
+        contractService = new ContractServiceImpl();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -91,9 +96,16 @@ public class CustomerServlet extends HttpServlet {
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
         try {
-            customerService.deleteCustomer(id.substring(3));
-            response.sendRedirect("/admin/customers");
-        } catch (SQLException | IOException e) {
+            if (!customerService.deleteCustomer(id)){
+                List<Customer> customers = customerService.selectAllCustomer();
+                request.setAttribute("customers", customers);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("customer/list.jsp");
+                dispatcher.forward(request,response);
+            } else {
+                response.sendRedirect("/admin/customers");
+            }
+
+        } catch (ServletException | SQLException | IOException e) {
             e.printStackTrace();
         }
     }
@@ -101,10 +113,6 @@ public class CustomerServlet extends HttpServlet {
     private void addCustomer(HttpServletRequest request, HttpServletResponse response) {
         String customerId = request.getParameter("id");
         String message2 = Validate.validateCustomerId(customerId);
-        String customerId1 = request.getParameter("id");
-        if (message2 == null) {
-            customerId1 = customerId.substring(3);
-        }
         CustomerType customerTypeId = customerTypeService.getCusTypeById(request.getParameter("type"));
         String message7 = Validate.validateCustomerType(customerTypeId);
         String customerName = request.getParameter("name");
@@ -119,7 +127,7 @@ public class CustomerServlet extends HttpServlet {
         String message6 = Validate.validateCustomerEmail(customerEmail);
         String customerAddress = request.getParameter("address");
 
-        Customer customer = new Customer(customerId1,customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
+        Customer customer = new Customer(customerId,customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
                 customerPhone, customerEmail, customerAddress);
 
         try {
@@ -153,13 +161,8 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void editCustomer(HttpServletRequest request, HttpServletResponse response) {
-        String customerOldId = request.getParameter("oldId");
         String customerId = request.getParameter("id");
         String message2 = Validate.validateCustomerId(customerId);
-        String customerId1 = request.getParameter("id");
-        if (message2 == null) {
-            customerId1 = customerId.substring(3);
-        }
         CustomerType customerTypeId = customerTypeService.getCusTypeById(request.getParameter("type"));
         String message7 = Validate.validateCustomerType(customerTypeId);
         String customerName = request.getParameter("name");
@@ -175,27 +178,15 @@ public class CustomerServlet extends HttpServlet {
         String customerAddress = request.getParameter("address");
 
         System.out.println(customerId);
-        System.out.println(customerOldId);
 
-        Customer customer;
+        Customer customer = new Customer(customerId, customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
+                customerPhone, customerEmail, customerAddress);
         try {
             if (message1 == null && message2 == null && message3 == null && message4 == null && message6 == null && message7 == null) {
-                if (!customerOldId.equals(customerId)) {
-                    customer = new Customer(customerId1, customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
-                            customerPhone, customerEmail, customerAddress);
-
-                    customerService.addCustomer(customer);
-                    customerService.deleteCustomer(customerOldId.substring(3));
-                } else {
-                    customer = new Customer(customerOldId.substring(3), customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
-                            customerPhone, customerEmail, customerAddress);
-                    customerService.updateCustomer(customer);
-                }
+                customerService.updateCustomer(customer);
                 response.sendRedirect("/admin/customers");
             } else {
-                customer = new Customer(customerId,customerTypeId, customerName.trim(), customerBirthDay, customerGender, customerIdCard,
-                        customerPhone, customerEmail, customerAddress);
-                request.setAttribute("customer",customer);
+                request.setAttribute("customer", customer);
                 request.setAttribute("message1", message1);
                 request.setAttribute("message2", message2);
                 request.setAttribute("message3", message3);
@@ -204,7 +195,7 @@ public class CustomerServlet extends HttpServlet {
                 request.setAttribute("message7", message7);
                 RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/edit.jsp");
                 try {
-                    requestDispatcher.forward(request,response);
+                    requestDispatcher.forward(request, response);
                 } catch (IOException | ServletException e) {
                     e.printStackTrace();
                 }
@@ -215,8 +206,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void displayCustomer(HttpServletRequest request, HttpServletResponse response) {
-        String id = (request.getParameter("id")).substring(3);
-        Customer customer = customerService.selectCustomer(id);
+        String id = (request.getParameter("id"));
+        System.out.println(id);
+        Customer customer = customerService.selectCustomer1(id.substring(3));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/view.jsp");
         request.setAttribute("customer", customer);
         try {
@@ -227,11 +219,11 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void showFormEdit(HttpServletRequest request, HttpServletResponse response) {
-        String id = (request.getParameter("id")).substring(3);
-        Customer customer = customerService.selectCustomer(id);
-        System.out.println(id);
+        String id = (request.getParameter("id"));
+        Customer customer = customerService.selectCustomer(id.substring(3));
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("customer/edit.jsp");
         request.setAttribute("customer", customer);
+
         try {
             requestDispatcher.forward(request, response);
         } catch (ServletException | IOException e) {

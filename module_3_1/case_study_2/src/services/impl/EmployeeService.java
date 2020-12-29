@@ -11,6 +11,8 @@ public interface EmployeeService {
 
     public Employee selectEmployee(String id);
 
+    public Employee selectEmployee1(String id);
+
     public List<Employee> selectAllEmployee();
 
     public boolean deleteEmployee(String id) throws SQLException;

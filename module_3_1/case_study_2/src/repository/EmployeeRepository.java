@@ -4,6 +4,8 @@ import connection.MySQLConnection;
 import models.*;
 
 import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -101,15 +103,27 @@ public class EmployeeRepository {
         return employee;
     }
 
-    public List<Employee> selectAllEmployee() {
-        List<Employee> employees = new ArrayList<>();
+    public Employee selectEmployee1(String id) {
+        Employee employee = null;
         try (Connection connection = MySQLConnection.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_EMPLOYEE)) {
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_EMPLOYEE_BY_ID)) {
+            preparedStatement.setString(1, id);
             ResultSet rs = preparedStatement.executeQuery();
+
             while (rs.next()) {
-                String employeeId = rs.getString("employee_id");
                 String employeeName = rs.getString("employee_name");
                 String employeeBirthDay = rs.getString("employee_birthday");
+
+                SimpleDateFormat dt = new SimpleDateFormat("yyyy-mm-dd");
+                java.util.Date date = null;
+                try {
+                    date = dt.parse(employeeBirthDay);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                SimpleDateFormat dt1 = new SimpleDateFormat("dd/mm/yyyy");
+                String birthday1 = dt1.format(date);
+
                 String employeeIdCard = rs.getString("employee_id_card");
                 String employeeSalary = rs.getString("employee_salary");
                 String employeePhone = rs.getString("employee_phone");
@@ -119,7 +133,46 @@ public class EmployeeRepository {
                 EducationDegree educationDegreeId = educationDegreeRepository.selectEducationDegreeById(rs.getString("education_degree_id"));
                 Division divisionId = divisionRepository.selectDivisionById(rs.getString("division_id"));
                 User userName = userRepository.selectUserByName(rs.getString("username"));
-                employees.add(new Employee(employeeId,employeeName,employeeBirthDay,employeeIdCard,employeeSalary,employeePhone,employeeMail,
+
+                employee = new Employee(id,employeeName,birthday1,employeeIdCard,employeeSalary,employeePhone,
+                        employeeMail,employeeAddress, positionId,educationDegreeId,divisionId,userName);
+            }
+        } catch (SQLException e) {
+            printSQLException(e);
+        }
+        return employee;
+    }
+
+    public List<Employee> selectAllEmployee() {
+        List<Employee> employees = new ArrayList<>();
+        try (Connection connection = MySQLConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_EMPLOYEE)) {
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()) {
+                String employeeId = rs.getString("employee_id");
+                String employeeName = rs.getString("employee_name");
+                String employeeBirthDay = rs.getString("employee_birthday");
+
+                SimpleDateFormat dt = new SimpleDateFormat("yyyy-mm-dd");
+                java.util.Date date = null;
+                try {
+                    date = dt.parse(employeeBirthDay);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                SimpleDateFormat dt1 = new SimpleDateFormat("dd/mm/yyyy");
+                String birthday1 = dt1.format(date);
+
+                String employeeIdCard = rs.getString("employee_id_card");
+                String employeeSalary = rs.getString("employee_salary");
+                String employeePhone = rs.getString("employee_phone");
+                String employeeMail = rs.getString("employee_email");
+                String employeeAddress = rs.getString("employee_address");
+                Position positionId = positionRepository.selectPositionById(rs.getString("position_id"));
+                EducationDegree educationDegreeId = educationDegreeRepository.selectEducationDegreeById(rs.getString("education_degree_id"));
+                Division divisionId = divisionRepository.selectDivisionById(rs.getString("division_id"));
+                User userName = userRepository.selectUserByName(rs.getString("username"));
+                employees.add(new Employee(employeeId,employeeName,birthday1,employeeIdCard,employeeSalary,employeePhone,employeeMail,
                         employeeAddress,positionId,educationDegreeId,divisionId,userName));
             }
         } catch (SQLException e) {
@@ -140,6 +193,17 @@ public class EmployeeRepository {
                 String employeeId = rs.getString("employee_id");
                 String employeeName = rs.getString("employee_name");
                 String employeeBirthDay = rs.getString("employee_birthday");
+
+                SimpleDateFormat dt = new SimpleDateFormat("yyyy-mm-dd");
+                java.util.Date date = null;
+                try {
+                    date = dt.parse(employeeBirthDay);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                SimpleDateFormat dt1 = new SimpleDateFormat("dd/mm/yyyy");
+                String birthday1 = dt1.format(date);
+
                 String employeeIdCard = rs.getString("employee_id_card");
                 String employeeSalary = rs.getString("employee_salary");
                 String employeePhone = rs.getString("employee_phone");
@@ -149,7 +213,7 @@ public class EmployeeRepository {
                 EducationDegree educationDegreeId = educationDegreeRepository.selectEducationDegreeById(rs.getString("education_degree_id"));
                 Division divisionId = divisionRepository.selectDivisionById(rs.getString("division_id"));
                 User userName = userRepository.selectUserByName(rs.getString("username"));
-                employeeList.add(new Employee(employeeId,employeeName,employeeBirthDay,employeeIdCard,employeeSalary,employeePhone,employeeMail,
+                employeeList.add(new Employee(employeeId,employeeName,birthday1,employeeIdCard,employeeSalary,employeePhone,employeeMail,
                         employeeAddress,positionId,educationDegreeId,divisionId,userName));
             }
 
@@ -159,12 +223,17 @@ public class EmployeeRepository {
         return employeeList;
     }
 
-    public boolean deleteEmployee(String id) throws SQLException {
-        boolean rowDeleted;
-        try (Connection connection = MySQLConnection.getConnection();
-             PreparedStatement statement = connection.prepareStatement(DELETE_EMPLOYEE_SQL)) {
-            statement.setString(1, id);
-            rowDeleted = statement.executeUpdate() > 0;
+    public boolean deleteEmployee(String id) {
+        boolean rowDeleted = false;
+        try {
+            try (Connection connection = MySQLConnection.getConnection();
+                 PreparedStatement statement = connection.prepareStatement(DELETE_EMPLOYEE_SQL)) {
+                statement.setString(1, id);
+                System.out.println(statement);
+                rowDeleted = statement.executeUpdate() > 0;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return rowDeleted;
     }

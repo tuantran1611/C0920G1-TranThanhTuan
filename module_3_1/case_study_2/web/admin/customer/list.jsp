@@ -30,6 +30,7 @@
         #tableCustomer_info {
             color: white;
         }
+
     </style>
 </head>
 <body onload="myFunction('${message}')">
@@ -70,8 +71,6 @@
                         <a class="dropdown-item" href="/admin/customers">Customer</a>
                     </div>
                 </li>
-
-
                 <li class="nav-item">
                     <a style="color: white" class="nav-link" href="/admin/services">Service</a>
                 </li>
@@ -127,7 +126,7 @@
                             <table>
                                 <tr>
                                     <th>Customer Id:</th>
-                                    <td><input type="text" name="id" id="id" size="45" value="${customer.getCustomerId()}"/>
+                                    <td><input readonly type="text" name="id" id="id" size="45" value="${customer.getCustomerId()}"/>
                                         <p>
                                             <c:if test='${message2!= null}'>
                                                 <span style="color: red" class="message">${message2}</span>
@@ -166,7 +165,8 @@
                                 </tr>
                                 <tr>
                                     <th>Customer BirthDay:</th>
-                                    <td><input type="text" name="birthday" id="birthday" size="45" value="${customer.getCustomerBirthDay()}"/></td>
+                                    <td><input required type="date" style="width: 100%" name="birthday" id="birthday" size="45"
+                                               value="${customer.getCustomerBirthDay()}"/></td>
                                 </tr>
                                 <tr>
                                     <th>Customer Gender:</th>
@@ -232,6 +232,7 @@
     <table id="tableCustomer" class="table table-striped table-bordered">
         <thead>
         <tr>
+            <th>Customer Id</th>
             <th>Customer Name</th>
             <th>Customer Birthday</th>
             <th>Customer Id Card</th>
@@ -242,6 +243,7 @@
         <tbody>
         <c:forEach var="customer" items="${customers}">
             <tr>
+                <td><c:out value="${customer.getCustomerId()}"/></td>
                 <td><a style="color: white" href="/admin/customers?action=view&id=${customer.getCustomerId()}"><c:out
                         value="${customer.getCustomerName()}"/></a></td>
                 <td><c:out value="${customer.getCustomerBirthDay()}"/></td>

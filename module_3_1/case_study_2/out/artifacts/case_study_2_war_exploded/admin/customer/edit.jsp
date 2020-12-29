@@ -87,20 +87,21 @@
     <h3>Form edit customer</h3>
 </center>
 <div align="center">
-    <form action="/admin/customers?action=edit&oldId=${customer.getCustomerId()}" method="post">
+    <form action="/admin/customers?action=edit&id=${customer.getCustomerId()}" method="post">
         <table border="1" cellpadding="5">
             <caption>
                 <h2>
                     Edit Customer
                 </h2>
             </caption>
-
             <tr>
                 <th>Customer Id:</th>
                 <td>
-                    <input type="text" name="id" size="45"
-                           value="${customer.getCustomerId()}"
-                    />
+                    <label>
+                        <input  type="text" name="id" size="45"
+                               value="${customer.getCustomerId()}"
+                        />
+                    </label>
                     <p>
                         <c:if test='${message2!= null}'>
                             <span style="color: red" class="message">${message2}</span>
@@ -145,8 +146,8 @@
             <tr>
                 <th>Customer BirthDay:</th>
                 <td>
-                    <input type="text" name="birthday" size="45"
-                           value="${customer.getCustomerBirthDay()}"
+                    <input type="date" style="width: 100%" name="birthday" size="45"
+                           value="<c:out value="${customer.getCustomerBirthDay()}"/>"
                     />
 <%--                    <p>--%>
 <%--                        <c:if test='${message4!= null}'>--%>

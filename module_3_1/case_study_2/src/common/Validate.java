@@ -23,6 +23,15 @@ public class Validate {
     private static final String TIME_FILM_REGEX = "^((0*\\d)|1[012])\\:[0-5][0-9] (AM|PM)$";
     private static final String NUMBER_SEAT_REGEX = "^\\[[A-Z][0-9][1-9]\\]$";
 
+    public static String validateUserName(String name) {
+        String message = null;
+        String regex = "^([a-z]+(|[0-9]+))_[a-z0-9]+$";
+        if (!name.matches(regex)) {
+            message = "Not OK. Username like abc123_abc123";
+        }
+        return message;
+    }
+
     public static String validateUserName(User user) {
         String message = null;
         if (user == null) {

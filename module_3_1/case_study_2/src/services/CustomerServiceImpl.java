@@ -22,6 +22,11 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
+    public Customer selectCustomer1(String id) {
+        return customerRepository.selectCustomer1(id);
+    }
+
+    @Override
     public List<Customer> selectAllCustomer() {
         return customerRepository.selectAllCustomer();
     }

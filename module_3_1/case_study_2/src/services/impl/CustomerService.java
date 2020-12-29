@@ -10,6 +10,8 @@ public interface CustomerService {
 
     public Customer selectCustomer(String id);
 
+    public Customer selectCustomer1(String id);
+
     public List<Customer> selectAllCustomer();
 
     public boolean deleteCustomer(String id) throws SQLException;

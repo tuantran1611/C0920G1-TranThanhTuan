@@ -22,6 +22,11 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
+    public Employee selectEmployee1(String id) {
+        return employeeRepository.selectEmployee1(id);
+    }
+
+    @Override
     public List<Employee> selectAllEmployee() {
         return employeeRepository.selectAllEmployee();
     }

@@ -86,16 +86,22 @@ public class EmployeeServlet extends HttpServlet {
     private void deleteEmployee(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
         try {
-            employeeService.deleteEmployee(id);
-            response.sendRedirect("/admin/employees");
-        } catch (SQLException | IOException e) {
+            if (!employeeService.deleteEmployee(id)){
+                List<Employee> employees = employeeService.selectAllEmployee();
+                request.setAttribute("employees", employees);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("employee/list.jsp");
+                dispatcher.forward(request,response);
+            } else {
+                response.sendRedirect("/admin/customers");
+            }
+        } catch (SQLException | IOException | ServletException e) {
             e.printStackTrace();
         }
     }
 
     private void displayEmployee(HttpServletRequest request, HttpServletResponse response) {
         String id = request.getParameter("id");
-        Employee employee = employeeService.selectEmployee(id);
+        Employee employee = employeeService.selectEmployee1(id);
         request.setAttribute("employee", employee);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("employee/view.jsp");
         try {
@@ -126,14 +132,17 @@ public class EmployeeServlet extends HttpServlet {
         String message8 = Validate.validateDegree(educationDegree);
         Division division = divisionService.selectDivisionById(request.getParameter("division"));
         String message9 = Validate.validateDivision(division);
+        userService.addUser(request.getParameter("userName"));
+        String message10 = Validate.validateUserName(request.getParameter("userName"));
         User user = userService.selectUserByName(request.getParameter("userName"));
-        String message10 = Validate.validateUserName(user);
 
         Employee  employee = new Employee(employeeId,employeeName,birthDay,idCard,salary,phone,email,address,position,
                 educationDegree,division,user);
+        userService.deleteUser(request.getParameter("userName"));
         try {
             if (message1 == null && message2 == null && message3 == null && message4 == null&& message5 == null && message6 == null && message7 == null
             && message8 == null && message9 == null && message10 == null) {
+                userService.addUser(request.getParameter("userName"));
                 employeeService.addEmployee(employee);
                 employee = null;
             } else {
