@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View product</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/product/list}">Back to Product List</a>
+</p>
+<div>
+    <div style="width: 500px; text-align: center; float: left">
+        <table>
+            <tr th:colspan="2">
+                <th>GIỎ HÀNG(<span th:text="cartNum"></span>)</th>
+            </tr>
+        </table>
+    </div>
+    <div style="float: left">
+        <h3 th:text="${product.nameProduct}"></h3>
+        <span th:text="${product.description}"></span>
+    </div>
+</div>
+</body>
+</html>

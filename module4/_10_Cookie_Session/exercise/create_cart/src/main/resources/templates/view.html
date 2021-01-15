@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View product</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/product/list}">Back to Product List</a>
+</p>
+<div>
+    <div style="width: 500px; text-align: center; float: left">
+        <form th:action="@{/cart/buy/{id}(id=${product.getIdProduct()})}">
+            <div style="border: 1px solid gray">
+                <img width="250px" height="300px" th:src="@{/img/{img}(img = ${product.getImg()})}">
+            </div>
+            <div style="border: 1px solid gray; text-align: center">
+                <p>Mã SP: <span th:text="${product.getCodeProduct()}"></span></p>
+                <p th:text="${product.getOldPrice()}"></p>
+                <p style="color: red" th:text="${product.getNewPrice()}"></p>
+                <input type="submit" value="Thêm vào giỏ" class="btn btn-warning">
+            </div>
+        </form>
+    </div>
+    <div style="float: left">
+        <h3 th:text="${product.nameProduct}"></h3>
+        <span th:text="${product.description}"></span>
+    </div>
+</div>
+</body>
+</html>
