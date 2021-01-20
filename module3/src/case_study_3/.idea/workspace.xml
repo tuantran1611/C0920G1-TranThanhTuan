@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="04d1b1b2-8786-4ee5-9122-04c7f57e674e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/java/com/codegym/createcart/controller/CartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/java/com/codegym/createcart/controller/CartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/java/com/codegym/createcart/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/java/com/codegym/createcart/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/java/com/codegym/createcart/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/java/com/codegym/createcart/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module4/_10_Cookie_Session/exercise/create_cart/src/main/resources/templates/view.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1nEZO5lkZLG0bE8H105nUpwe2FZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../module_3_1/case_study_2" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04d1b1b2-8786-4ee5-9122-04c7f57e674e" name="Default Changelist" comment="" />
+      <created>1610957174385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610957174385</updated>
+      <workItem from="1610957175510" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1610957202745">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610957202745" />
+  </component>
+</project>
