@@ -1,6 +1,7 @@
 package vn.codegym.case_study.model;
 
 public class CustomerUseService {
+
     private String customerName;
     private String customerAddress;
     private Contract contract;

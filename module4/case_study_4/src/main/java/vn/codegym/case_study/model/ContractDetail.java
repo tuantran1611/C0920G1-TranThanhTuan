@@ -1,23 +1,31 @@
 package vn.codegym.case_study.model;
 
+import javax.persistence.*;
+
+@Entity
 public class ContractDetail {
-    private String contractDetailId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long contractDetailId;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "contract_id",referencedColumnName = "contractId")
     private Contract contractId;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "attach_service_id",referencedColumnName = "attachServiceId")
     private AttachService attachServiceId;
+
     private int quantity;
 
-    public ContractDetail(String contractDetailId, Contract contractId, AttachService attachServiceId, int quantity) {
-        this.contractDetailId = contractDetailId;
-        this.contractId = contractId;
-        this.attachServiceId = attachServiceId;
-        this.quantity = quantity;
+    public ContractDetail() {
     }
 
-    public String getContractDetailId() {
+    public Long getContractDetailId() {
         return contractDetailId;
     }
 
-    public void setContractDetailId(String contractDetailId) {
+    public void setContractDetailId(Long contractDetailId) {
         this.contractDetailId = contractDetailId;
     }
 
@@ -44,4 +52,6 @@ public class ContractDetail {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+
 }

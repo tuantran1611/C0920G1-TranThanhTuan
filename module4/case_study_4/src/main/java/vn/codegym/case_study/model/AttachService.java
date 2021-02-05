@@ -1,26 +1,29 @@
 package vn.codegym.case_study.model;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
 public class AttachService {
-    private String attachServiceId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long attachServiceId;
     private String attachServiceName;
     private double attachServiceCost;
     private int attachServiceUnit;
     private String attachServiceStatus;
 
-    public AttachService(String attachServiceId, String attachServiceName, double attachServiceCost, int attachServiceUnit,
-                         String attachServiceStatus) {
-        this.attachServiceId = attachServiceId;
-        this.attachServiceName = attachServiceName;
-        this.attachServiceCost = attachServiceCost;
-        this.attachServiceUnit = attachServiceUnit;
-        this.attachServiceStatus = attachServiceStatus;
+    @OneToMany(mappedBy = "attachServiceId")
+    private Set<ContractDetail> contractDetailSet;
+
+    public AttachService() {
     }
 
-    public String getAttachServiceId() {
+    public Long getAttachServiceId() {
         return attachServiceId;
     }
 
-    public void setAttachServiceId(String attachServiceId) {
+    public void setAttachServiceId(Long attachServiceId) {
         this.attachServiceId = attachServiceId;
     }
 

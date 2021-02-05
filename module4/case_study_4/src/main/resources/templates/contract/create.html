@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Contract</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h3>Create Contract</h3>
+<!--<th:block th:if="${message}">-->
+<!--    <p th:text="${message}"></p>-->
+<!--</th:block>-->
+<form th:action="@{/contract/create-contract}" method="post" th:object="${contract}">
+    <table class="table">
+
+        <tr>
+            <td>Start Date</td>
+            <td><input type="date" th:field = "*{contractStartDate}"></td>
+        </tr>
+
+        <tr>
+            <td>End Date</td>
+            <td><input type="date" th:field = "*{contractEndDate}"></td>
+        </tr>
+        <tr>
+            <td>Deposit</td>
+            <td><input type="text" th:field = "*{contractDeposit}"></td>
+        </tr>
+
+        <tr>
+            <td>Total Money</td>
+            <td><input type="text" th:field = "*{contractTotalMoney}"></td>
+        </tr>
+
+        <tr>
+            <td>Employee</td>
+            <td>
+                <select th:field="*{employeeId}">
+                    <option th:each="item : ${employees}" th:text="${item.employeeName}" th:value="${item.employeeId}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Customer</td>
+            <td>
+                <select th:field="*{customerId}">
+                    <option th:each="item : ${customers}" th:text="${item.customerName}" th:value="${item.customerId}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Service</td>
+            <td>
+                <select th:field="*{serviceId}">
+                    <option th:each="item : ${services}" th:text="${item.serviceName}" th:value="${item.serviceId}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input class="btn btn-primary" type="submit" value="Create"></td>
+        </tr>
+    </table>
+
+</form>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+</html>

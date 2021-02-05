@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Attach Service List</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+
+    <style>
+        body {
+            background-image: url("/img/details-1-background.jpg");
+            background-size: cover;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--onload="myFunction('${message}')"-->
+<div class="container-fluid">
+    <header class="container">
+        <div style="float: left;margin-top: 10px">
+            <a href="/" title="Furama Resort">
+                <img src="/img/furama.png" alt="Furama Resort" height="77px" width="77px">
+            </a>
+        </div>
+        <div style="float: right">
+            <a href="#">
+                Đăng nhập/Đăng ký
+            </a>
+        </div>
+    </header>
+    <nav style="clear: both" class="navbar navbar-expand-lg navbar-light container">
+        <a style="color: white" class="navbar-brand" href="/">HOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a style="color: white" class="nav-link" href="/employee/list">Employee</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a style="color: white" class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdown2"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Customer Service
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <a class="dropdown-item" href="/attach-service/list">Customer Use Attach
+                            Service</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/customer/list">Customer</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white" class="nav-link" href="/service/list">Service</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a style="color: white" class="nav-link dropdown-toggle" href="#"
+                       id="navbarDropdown1"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contract Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" href="/contract-detail/list">Contract Detail</a>
+                        <a class="dropdown-item" href="/contract-detail/list-attach-service">Attach Service</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/contract/list">Contract</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="container" style="text-align: center">
+    <h1>List Attach Service</h1>
+</div>
+<div class="container">
+    <!-- Button trigger modal -->
+    <div style="float: left; margin-left: 10px">
+        <a class="btn btn-primary" href="/">Back To Home</a><br/>
+    </div>
+    <h3 th:if="${message}" th:text="${message}" style="color: red"></h3>
+    <table id="tableCustomer" class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th>Attach Service Id</th>
+            <th>Attach Service Name</th>
+            <th>Cost</th>
+            <th>Unit</th>
+            <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="attachService : ${attachServices}">
+            <td><span th:text="${attachService.attachServiceId}"></span></td>
+            <td><span th:text="${attachService.attachServiceName}"></span></td>
+            <td><span th:text="${attachService.attachServiceCost}"></span></td>
+            <td><span th:text="${attachService.attachServiceUnit}"></span></td>
+            <td><span th:text="${attachService.attachServiceStatus}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="/css/datatables/js/jquery.dataTables.min.js"></script>
+<script src="/css/datatables/js/dataTables.bootstrap4.min.js"></script>
+
+</body>
+</html>

@@ -1,50 +1,68 @@
 package vn.codegym.case_study.model;
 
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import java.util.Date;
+import java.util.Set;
+
+@Entity(name = "employee")
 public class Employee {
+
+    @Id
+    @GeneratedValue(generator = "my_generator")
+    @GenericGenerator(name = "my_generator", strategy = "vn.codegym.case_study.common.MyGeneratorEmployee")
     private String employeeId;
+
+    @NotEmpty(message = "Please input name")
+    @Pattern(regexp = "([\\p{Lu}][\\p{Ll}]{1,8})(\\s([\\p{Lu}]|[\\p{Lu}][\\p{Ll}]{1,10})){0,5}$", message = "Name not valid")
     private String employeeName;
-    private String employeeBirthDay;
+
+    @NotNull(message = "Please choose birthday")
+    private Date employeeBirthDay;
+
+    @NotEmpty(message = "Please input id card")
+    @Pattern(regexp = "^[0-9]{9}$", message = "Id card must have 9 numbers")
     private String employeeIdCard;
+
+    @NotEmpty(message = "Please input salary")
+    @Min(value = 0 , message = "Salary must greater than 0")
     private String employeeSalary;
+
+    @NotEmpty(message = "Please input phone")
+    @Pattern(regexp = "^(0|(\\(\\+84\\)))[35789]\\d{8}$", message = "Phone must be like 0XXXXXXXXX or (+84)XXXXXXXXX")
     private String employeePhone;
+
+    @NotEmpty(message = "Please input email")
+    @Pattern(regexp = "^[a-z0-9_]+[a-z0-9]@([a-z0-9]+\\.)[a-z]+(|\\.[a-z]+)$", message = "Email must be like abc@gmail.com or abc@yahoo.com.vn")
     private String employeeEmail;
+
+    @NotEmpty(message = "Please input address")
     private String employeeAddress;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "position_id" , referencedColumnName = "positionId")
     private Position positionId;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "education_degree_id", referencedColumnName = "educationDegreeId")
     private EducationDegree educationDegreeId;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "division_id", referencedColumnName = "divisionId")
     private Division divisionId;
-    private User userName;
 
-    public Employee(String employeeName, String employeeBirthDay, String employeeIdCard, String employeeSalary,
-                    String employeePhone, String employeeEmail, String employeeAddress, Position positionId,
-                    EducationDegree educationDegreeId, Division divisionId, User userName) {
-        this.employeeName = employeeName;
-        this.employeeBirthDay = employeeBirthDay;
-        this.employeeIdCard = employeeIdCard;
-        this.employeeSalary = employeeSalary;
-        this.employeePhone = employeePhone;
-        this.employeeEmail = employeeEmail;
-        this.employeeAddress = employeeAddress;
-        this.positionId = positionId;
-        this.educationDegreeId = educationDegreeId;
-        this.divisionId = divisionId;
-        this.userName = userName;
-    }
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_name_id",referencedColumnName = "id")
+    private User user;
 
-    public Employee(String employeeId, String employeeName, String employeeBirthDay, String employeeIdCard,
-                    String employeeSalary, String employeePhone, String employeeEmail, String employeeAddress,
-                    Position positionId, EducationDegree educationDegreeId, Division divisionId, User userName) {
-        this.employeeId = employeeId;
-        this.employeeName = employeeName;
-        this.employeeBirthDay = employeeBirthDay;
-        this.employeeIdCard = employeeIdCard;
-        this.employeeSalary = employeeSalary;
-        this.employeePhone = employeePhone;
-        this.employeeEmail = employeeEmail;
-        this.employeeAddress = employeeAddress;
-        this.positionId = positionId;
-        this.educationDegreeId = educationDegreeId;
-        this.divisionId = divisionId;
-        this.userName = userName;
+    @OneToMany(mappedBy = "employeeId")
+    private Set<Contract> contracts;
+    public Employee() {
     }
 
     public String getEmployeeId() {
@@ -63,11 +81,11 @@ public class Employee {
         this.employeeName = employeeName;
     }
 
-    public String getEmployeeBirthDay() {
+    public Date getEmployeeBirthDay() {
         return employeeBirthDay;
     }
 
-    public void setEmployeeBirthDay(String employeeBirthDay) {
+    public void setEmployeeBirthDay(Date employeeBirthDay) {
         this.employeeBirthDay = employeeBirthDay;
     }
 
@@ -135,11 +153,20 @@ public class Employee {
         this.divisionId = divisionId;
     }
 
-    public User getUserName() {
-        return userName;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserName(User userName) {
-        this.userName = userName;
+    public void setUser(User user) {
+        this.user = user;
     }
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
+    }
+
 }

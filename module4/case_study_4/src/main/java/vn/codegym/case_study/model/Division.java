@@ -1,8 +1,18 @@
 package vn.codegym.case_study.model;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
 public class Division {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String divisionId;
+
     private String divisionName;
+
+    @OneToMany(mappedBy = "divisionId")
+    private Set<Employee> employees;
 
     public Division() {
     }
@@ -26,5 +36,13 @@ public class Division {
 
     public void setDivisionName(String divisionName) {
         this.divisionName = divisionName;
+    }
+
+    public Set<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(Set<Employee> employees) {
+        this.employees = employees;
     }
 }

@@ -138,7 +138,7 @@ public class Validate {
 
     public static String validateCustomerName(String name) {
         String message = null;
-        String regex = "^(([A-Z][a-z]+)(| ))+$";
+        String regex = "^(([A-Z][aàảãáạăằẳẵắặâầẩẫấậbcdđeèẻẽéẹêềểễếệfghiìỉĩíịjklmnoòỏõóọôồổỗốộơờởỡớợpqrstuùủũúụưừửữứựvwxyỳỷỹýỵz]+)(| ))+$";
         if (!name.matches(regex)) {
             message = "Not OK. Customer name invalid";
         }

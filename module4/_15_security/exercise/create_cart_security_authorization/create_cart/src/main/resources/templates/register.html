@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+
+<div>
+    <form th:action="@{/product/register}" method="post" th:object="${user}">
+        <table>
+            <tr>
+                <th>User Name: </th>
+                <td><input th:field="*{username}" type="text"></td>
+            </tr>
+            <tr>
+                <th>Pass word: </th>
+                <td><input type="password" th:field="*{password}"></td>
+            </tr>
+            <tr>
+                <th>Role: </th>
+                <td>
+                    <select th:field="*{roles}">
+                        <option th:each="item : ${roles}" th:text="${item.getName()}" th:value="${item.getId()}"></option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <input type="submit" value="Register">
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

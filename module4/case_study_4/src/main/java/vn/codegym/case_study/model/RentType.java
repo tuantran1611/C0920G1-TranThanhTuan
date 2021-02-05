@@ -1,9 +1,18 @@
 package vn.codegym.case_study.model;
 
+import javax.persistence.*;
+import java.util.Set;
+
+@Entity
 public class RentType {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private String rentTypeId;
     private String rentTypeName;
     private double rentTypeCost;
+
+    @OneToMany(mappedBy = "rentType")
+    private Set<Service> services;
 
     public RentType() {
     }
@@ -36,5 +45,13 @@ public class RentType {
 
     public void setRentTypeCost(double rentTypeCost) {
         this.rentTypeCost = rentTypeCost;
+    }
+
+    public Set<Service> getServices() {
+        return services;
+    }
+
+    public void setServices(Set<Service> services) {
+        this.services = services;
     }
 }

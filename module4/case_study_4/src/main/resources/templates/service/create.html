@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Create Service</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h3>Create Service</h3>
+<!--<th:block th:if="${message}">-->
+<!--    <p th:text="${message}"></p>-->
+<!--</th:block>-->
+<form th:action="@{/service/create-service}" method="post" th:object="${service}">
+    <table class="table">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" th:field = "*{serviceName}"></td>
+        </tr>
+        <tr>
+            <td>Area</td>
+            <td><input type="text" th:field = "*{serviceArea}"></td>
+        </tr>
+        <tr>
+            <td>Cost</td>
+            <td><input type="text" th:field = "*{serviceTypeCost}"></td>
+        </tr>
+        <tr>
+            <td>Max People</td>
+            <td><input type="text" th:field = "*{serviceMaxPeople}"></td>
+        </tr>
+
+        <tr>
+            <td>Rent Type:</td>
+            <td>
+                <select th:field="*{rentType}">
+                    <option th:each="item : ${rentTypes}" th:text="${item.rentTypeName}" th:value="${item.rentTypeId}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Service Type</td>
+            <td>
+                <select th:field="*{serviceType}">
+                    <option th:each="item : ${serviceTypes}" th:text="${item.serviceTypeName}" th:value="${item.serviceTypeId}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Standard Room</td>
+            <td><input type="text" th:field = "*{standardRoom}"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" th:field = "*{descriptionConvenience}"></td>
+        </tr>
+        <tr>
+            <td>Pool Area</td>
+            <td><input type="text" th:field = "*{poolArea}"></td>
+        </tr>
+
+        <tr>
+            <td>Floors</td>
+            <td><input type="text" th:field = "*{numberFloor}"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input class="btn btn-primary" type="submit" value="Create"></td>
+        </tr>
+    </table>
+
+</form>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+</html>

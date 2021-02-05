@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<h3>Create Employee</h3>
+<!--<th:block th:if="${message}">-->
+<!--    <p th:text="${message}"></p>-->
+<!--</th:block>-->
+<form th:action="@{/employee/create-employee}" method="post" th:object="${employee}">
+    <table class="table">
+        <tr>
+            <td style="color: black">Name</td>
+            <td><input type="text" th:field = "*{employeeName}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeeName')}" th:errors="*{employeeName}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">Birth Day</td>
+            <td><input type="date" th:field = "*{employeeBirthDay}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeeBirthDay')}" th:errors="*{employeeBirthDay}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">ID card</td>
+            <td><input type="text" th:field = "*{employeeIdCard}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeeIdCard')}" th:errors="*{employeeIdCard}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">Salary</td>
+            <td><input type="text" th:field = "*{employeeSalary}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeeSalary')}" th:errors="*{employeeSalary}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">Phone</td>
+            <td><input type="text" th:field = "*{employeePhone}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeePhone')}" th:errors="*{employeePhone}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">Email</td>
+            <td><input type="text" th:field = "*{employeeEmail}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeeEmail')}" th:errors="*{employeeEmail}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">Address</td>
+            <td><input type="text" th:field = "*{employeeAddress}">
+                <p style="color: red" th:if="${#fields.hasErrors('employeeAddress')}" th:errors="*{employeeAddress}"></td>
+        </tr>
+        <tr>
+            <td style="color: black">Position:</td>
+            <td>
+                <select th:field="*{positionId}">
+                    <option th:each="item : ${positions}" th:text="${item.getPositionName()}" th:value="${item.getPositionId()}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: black">Degree:</td>
+            <td>
+                <select th:field="*{educationDegreeId}">
+                    <option th:each="item : ${educationDegrees}" th:text="${item.getEducationDegreeName()}" th:value="${item.getEducationDegreeId()}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: black">Division:</td>
+            <td>
+                <select th:field="*{divisionId}">
+                    <option th:each="item : ${divisions}" th:text="${item.getDivisionName()}" th:value="${item.getDivisionId()}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="color: black">User Name</td>
+            <td><input type="text" th:field = "*{user.username}"></td>
+        </tr>
+
+        <tr>
+            <th style="color: black">Role</th>
+            <td>
+                <select th:field="*{user.roles}">
+                    <option th:each="item : ${roles}" th:text="${item.name}" th:value="${item.id}"></option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input class="btn btn-primary" type="submit" value="Create"></td>
+        </tr>
+    </table>
+
+</form>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+</body>
+</html>

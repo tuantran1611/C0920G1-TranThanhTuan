@@ -1,43 +1,51 @@
 package vn.codegym.case_study.model;
 
+import javax.persistence.*;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import java.util.Set;
+
+@Entity
 public class Contract {
-    private String contractId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long contractId;
+
+
     private String contractStartDate;
+
     private String contractEndDate;
+
+    @NotNull(message = "Please input deposit")
+    @Min(value = 0 , message = "Deposit must greater than 0")
     private double contractDeposit;
+
     private double contractTotalMoney;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "employee_id", referencedColumnName = "employeeId")
     private Employee employeeId;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "customer_id",referencedColumnName = "customerId")
     private Customer customerId;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "service_id",referencedColumnName = "serviceId")
     private Service serviceId;
 
-    public Contract(String contractStartDate, String contractEndDate, double contractDeposit, double contractTotalMoney,
-                    Employee employeeId, Customer customerId, Service serviceId) {
-        this.contractStartDate = contractStartDate;
-        this.contractEndDate = contractEndDate;
-        this.contractDeposit = contractDeposit;
-        this.contractTotalMoney = contractTotalMoney;
-        this.employeeId = employeeId;
-        this.customerId = customerId;
-        this.serviceId = serviceId;
+    @OneToMany(mappedBy = "contractId")
+    private Set<ContractDetail> contractDetails;
+
+    public Contract() {
     }
 
-    public Contract(String contractId, String contractStartDate, String contractEndDate, double contractDeposit,
-                    double contractTotalMoney, Employee employeeId, Customer customerId, Service serviceId) {
-        this.contractId = contractId;
-        this.contractStartDate = contractStartDate;
-        this.contractEndDate = contractEndDate;
-        this.contractDeposit = contractDeposit;
-        this.contractTotalMoney = contractTotalMoney;
-        this.employeeId = employeeId;
-        this.customerId = customerId;
-        this.serviceId = serviceId;
-    }
-
-    public String getContractId() {
+    public Long getContractId() {
         return contractId;
     }
 
-    public void setContractId(String contractId) {
+    public void setContractId(Long contractId) {
         this.contractId = contractId;
     }
 
@@ -95,5 +103,13 @@ public class Contract {
 
     public void setServiceId(Service serviceId) {
         this.serviceId = serviceId;
+    }
+
+    public Set<ContractDetail> getContractDetails() {
+        return contractDetails;
+    }
+
+    public void setContractDetails(Set<ContractDetail> contractDetails) {
+        this.contractDetails = contractDetails;
     }
 }

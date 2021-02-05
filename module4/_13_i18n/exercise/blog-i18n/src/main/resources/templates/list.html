@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link type="text/css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+<body>
+<a th:href="@{/create}">
+    <button>add new blog</button>
+</a>
+<form>
+    <input id="name" type="text">
+</form>
+<a href="?lang=en">English</a>|<a href="?lang=vi">VietNam</a>
+<table class="table table-bordered table-striped table-hover" id="blog">
+    <thead class="thead-inverse">
+    <tr>
+        <th th:text="#{language.id}"></th>
+        <th th:text="#{language.name}"></th>
+        <th th:text="#{language.description}"></th>
+        <th th:text="#{language.action}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog: ${listBlog}">
+        <td scope="row" th:text="${blog.id}"></td>
+        <td th:text="${blog.name}"></td>
+        <td th:text="${blog.description}"></td>
+        <td>
+            <a th:href="@{/view/{id}(id=${blog.id})}">View</a>
+            <a th:href="@{/edit/{id}(id=${blog.id})}">Edit</a>
+            <a th:href="@{/delete/{id}(id=${blog.id})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script th:src="@{/jquery/jquery-3.5.1.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:inline="javascript">
+    $(document).ready(function () {
+        $("#name").on("change", function () {
+            console.log($('#name').val())
+            var name = $('#name').val()
+            $.ajax({
+                type: "GET",
+                url: "/search/" + name,
+                dataType: "HTML",
+                success: function (data) {
+                    $("#blog").html(data);
+                }
+            })
+        })
+    });
+
+</script>
+</body>
+</html>
