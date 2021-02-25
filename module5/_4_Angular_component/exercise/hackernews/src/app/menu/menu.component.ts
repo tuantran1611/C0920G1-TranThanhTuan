@@ -38,11 +38,13 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
   addArticle() {
     this.articles.push({title: this.title , url: this.url});
     this.title = undefined;
     this.url = undefined;
   }
 
+  receiveTitle($event: any) {
+    this.title = $event;
+  }
 }
