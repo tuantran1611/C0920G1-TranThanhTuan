@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="d-flex" style="float: right;">
+    <input name="inputSearch" style="width: 300px" class="form-control mr-sm-2" type="text"
+           placeholder="Search" [(ngModel)]="term">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </div>
+  <div class="container" style="text-align: center; clear: both;">
+    <h1>Customer Management</h1>
+  </div>
+  <div class="container">
+    <!-- Button trigger modal -->
+    <div style="float: left">
+      <button [routerLink]="['/customer-create']" type="button" class="btn btn-primary" id="idModalCreate" data-toggle="modal" data-target="#modelId">
+        Add New Customer
+      </button>
+    </div>
+    <div style="float: left; margin-left: 10px">
+      <a class="btn btn-primary" href="#" [routerLink]="['']">Back To Home</a><br/>
+    </div>
+  </div>
+  <input type="hidden"  id="check">
+  <h3  style="color: red"></h3>
+  <table class="table table-bordered" style="font-size: 12px;" >
+    <thead>
+    <tr style="text-align: center; color: rgb(46, 25, 25);">
+      <!-- <th>STT</th> -->
+      <th>Id</th>
+      <th>Customer type</th>
+      <th>Name</th>
+      <th>Birthday</th>
+      <th>Id card</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th style="width: 12%">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="text-align:center" *ngFor = "let customer of customers |filter:term | paginate: { itemsPerPage: 2, currentPage: p }; let i = index">
+      <!-- <td>{{i+1}}</td> -->
+      <td>{{customer.id}}</td>
+      <td>{{customer.customerType}}</td>
+      <td>{{customer.fullName}}</td>
+      <td>{{customer.dayOfBirth}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phone}}</td>
+      <td>{{customer.email}}</td>
+      <td>{{customer.address}}</td>
+
+      <td>
+        <button [routerLink]="['/customer-edit', customer.id]" class="btn btn-warning btn-sm">Edit</button>
+        <button class="btn btn-danger btn-sm" (click)="openDialog(customer.id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
