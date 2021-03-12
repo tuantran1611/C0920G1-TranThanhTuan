@@ -1,0 +1,125 @@
+<h3 class="text-center">Sửa sổ tiết kiệm</h3>
+
+<form class="w-50 mx-auto mt-3" [formGroup]="formEdit">
+  <div class="form-group">
+  <label for="masoso">Mã số sổ</label>
+  <input type="text" readonly name="masoso" id="masoso" class="form-control" formControlName="id">
+</div>
+<!--<div>-->
+<!--  <p>Mã khách hàng</p>-->
+<!--  <select style="width: 350px"  class="form-control mr-sm-3" formControlName="khachHang" disabled="disabled">-->
+<!--    <option [selected]="khachHang.id == formEdit.controls.khachHang.value.id"-->
+<!--            *ngFor="let khachHang of khachHang" [ngValue]="khachHang"> {{khachHang.id}} </option>-->
+<!--  </select>-->
+<!--</div>-->
+
+  <div class="form-group">
+    <label for="maKhach">Mã khách hàng</label>
+    <input type="text" name="maKhach" id="maKhach" class="form-control" formControlName="khachHang"
+           [value]="formEdit.controls.khachHang.value.id" readonly>
+  </div>
+
+<!--  <div>-->
+<!--    <p>Tên khách hàng</p>-->
+<!--    <select style="width: 350px"  class="form-control mr-sm-3" formControlName="khachHang" >-->
+<!--      <option [selected]="khachHang.ten == formEdit.controls.khachHang.value.ten"-->
+<!--              *ngFor="let khachHang of khachHang" [ngValue]="khachHang"> {{khachHang.ten}} </option>-->
+<!--    </select>-->
+<!--    <p *ngIf="formEdit.get('khachHang').hasError('required') && formEdit.get('khachHang').dirty"-->
+<!--       class="text-danger">Please input your name</p>-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <p>Tên khách hàng</p>-->
+<!--    <input type="text" formControlName="khachHang" [value]="formEdit.controls.khachHang.value.ten">-->
+<!--    <p *ngIf="formEdit.get('khachHang').hasError('required') && formEdit.get('khachHang').dirty"-->
+<!--       class="text-danger">Please input your name</p>-->
+<!--  </div>-->
+
+  <div class="form-group">
+    <label for="tenKhach">Tên khách hàng</label>
+    <input type="text" name="tenKhach" id="tenKhach" class="form-control"
+           [value]="formEdit.controls.khachHang.value.ten">
+    <p
+      *ngIf="formEdit.get('khachHang').hasError('required')&& formEdit.get('khachHang').dirty"
+      class="text-danger">Nhập tên khách</p>
+  </div>
+
+
+<!--  <div class="form-group">-->
+<!--    <label for="makhachhang">Mã khách hàng</label>-->
+<!--    <input readonly type="text" name="makhachhang" id="makhachhang" class="form-control"-->
+<!--           formControlName="khachHang">-->
+<!--  </div>-->
+
+<!--  <div class="form-group">-->
+<!--    <label for="tenKhach">Tên khách</label>-->
+<!--    <input type="text" name="tenKhach" id="tenKhach" class="form-control" placeholder="Trần Thanh Tuấn"-->
+<!--           formControlName="khachHang">-->
+<!--    <p *ngIf="formEdit.get('khachHang').hasError('required') && formEdit.get('khachHang').dirty"-->
+<!--       class="text-danger">Please input your name</p>-->
+<!--    &lt;!&ndash;        <p *ngIf="formEditEmployee.get('fullName').hasError('pattern') && formEditEmployee.get('fullName').dirty" class="text-danger">Name not valid</p>&ndash;&gt;-->
+<!--  </div>-->
+
+  <div class="form-group">
+    <label for="ngayMo">Ngày mở</label>
+    <input type="date" name="ngayMo" id="ngayMo" class="form-control" formControlName="ngayMo">
+    <p
+      *ngIf="formEdit.get('ngayMo').hasError('required')&& formEdit.get('ngayMo').dirty"
+      class="text-danger">Nhập ngày mở</p>
+  </div>
+
+  <div class="form-group">
+    <label for="ngayGui">Ngày gửi</label>
+    <input type="date" name="ngayGui" id="ngayGui" class="form-control" formControlName="ngayGui">
+    <p
+      *ngIf="formEdit.get('ngayGui').hasError('required')&& formEdit.get('ngayGui').dirty"
+      class="text-danger">Nhập ngày gửi</p>
+  </div>
+
+  <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Kì hạn</mat-label>
+      <mat-select formControlName="kiHan" required>
+        <mat-option>--Chọn kì hạn--</mat-option>
+        <mat-option *ngFor="let division of items" [value]="division.value">
+          {{division.viewValue}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="formEdit.get('kiHan').hasError('required')">Chọn kì hạn</mat-error>
+      <!--      <mat-hint>{{animalControl.value?.sound}}</mat-hint>-->
+    </mat-form-field>
+  </div>
+
+  <div class="form-group">
+    <label for="soTien">Số tiền gửi</label>
+    <input type="text" name="soTien" id="soTien" class="form-control" formControlName="soTien">
+    <p *ngIf="formEdit.get('soTien').hasError('required')&& formEdit.get('soTien').dirty"
+       class="text-danger">Nhập số tiền</p>
+    <p *ngIf="formEdit.get('soTien').hasError('pattern')" class="text-danger">Vui lòng nhập số tiền >10.000.000</p>
+  </div>
+  <div class="form-group">
+
+    <label for="laiSuat">Lãi suất</label>
+    <input type="text" name="laiSuat" id="laiSuat" class="form-control" formControlName="laiSuat">
+    <p *ngIf="formEdit.get('laiSuat').hasError('required') && formEdit.get('laiSuat').dirty"
+       class="text-danger">Nhập lãi suất</p>
+    <p *ngIf="formEdit.get('laiSuat').hasError('pattern') && formEdit.get('laiSuat').dirty"
+       class="text-danger">Lãi suất phải là số </p>
+  </div>
+  <div class="form-group">
+    <label for="uuDai">Ưu đãi</label>
+    <input type="text" name="uuDai" id="uuDai" class="form-control" formControlName="uuDai">
+    <p *ngIf="formEdit.get('uuDai').hasError('required') && formEdit.get('uuDai').touched"
+       class="text-danger">Nhập ưu đãi</p>
+  </div>
+
+
+  <div style="float: left">
+    <button type="button" [disabled]="formEdit.invalid" class="btn btn-success" (click)="editEmployee()">Sửa
+    </button>
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" [routerLink]="['/sotietkiem-list']">Trở về</button>
+  </div>
+</form>

@@ -1,0 +1,70 @@
+<div class="home-page">
+  <div>
+    <header class="container">
+      <div style="float: left;margin-top: 10px">
+<!--        <a href="#" title="Furama Resort" [routerLink]="['']" >-->
+<!--          <img src="../../assets/furama.jpg" alt="Furama Resort" height="77px" width="77px">-->
+<!--        </a>-->
+      </div>
+      <div style="float: right">
+        <ul class="navbar-nav mr-auto">
+          <!--                <li class="nav-item dropdown">-->
+          <!--                    <a style="color: white" class="nav-link dropdown-toggle" href="#"-->
+          <!--                       id="navbarDropdown3"-->
+          <!--                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"-->
+          <!--                       th:text="${#request.userPrincipal.name}"-->
+          <!--                    >-->
+          <!--                    </a>-->
+          <!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">-->
+          <!--                        <a class="dropdown-item"-->
+          <!--                           th:href="@{/employee/view-info/{name}(name=${#request.userPrincipal.name})}">User Info</a>-->
+          <!--                        <div class="dropdown-divider"></div>-->
+          <!--                        <a class="dropdown-item" th:href="@{/logout}">Logout</a>-->
+          <!--                    </div>-->
+          <!--                </li>-->
+
+  <!--        <li class="nav-item dropdown float-right">-->
+  <!--          <a style="color: white" class="nav-link dropdown-toggle" href="#"-->
+  <!--             id="navbarDropdown4"-->
+  <!--             role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"-->
+  <!--             th:text="${#request.userPrincipal.name}"-->
+  <!--          >-->
+  <!--          </a>-->
+  <!--          <div class="dropdown-menu" aria-labelledby="navbarDropdown3">-->
+  <!--            <a class="dropdown-item"-->
+  <!--               th:href="@{/employee/view-info/{name}(name=${#request.userPrincipal.name})}">User Info</a>-->
+  <!--            <div class="dropdown-divider"></div>-->
+  <!--            <a class="dropdown-item" th:href="@{/logout}">Logout</a>-->
+  <!--          </div>-->
+  <!--        </li>-->
+        </ul>
+      </div>
+<!--      <div  style="float: right">-->
+<!--        <a href="@{/login}">-->
+<!--          Đăng nhập/Đăng ký-->
+<!--        </a>-->
+<!--      </div>-->
+    </header>
+
+  </div>
+  <nav style="clear: both" class="navbar navbar-expand-lg navbar-light container">
+    <a class="navbar-brand" href="#" [routerLink]="['']">HOME</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" [routerLink]="['employee-list']">Employee</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

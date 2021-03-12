@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="d-flex" style="float: right;">
+    <!--            <input name="inputSearch" style="width: 300px" class="form-control mr-sm-2" type="text"-->
+    <!--                   placeholder="Search by name" [(ngModel)]="term">-->
+    <input name="inputSearch" style="width: 300px" class="form-control mr-sm-2" type="text"
+           placeholder="Tìm bằng id sổ" [(ngModel)]="name">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="search()">Tìm</button>
+  </div>
+  <div class="container" style="text-align: center; clear: both;">
+    <h1>Quản lý sổ tiết kiệm</h1>
+  </div>
+  <input type="hidden"  id="check">
+  <h3  style="color: red"></h3>
+  <table class="table table-bordered" style="font-size: 12px;" >
+    <thead>
+    <tr style="text-align: center; color: rgb(46, 25, 25);">
+      <!-- <th>STT</th> -->
+      <th (click)="sort('id')">Mã số sổ<i class="glyphicon glyphicon-sort"></i></th>
+      <th>Mã khách</th>
+      <th>Tên khách<i class="fa fa-sort"></i></th>
+      <th (click)="sort('ngayMo')">Ngày mở<i class="fa fa-sort"></i></th>
+      <th (click)="sort('ngayGui')">Ngày gửi<i class="fa fa-sort"></i></th>
+      <th (click)="sort('kiHan')">Kì hạn<i class="fa fa-sort"></i></th>
+      <th (click)="sort('soTien')">Số tiền<i class="fa fa-sort"></i></th>
+      <th (click)="sort('laiSuat')">Lãi suất<i class="fa fa-sort"></i></th>
+      <th (click)="sort('uuDai')">Ưu đãi<i class="fa fa-sort"></i></th>
+      <th style="width: 12%">Tác vụ</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="text-align:center" *ngFor = "let sotietkiem of sotietkiems |filter:term | paginate: { itemsPerPage: 2, currentPage: p }; let i = index">
+      <!-- <td>{{i+1}}</td> -->
+      <td>{{sotietkiem.id}}</td>
+      <td>{{sotietkiem.khachHang.id}}</td>
+      <td>{{sotietkiem.khachHang.ten}}</td>
+      <td>{{sotietkiem.ngayMo}}</td>
+      <td>{{sotietkiem.ngayGui}}</td>
+      <td [ngSwitch] = "sotietkiem.kiHan">
+        <p *ngSwitchCase='1'>6 tháng</p>
+        <p *ngSwitchCase='2'>3 tháng</p>
+        <p *ngSwitchCase='3'>1 năm</p>
+        <p *ngSwitchCase='4'>5 năm</p>
+        <p *ngSwitchDefault>Không kì hạn</p>
+      </td>
+      <td>{{sotietkiem.soTien}}</td>
+      <td>{{sotietkiem.laiSuat}}%/năm</td>
+      <td>{{sotietkiem.uuDai}}</td>
+
+      <td>
+        <!--                <button [routerLink]="['/employee-edit', employee.id]" class="btn btn-warning btn-sm">Edit</button>-->
+        <button class="btn icon-btn btn-warning btn-sm" [routerLink]="['/sotietkiem-edit', sotietkiem.id]"><span class="glyphicon btn-glyphicon glyphicon-edit img-circle text-warning"></span></button>
+        <!--                <button class="btn btn-danger btn-sm" (click)="openDialog(employee.id)">Delete</button>-->
+        <button class="btn icon-btn btn-danger btn-sm" (click)="openDialog(sotietkiem.id)"><span class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

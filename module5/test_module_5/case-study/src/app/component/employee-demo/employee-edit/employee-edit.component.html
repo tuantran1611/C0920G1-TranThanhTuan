@@ -1,0 +1,36 @@
+<h3 class="text-center">Edit employee</h3>
+
+<form class="w-50 mx-auto mt-3" [formGroup]="formEdit">
+  <div class="form-group">
+    <label for="firstName">Full name</label>
+    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Trần"
+           formControlName="firstName">
+    <p *ngIf="formEdit.get('firstName').hasError('required') && formEdit.get('firstName').dirty"
+       class="text-danger">Please input first name</p>
+    <!--        <p *ngIf="formEditEmployee.get('fullName').hasError('pattern') && formEditEmployee.get('fullName').dirty" class="text-danger">Name not valid</p>-->
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last name</label>
+    <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Tuấn"
+           formControlName="lastName">
+    <p *ngIf="formEdit.get('lastName').hasError('required') && formEdit.get('lastName').dirty"
+       class="text-danger">Please input last name</p>
+    <!--        <p *ngIf="formEditEmployee.get('fullName').hasError('pattern') && formEditEmployee.get('fullName').dirty" class="text-danger">Name not valid</p>-->
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" class="form-control" placeholder="trantuan@gmail.com"
+           formControlName="email">
+    <p *ngIf="formEdit.get('email').hasError('required') && formEdit.get('email').touched"
+       class="text-danger">Please input your email</p>
+    <p *ngIf="formEdit.get('email').hasError('pattern') && formEdit.get('email').touched"
+       class="text-danger">Email must be like abc@gmail.com or abc@yahoo.com.vn</p>
+  </div>
+
+  <div>
+    <button type="button" [disabled]="formEdit.invalid" class="btn btn-success" (click)="editEmployee()">Edit
+    </button>
+  </div>
+</form>

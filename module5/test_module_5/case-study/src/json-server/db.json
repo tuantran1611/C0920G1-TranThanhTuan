@@ -1,0 +1,195 @@
+{
+  "employees": [
+    {
+      "fullName": "Trần Thanh Tuấn",
+      "position": "1",
+      "educationDegree": "1",
+      "division": "1",
+      "dayOfBirth": "1995-11-14",
+      "idCard": "241598158",
+      "salary": "50000000",
+      "phone": "0852477788",
+      "email": "trantuan@gmail.com",
+      "address": "Đà Nẵng",
+      "id": 1
+    },
+    {
+      "fullName": "Mai Nam Khánh",
+      "position": "2",
+      "educationDegree": "2",
+      "division": "2",
+      "dayOfBirth": "1992-11-21",
+      "idCard": "241598100",
+      "salary": "90000000",
+      "phone": "0852477788",
+      "email": "khanhmai@gmail.com",
+      "address": "Đà Nẵng",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "fullName": "Lê Đình Phúc",
+      "position": "3",
+      "educationDegree": "3",
+      "division": "2",
+      "dayOfBirth": "1997-01-01",
+      "idCard": "2415981008",
+      "salary": "30000000",
+      "phone": "0852477788",
+      "email": "phucle@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "fullName": "Nguyễn Thiện Nhân",
+      "position": "5",
+      "educationDegree": "4",
+      "division": "2",
+      "dayOfBirth": "1992-10-10",
+      "idCard": "2415981008",
+      "salary": "30000000",
+      "phone": "0852477788",
+      "email": "nhannguyen@gmail.com",
+      "address": "Đà Nẵng",
+      "id": 4
+    },
+    {
+      "fullName": "Nguyen Khang",
+      "position": "6",
+      "educationDegree": "1",
+      "division": "Quản lý",
+      "dayOfBirth": "2021-02-11",
+      "idCard": "12321321",
+      "salary": "9000000",
+      "email": "khang@gmail.com",
+      "phone": "0965213211",
+      "address": "Da Nang",
+      "id": 5
+    },
+    {
+      "fullName": "Tuan",
+      "position": "6",
+      "educationDegree": "2",
+      "division": "3",
+      "dayOfBirth": "2001-11-20",
+      "idCard": "123412321",
+      "salary": "11000000",
+      "phone": "0987077238",
+      "email": "tuan@gmail.com",
+      "address": "Đắk Lăk",
+      "id": 6
+    },
+    {
+      "fullName": "Hoai Linh",
+      "position": "6",
+      "educationDegree": "2",
+      "division": "2",
+      "dayOfBirth": "1979-12-11",
+      "idCard": "231231231",
+      "salary": "9000000",
+      "phone": "0812323211",
+      "email": "hoailinh@gmail.com",
+      "address": "Da Nang",
+      "id": 7
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "customerType": "Diamond",
+      "fullName": "Huỳnh Thị Hú",
+      "dayOfBirth": "1996-08-14",
+      "idCard": "123412311",
+      "phone": "0763706254",
+      "email": "huhuynh@gmail.com",
+      "address": "Hội An"
+    },
+    {
+      "id": 2,
+      "customerType": "Platinium",
+      "fullName": "Tưởng Thế Anh",
+      "dayOfBirth": "1997-10-20",
+      "idCard": "123412311",
+      "phone": "0763706254",
+      "email": "anhtuong@gmail.com",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": 3,
+      "customerType": "Member",
+      "fullName": "Trần Huỳnh Quốc Bảo",
+      "dayOfBirth": "1997-03-29",
+      "idCard": "123412311",
+      "phone": "0763706254",
+      "email": "baotran@gmail.com",
+      "address": "Đà Nẵng"
+    }
+  ],
+  "positions": [
+    {
+      "id": 1,
+      "value": "Lễ tân"
+    },
+    {
+      "id": 2,
+      "value": "Phục vụ"
+    },
+    {
+      "id": 3,
+      "value": "Chuyên viên"
+    },
+    {
+      "id": 4,
+      "value": "Giám sát"
+    },
+    {
+      "id": 5,
+      "value": "Quản lý"
+    },
+    {
+      "id": 6,
+      "value": "Giám đốc"
+    }
+  ],
+  "sotietkiems": [
+    {
+      "id": 1,
+      "khachHang": {
+        "id": "1",
+        "ten": "Trương Tấn Hải"
+      },
+      "ngayMo": "2019-12-31",
+      "ngayGui": "2020-01-24",
+      "kiHan": "1",
+      "soTien": "20000000",
+      "laiSuat": "8",
+      "uuDai": "Áo mưa1"
+    },
+    {
+      "id": 2,
+      "khachHang": {
+        "id": "2",
+        "ten": "Đoàn Phước Trung"
+      },
+      "ngayMo": "2020-01-01",
+      "ngayGui": "2020-01-01",
+      "kiHan": "1",
+      "soTien": "200000000",
+      "laiSuat": "8",
+      "uuDai": "Áo mưa"
+    }
+  ],
+  "khachhang": [
+    {
+      "id": "1",
+      "ten": "Trương Tấn Hải"
+    },
+    {
+      "id": "2",
+      "ten": "Đoàn Phước Trung"
+    },
+    {
+      "id": "3",
+      "ten": "Abc"
+    }
+  ]
+}

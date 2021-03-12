@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="employee.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container-body">
+    <div class="menu">
+        <div class=".logo col-2 text-center float-left">
+            <h4 class="pt-3">logo</h4>
+        </div>
+        <div class="col-2 float-right mt-3">
+            <a class="float-left">Logout</a>
+        </div>
+    </div>
+    <div class="content row">
+        <div class="col-2 menu-left-admin">
+            <div class="row">
+                <ul class="col-12">
+                    <li class="pl-4 pt-2 pb-2 menu-var">
+                        <a><i class="fas fa-user-friends mr-2"></i>Nhân viên</a>
+                    </li>
+                    <li class="pl-4 pt-2 pb-2 menu-var">
+                        <a><i class="fas fa-female mr-2"></i>Khách hàng</a>
+                    </li>
+                    <li class="pl-4 pt-2 pb-2 menu-var">
+                        <a><i class="fas fa-file-signature mr-2"></i>Hợp đồng</a>
+                    </li>
+                    <li class="pl-4 pt-2 pb-2 menu-var">
+                        <a><i class="fas fa-user-friends mr-2"></i>Đền bù</a>
+                    </li>
+                    <li class="pl-4 pt-2 pb-2 menu-var">
+                        <a><i class="fas fa-user-friends mr-2"></i>Sản phẩm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-10 content-center">
+            <h3 align="center" class="mt-5">
+                Màn Hình Thêm Mới Nhân Viên
+            </h3>
+            <form>
+                <div class="form-inline">
+                    <label class="col-2">
+                        Họ Tên:
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+                <div class="form-inline">
+                    <label class="col-2">
+                        Ngày Sinh :
+                    </label>
+                    <input class="col-9 form-control" type="date">
+                </div>
+                <div class="form-inline">
+                    <label class="col-2">
+                        Giới tính :
+                    </label>
+                    <input type="radio"/>&nbsp;Nam &nbsp;
+                    <input type="radio"/>&nbsp;Nữ
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        CMND :
+                    </label>
+                    <input class="col-9 form-control" type="number">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Địa Chỉ :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Điện thoại :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Fax :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Số tài khoản :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Ngân hàng :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Tài khoản :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Mật khẩu :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Xác nhận mật khẩu :
+                    </label>
+                    <input class="col-9 form-control" type="text">
+                </div>
+
+                <div class="form-inline">
+                    <label class="col-2">
+                    </label>
+                    <IMG src="ảnh%20default.jpg" style="width: 150px ; height: 150px">
+                </div>
+
+
+                <div class="form-inline">
+                    <label class="col-2">
+                        Ảnh Cá Nhân :
+                    </label>
+                    <input class="col-9 form-control" type="file">
+                </div>
+                <div class="form-inline mb-3 btn-submit">
+                    <label>
+                        <button type="submit" class="btn btn-outline-warning ">Lưu</button>
+                    </label>
+                    <label class="ml-4">
+                        <button type="submit" class="btn btn-outline-dark ">Trở Lại</button>
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="col-12 text-center" style="width: 100%">CodeGym Đà Nẵng</p>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d01d87d6ad.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

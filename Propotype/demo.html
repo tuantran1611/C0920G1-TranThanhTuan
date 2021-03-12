@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d01d87d6ad.js" crossorigin="anonymous"></script>
+    <style>
+        .menu{
+            width: 100%;
+            height: 60px;
+            background: #2196f3;
+        }
+        .menu-left-admin{
+            border-right: solid #2196f3 1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <div class=".logo col-2 text-center float-left">
+        <h4 class="pt-3">logo</h4>
+    </div>
+    <div class="col-2 float-right mt-3">
+        <a class="float-left">Logout</a>
+    </div>
+    <div class=".searchAll col-3 float-right input-group mt-2">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-warning" type="button"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+</div>
+<div class="col-2 float-left menu-left-admin" style="height: 600px"></div>
+<div class="col-10 float-right mt-3">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+               aria-controls="nav-home" aria-selected="true">Danh Sách Đợi Phê Duyệt</a>
+            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+               aria-controls="nav-profile" aria-selected="false">Danh Sách Đã Phê Duyệt</a>
+            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+               aria-controls="nav-contact" aria-selected="false">Danh Sách Không Phê Duyệt</a>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <h3 class="col-12 text-center mt-3">Danh Sách Đợi Phê Duyệt</h3>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã hợp đồng</th>
+                    <th scope="col">Tên khách hàng</th>
+                    <th scope="col">Số tiền</th>
+                    <th scope="col">Lý do</th>
+                    <th scope="col">Hoạt Động</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>HD-0001</td>
+                    <td>Anh</td>
+                    <td>1000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>HD-0002</td>
+                    <td>Thornton</td>
+                    <td>2000000</td>
+                    <td>Té xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>HD-1264</td>
+                    <td>Bird</td>
+                    <td>14000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>HD-4325</td>
+                    <td>Ari</td>
+                    <td>14000000</td>
+                    <td>Tai nạn xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>HD-4264</td>
+                    <td>Bla</td>
+                    <td>14000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <h3 class="col-12 text-center mt-3">Danh Sách Đã Phê Duyệt</h3>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã hợp đồng</th>
+                    <th scope="col">Tên khách hàng</th>
+                    <th scope="col">Số tiền</th>
+                    <th scope="col">Lý do</th>
+                    <th scope="col">Hoạt Động</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>HD-0001</td>
+                    <td>Anh</td>
+                    <td>1000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" disabled>
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>HD-0002</td>
+                    <td>Thornton</td>
+                    <td>2000000</td>
+                    <td>Té xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" disabled>
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>HD-1264</td>
+                    <td>Bird</td>
+                    <td>14000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" disabled>
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>HD-4325</td>
+                    <td>Ari</td>
+                    <td>14000000</td>
+                    <td>Tai nạn xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" disabled>
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>HD-4264</td>
+                    <td>Bla</td>
+                    <td>14000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal" disabled>
+                            Phê Duyệt
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+            <h3 class="col-12 text-center mt-3">Danh Sách Không Phê Duyệt</h3>
+            <table class="table table-hover">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã hợp đồng</th>
+                    <th scope="col">Tên khách hàng</th>
+                    <th scope="col">Số tiền</th>
+                    <th scope="col">Lý do</th>
+                    <th scope="col">Hoạt Động</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>HD-0001</td>
+                    <td>Anh</td>
+                    <td>1000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt Lại
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>HD-0002</td>
+                    <td>Thornton</td>
+                    <td>2000000</td>
+                    <td>Té xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt Lại
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>HD-1264</td>
+                    <td>Bird</td>
+                    <td>14000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt Lại
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>HD-4325</td>
+                    <td>Ari</td>
+                    <td>14000000</td>
+                    <td>Tai nạn xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt Lại
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>HD-4264</td>
+                    <td>Bla</td>
+                    <td>14000000</td>
+                    <td>Tông xe</td>
+                    <td>
+                        <button class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Phê Duyệt Lại
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+    </div>
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Màn Hình Phê Duyệt</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="col-6 float-left">
+                    <p class="col-7 float-left">Mã khách hàng:</p><p class="col-4 float-left">KH-0001</p>
+                    <p class="col-7 float-left">Họ tên:</p><p class="col-4 float-left">Nguyễn Hải</p>
+                    <p class="col-7 float-left">Địa chỉ:</p><p class="col-4 float-left">Đà Nẵng</p>
+                    <p class="col-7 float-left">Thanh toán tiền theo:</p><p class="col-4 float-left">Tháng</p>
+                    <p class="col-7 float-left">Biển số:</p><p class="col-4 float-left">43E1-12378</p>
+                    <p class="col-7 float-left">Số khung:</p><p class="col-4 float-left">...</p>
+                    <p class="col-7 float-left">Số máy:</p><p class="col-4 float-left">...</p>
+                    <p class="col-7 float-left">Lý do bồi thường:</p><p class="col-4 float-left">Tai nạn xe</p>
+                </div>
+                <div class="col-6 float-left">
+                    <p class="col-12">Hình ảnh thực tế</p>
+                    <img src="img/B14f2da897616f3f3670.jpg" class="col-5" height="100px">
+                    <img src="img/unnamed.jpg" class="col-5" height="100px">
+                    <div class="col-12 mt-4">
+                        <p class="col-8 float-left mt-1">Số tiền cẩn bồi thường:</p><input
+                            class="form-control col-4 float-left">
+                    </div>
+                    <div class="col-12 mt-4">
+                        <p class="col-8 float-left mt-1">Lý do không duyệt:</p><textarea
+                            class="form-control col-4 float-left"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-info">Không Đền Bù</button>
+                <button type="button" class="btn btn-warning">Đền Bù</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>

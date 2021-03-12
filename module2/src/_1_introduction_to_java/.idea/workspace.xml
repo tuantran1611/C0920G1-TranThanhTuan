@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e0d082c-f40a-4633-a45c-b7998e8ec7f6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-create/employee-create.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-create/employee-create.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-create/employee-create.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-create/employee-create.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-list/employee-list.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-list/employee-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/component/employees/employee-list/employee-list.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/employee.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/khachhang.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module5/test_module_5/case-study/src/app/sotietkiem.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/demo/src/main/java/com/example/controller/EmployeeRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/demo/src/main/java/com/example/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/demo/src/main/java/com/example/repository/EmployeeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/demo/src/main/java/com/example/service/EmployeeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/demo/src/main/java/com/example/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/prototype/prototype-project/employee-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/prototype/prototype-project/employee.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module6/prototype/prototype-project/image/codegym.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/_2_Typescript/practice/variable-datatype/typescript-demo" beforeDir="false" afterPath="$PROJECT_DIR$/../../../module5/_2_Typescript/practice/variable-datatype/typescript-demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/browserslist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/e2e/protractor.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/e2e/src/app.e2e-spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/e2e/src/app.po.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/e2e/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/app.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-create/customer-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-create/customer-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-create/customer-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-create/customer-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-delete/customer-delete.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-delete/customer-delete.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-delete/customer-delete.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-delete/customer-delete.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-edit/customer-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-edit/customer-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-edit/customer-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-edit/customer-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-list/customer-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-list/customer-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-list/customer-list.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/customers/customer-list/customer-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-create/employee-create.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-create/employee-create.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-create/employee-create.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-create/employee-create.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-delete/employee-delete.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-edit/employee-edit.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-list/employee-list.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-list/employee-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/employees/employee-list/employee-list.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/home-page/home-page.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/home-page/home-page.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/home-page/home-page.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/home-page/home-page.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/page-not-found/page-not-found.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/page-not-found/page-not-found.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/page-not-found/page-not-found.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/component/page-not-found/page-not-found.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/material.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/services/customer.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/services/customer.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/services/employee.service.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/app/services/employee.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/furama.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/furama.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/assets/furama1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/json-server/db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../module5/case_study_5/case-study/tslint.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1pZPX6vRCdXdtS1HMCkY8bZ6szj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../_2_loop_in_java" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e0d082c-f40a-4633-a45c-b7998e8ec7f6" name="Default Changelist" comment="" />
+      <created>1615387675925</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615387675925</updated>
+      <workItem from="1615387677070" duration="164000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1615387839317">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1615387839317" />
+  </component>
+</project>

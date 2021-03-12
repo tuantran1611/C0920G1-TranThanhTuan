@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/d01d87d6ad.js" crossorigin="anonymous"></script>
+    <style>
+        .menu {
+            width: 100%;
+            height: 60px;
+            background: #2196f3;
+        }
+
+        .menu-left-admin {
+            border-right: solid #2196f3 1px;
+            height: 700px;
+        }
+
+        .menu-left-admin ul li {
+            list-style: none;
+            transition: 0.5s;
+            border-bottom: white solid 2px;
+        }
+
+        .menu-left-admin .menu-var:hover {
+            border-bottom: #2196f3 solid 2px;
+            transition: 0.5s;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            background: #2196f3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="menu">
+    <div class=".logo col-2 text-center float-left">
+        <h4 class="pt-3">logo</h4>
+    </div>
+    <div class="col-2 float-right mt-3">
+        <a class="float-left">Logout</a>
+    </div>
+</div>
+<div class="col-2 float-left menu-left-admin">
+    <div class="row">
+        <ul class="col-12">
+            <li class="pl-4 pt-2 pb-2 menu-var">
+                <a><i class="fas fa-user-friends mr-2"></i>Nhân viên</a>
+            </li>
+            <li class="pl-4 pt-2 pb-2 menu-var">
+                <a><i class="fas fa-female mr-2"></i>Khách hàng</a>
+            </li>
+            <li class="pl-4 pt-2 pb-2 menu-var">
+                <a><i class="fas fa-file-signature mr-2"></i>Hợp đồng</a>
+            </li>
+            <li class="pl-4 pt-2 pb-2 menu-var">
+                <a><i class="fas fa-user-friends mr-2"></i>Đền bù</a>
+            </li>
+            <li class="pl-4 pt-2 pb-2 menu-var">
+                <a><i class="fas fa-user-friends mr-2"></i>Sản phẩm</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="col-10 float-right mt-3">
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+               aria-controls="nav-home" aria-selected="true">Danh Sách Nhân Viên</a>
+            <!--            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"-->
+            <!--               aria-controls="nav-profile" aria-selected="false">Danh Sách Đã Phê Duyệt</a>-->
+            <!--            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"-->
+            <!--               aria-controls="nav-contact" aria-selected="false">Danh Sách Không Phê Duyệt</a>-->
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <h3 class="col-7 mt-3 float-left">Danh Sách Nhân Viên</h3>
+            <div class="col-5 mt-3 float-right input-group">
+                <button type="button" class="btn btn-dark mr-2">Thêm</button>
+                <input type="text" class="form-control" placeholder="Nhập tên hoặc số điện thoại" aria-label="Recipient's username"
+                       aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary" type="button">Tìm</button>
+                </div>
+            </div>
+            <table class="table table-hover" style="font-size: 12px;">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Mã nhân viên</th>
+                    <th scope="col">Họ tên</th>
+                    <th scope="col">Ngày sinh</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">CMND</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Điện thoại</th>
+                    <th scope="col">Fax</th>
+                    <th scope="col">Số tài khoản</th>
+                    <th scope="col">Ngân hàng</th>
+                    <th scope="col">Chức vụ</th>
+                    <th scope="col">Tài khoản</th>
+                    <th scope="col">Hoạt Động</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>NV-0001</td>
+                    <td>Anh</td>
+                    <td>2021-11-16</td>
+                    <td>Nam</td>
+                    <td>2412312231</td>
+                    <td>Đà Nẵng</td>
+                    <td>0852477788</td>
+                    <td></td>
+                    <td>6236213612</td>
+                    <td>BIDV</td>
+                    <td>Giám đốc</td>
+                    <td>anh_tran</td>
+                    <td>
+                        <button class="btn btn-warning">
+                            Sửa
+                        </button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>NV-0002</td>
+                    <td>Em</td>
+                    <td>2021-11-16</td>
+                    <td>Nam</td>
+                    <td>2412312231</td>
+                    <td>Đà Nẵng</td>
+                    <td>0852477788</td>
+                    <td></td>
+                    <td>6236213612</td>
+                    <td>BIDV</td>
+                    <td>Giám đốc</td>
+                    <td>em_tran</td>
+                    <td>
+                        <button class="btn btn-warning">
+                            Sửa
+                        </button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>NV-0003</td>
+                    <td>Phúc</td>
+                    <td>2021-11-16</td>
+                    <td>Nam</td>
+                    <td>2412312231</td>
+                    <td>Đà Nẵng</td>
+                    <td>0852477788</td>
+                    <td></td>
+                    <td>6236213612</td>
+                    <td>BIDV</td>
+                    <td>Giám đốc</td>
+                    <td>phuc_le</td>
+                    <td>
+                        <button class="btn btn-warning">
+                            Sửa
+                        </button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>NV-0004</td>
+                    <td>Linh</td>
+                    <td>2021-11-16</td>
+                    <td>Nam</td>
+                    <td>2412312231</td>
+                    <td>Đà Nẵng</td>
+                    <td>0852477788</td>
+                    <td></td>
+                    <td>6236213612</td>
+                    <td>BIDV</td>
+                    <td>Giám đốc</td>
+                    <td>linh_nguyen</td>
+                    <td>
+                        <button class="btn btn-warning">
+                            Sửa
+                        </button>
+                        <button class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            Xóa
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade bd-example-modal-md" id="exampleModal" tabindex="-1" role="dialog"
+         aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Xóa nhân viên</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có muốn xóa nhân viên này hay không???</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                    <button type="button" class="btn btn-danger">Xóa</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="col-12 footer pt-3 float-left">
+        <p class="text-center">CodeGym Đà Nẵng</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+</html>

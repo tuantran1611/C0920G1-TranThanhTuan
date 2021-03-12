@@ -1,0 +1,92 @@
+<div class="container">
+  <div class="container" style="text-align: center; clear: both;">
+    <h1>Employee Management</h1>
+  </div>
+  <div class="container">
+    <!--        &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+    <!--        <div style="float: left">-->
+    <!--            <button [routerLink]="['/employee-create']" type="button" class="btn btn-primary" id="idModalCreate" data-toggle="modal" data-target="#modelId">-->
+    <!--                Add New Employee-->
+    <!--            </button>-->
+    <!--        </div>-->
+    <div style="float: left">
+      <button class="btn icon-btn btn-success" type = "button" [routerLink]="['/employee-create']"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add</button>
+    </div>
+    <div style="float: left; margin-left: 10px">
+      <a class="btn icon-btn btn-info" href="#" [routerLink]="['']"><span class="glyphicon btn-glyphicon glyphicon-arrow-left img-circle text-info"></span>Back</a>
+      <!--            <a class="btn btn-primary" href="#" [routerLink]="['']">Back To Home</a><br/>-->
+    </div>
+    <div class="d-flex" style="float: right;">
+      <!--            <input name="inputSearch" style="width: 300px" class="form-control mr-sm-2" type="text"-->
+      <!--                   placeholder="Search by name" [(ngModel)]="term">-->
+      <input name="inputSearch" style="width: 300px" class="form-control mr-sm-2" type="text"
+             placeholder="Tìm kiếm" [(ngModel)]="name">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="button" (click)="search(0)">Tìm kiếm</button>
+    </div>
+  </div>
+  <input type="hidden"  id="check">
+  <h3  style="color: red"></h3>
+  <table class="table table-bordered" style="font-size: 12px;" >
+    <thead>
+    <tr style="text-align: center; color: rgb(46, 25, 25);">
+      <!-- <th>STT</th> -->
+      <th>Id &nbsp; </th>
+      <th>First name &nbsp; <i class="fa fa-sort"></i></th>
+      <th (click)="onLastNameSortingChange($event)">Last name &nbsp; <i class="glyphicon glyphicon-sort"></i></th>
+      <th>Email &nbsp; <i class="fa fa-sort"></i></th>
+      <th>Image <i class="fa fa-sort"></i></th>
+      <th style="width: 12%">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="text-align:center" *ngFor = "let e of employees; let i = index">
+      <!-- <td>{{i+1}}</td> -->
+      <td>{{e.id}}</td>
+      <td>{{e.firstName}}</td>
+      <td>{{e.lastName}}</td>
+      <td>{{e.email}}</td>
+      <td><img src="{{e.image}}" width="50px" height="50px"></td>
+      <td>
+        <!--                <button [routerLink]="['/employee-edit', employee.id]" class="btn btn-warning btn-sm">Edit</button>-->
+        <button class="btn icon-btn btn-warning btn-sm" [routerLink]="['/employee-edit', e.id]"><span class="glyphicon btn-glyphicon glyphicon-edit img-circle text-warning"></span></button>
+        <!--                <button class="btn btn-danger btn-sm" (click)="openDialog(employee.id)">Delete</button>-->
+        <button class="btn icon-btn btn-danger btn-sm" (click)="openDialog(e.id)" ><span class="glyphicon btn-glyphicon glyphicon-trash img-circle text-danger"></span></button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+<!--  <pagination-controls (pageChange)="page = $event"></pagination-controls>-->
+</div>
+<div class="container paging-course">
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" (click)="onFirst()" [ngClass]="pageClicked==0?'disabled':''">
+        <a class="page-link">First</a>
+      </li>
+      <li class="page-item" (click)="onPrevious()" [ngClass]="pageClicked==0?'disabled':''">
+        <a class="page-link">Previous</a>
+      </li>
+      <li *ngIf="pageClicked != 0" class="page-item" (click)="onSubmit(pages[pageClicked-1])">
+        <a class="page-link">{{pageClicked}}</a>
+      </li>
+      <li [ngClass]="(pageClicked == pages[pageClicked]) ? 'active' : ''" class="page-item"
+          (click)="onSubmit(pages[pageClicked])">
+        <a class="page-link">{{pageClicked + 1}}</a>
+      </li>
+      <li *ngIf="pageClicked < pages.length -1" class="page-item" (click)="onSubmit(pages[pageClicked+1])">
+        <a class="page-link">{{pageClicked + 2}}</a>
+      </li>
+      <li *ngIf="pageClicked < pages.length -2" class="page-item">
+        <a class="page-link">...</a>
+      </li>
+      <li *ngIf="pageClicked < pages.length-2" class="page-item" (click)="onLast()">
+        <a class="page-link">{{pages[pages.length - 1] + 1}}</a>
+      </li>
+      <li class="page-item" (click)="onNext()" [ngClass]="pageClicked==totalPages-1?'disabled':''">
+        <a class="page-link">Next</a>
+      </li>
+      <li class="page-item" (click)="onLast()" [ngClass]="pageClicked==totalPages-1?'disabled':''"><a
+        class="page-link">Last</a></li>
+    </ul>
+  </nav>
+</div>

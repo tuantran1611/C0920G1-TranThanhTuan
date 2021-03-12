@@ -1,0 +1,52 @@
+<h3 class="text-center">Add new employee</h3>
+
+<form class="w-50 mx-auto mt-3" [formGroup]="formCreateEmployee" (ngSubmit)="addNewEmployee(formCreateEmployee.value)">
+  <div class="form-group">
+    <label for="firstName">First name</label>
+    <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Trần"
+           formControlName="firstName">
+    <p *ngIf="formCreateEmployee.get('firstName').hasError('required') && formCreateEmployee.get('firstName').touched"
+       class="text-danger">Please input first name</p>
+    <!--        <p *ngIf="formAddNewEmployee.get('fullName').hasError('pattern') && formAddNewEmployee.get('fullName').dirty" class="text-danger">Name not valid</p>-->
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last name</label>
+    <input type="text" name="lastName" id="lastName" class="form-control" placeholder="Tuấn"
+           formControlName="lastName">
+    <p *ngIf="formCreateEmployee.get('lastName').hasError('required') && formCreateEmployee.get('lastName').touched"
+       class="text-danger">Please input first name</p>
+    <!--        <p *ngIf="formAddNewEmployee.get('fullName').hasError('pattern') && formAddNewEmployee.get('fullName').dirty" class="text-danger">Name not valid</p>-->
+  </div>
+
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" class="form-control" placeholder="trantuan@gmail.com"
+           formControlName="email">
+    <p *ngIf="formCreateEmployee.get('email').hasError('required') && formCreateEmployee.get('email').touched"
+       class="text-danger">Please input your email</p>
+    <p *ngIf="formCreateEmployee.get('email').hasError('pattern') && formCreateEmployee.get('email').touched"
+       class="text-danger">Email must be like abc@gmail.com or abc@yahoo.com.vn</p>
+  </div>
+
+  <div class="form-group">
+    <label for="image">Image</label>
+    <div class="text-left">
+      <img [src]="imgSrc" width="100px" height="100px" (click) = "fileUploader.click()">
+    </div>
+    <input type="file" name="image" id="image" class="form-control"
+         #fileUploader  formControlName="image" accept="image/*" (change)="showPreview($event)" >
+    <p *ngIf="formCreateEmployee.get('email').hasError('required') && formCreateEmployee.get('email').touched"
+       class="text-danger">Please input your email</p>
+  </div>
+
+  <div style="float: left" class="mr-3">
+    <button type="submit" [disabled]="formCreateEmployee.invalid" class="btn btn-success">
+      Add
+    </button>
+  </div>
+  <div>
+    <button type="button" class="btn btn-primary" [routerLink]="['/employee-list']">Back</button>
+  </div>
+</form>
