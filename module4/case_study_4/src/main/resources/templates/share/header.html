@@ -5,6 +5,111 @@
     <title>Title</title>
 </head>
 <body>
+<div th:fragment="menuBar">
+    <header class="container">
+        <div style="float: left;margin-top: 10px">
+            <a href="/admin" title="Furama Resort">
+                <img src="/img/furama.png" alt="Furama Resort" height="77px" width="77px">
+            </a>
+        </div>
+        <div sec:authorize="isAuthenticated()" style="float: right">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a style="color: white" class="nav-link dropdown-toggle"
+                       id="navbarDropdown3"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       th:text="${#request.userPrincipal.name}"
+                    >
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                        <a class="dropdown-item"
+                           th:href="@{/employee/view-info/{name}(name=${#request.userPrincipal.name})}">User Info</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" th:href="@{/logout}">Logout</a>
+                    </div>
+                </li>
 
+<!--                <li class="nav-item dropdown float-right">-->
+<!--                    <a style="color: white" class="nav-link dropdown-toggle" href="#"-->
+<!--                       id="navbarDropdown4"-->
+<!--                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"-->
+<!--                       th:text="${#request.userPrincipal.name}"-->
+<!--                    >-->
+<!--                    </a>-->
+<!--                    <div class="dropdown-menu" aria-labelledby="navbarDropdown3">-->
+<!--                        <a class="dropdown-item"-->
+<!--                           th:href="@{/employee/view-info/{name}(name=${#request.userPrincipal.name})}">User Info</a>-->
+<!--                        <div class="dropdown-divider"></div>-->
+<!--                        <a class="dropdown-item" th:href="@{/logout}">Logout</a>-->
+<!--                    </div>-->
+<!--                </li>-->
+            </ul>
+        </div>
+        <div sec:authorize="isAnonymous()" style="float: right">
+            <a th:href="@{/login}">
+                Đăng nhập/Đăng ký
+            </a>
+        </div>
+    </header>
+    <nav style="clear: both" class="navbar navbar-expand-lg navbar-light container">
+        <a style="color: white" class="navbar-brand" href="/">HOME</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a style="color: white" class="nav-link" th:href="@{/employee/list}">Employee</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a style="color: white" class="nav-link dropdown-toggle"
+                       id="navbarDropdown20"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Customer Service
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown20">
+                        <a class="dropdown-item" href="#">Customer Use Attach
+                            Service</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/customer/list">Customer</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a style="color: white" class="nav-link" href="/service/list">Service</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a style="color: white" class="nav-link dropdown-toggle"
+                       id="navbarDropdown1"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contract Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                        <a class="dropdown-item" href="/contract-detail/list">Contract Detail</a>
+                        <a class="dropdown-item" href="/contract-detail/list-attach-service">Attach Service</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/contract/list">Contract</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/customer/search-customer">
+                <input name="inputSearch" style="width: 300px" class="form-control mr-sm-2" type="text"
+                       placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 </html>
